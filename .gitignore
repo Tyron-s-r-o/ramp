@@ -39,3 +39,10 @@ ramp-sparkle.key
 
 # Logs
 *.log
+
+# Exported / archived release builds (distributed via getramp.net, not git)
+/RAMP.app/
+*.app/
+*.xcarchive/
+*.zip
+*.dmg

@@ -112,6 +112,12 @@ struct SettingsView: View {
                 Button("Zobraziť…") { showLicenses = true }
                     .disabled(LicensesSheet.url == nil)
             }
+            LabeledContent("Web") {
+                Link(destination: URL(string: "https://getramp.net")!) { Text(verbatim: "getramp.net") }
+            }
+            LabeledContent("Kontakt") {
+                Link(destination: URL(string: "mailto:info@getramp.net")!) { Text(verbatim: "info@getramp.net") }
+            }
         }
     }
 
