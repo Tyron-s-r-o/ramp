@@ -8,7 +8,7 @@ RAMP_APPCAST_URL = https:/$()/getramp.net/appcast.xml
 
 // Sparkle EdDSA public key (base64) printed by Sparkle's `generate_keys` — PLACEHOLDER.
 // app/scripts/release-app.sh refuses to build a release while this still starts with TODO.
-RAMP_SPARKLE_PUBLIC_KEY = TODO_SPARKLE_PUBLIC_KEY
+RAMP_SPARKLE_PUBLIC_KEY = 3k/vWajXsMfEr9y8+jhC8ZU/BGb96tz6NKpwYpw7J/4=
 
 // Default service manifest for fresh installs (ramp.json without manifestURL); existing configs untouched.
 // Empty or containing OWNER = not configured (the app then needs RAMP_DEV_MANIFEST / rampctl install).
