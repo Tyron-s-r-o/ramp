@@ -15,4 +15,4 @@ RAMP_SPARKLE_PUBLIC_KEY = 3k/vWajXsMfEr9y8+jhC8ZU/BGb96tz6NKpwYpw7J/4=
 RAMP_MANIFEST_URL = https:/$()/getramp.net/manifest.json
 
 // Monotonic integer → CFBundleVersion (Sparkle compares it). release-app.sh passes RAMP_BUILD_NUMBER=<n>.
-RAMP_BUILD_NUMBER = 1
+RAMP_BUILD_NUMBER = 3

@@ -21,9 +21,9 @@ struct MenuServicesSection: View {
             }
             HStack(spacing: 6) {
                 Button("Spustiť všetko") { Task { await services.startAll() } }
-                    .disabled(services.isBusyAll)
+                    .disabled(services.isBusyAll || services.health.level == .allRunning)
                 Button("Zastaviť všetko") { Task { await services.stopAll() } }
-                    .disabled(services.isBusyAll)
+                    .disabled(services.isBusyAll || services.health.level == .stopped)
                 Button("Reštart Apache") { Task { await services.restartApache() } }
                     .disabled(!(rows.first { $0.id == .apache }?.state.isRunning ?? false))
                     .help("Reštart Apache (graceful)")

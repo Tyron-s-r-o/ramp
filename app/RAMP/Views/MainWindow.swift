@@ -66,7 +66,8 @@ struct MainWindow: View {
             } label: {
                 Label("Spustiť všetko", systemImage: "play.fill")
             }
-            .disabled(services.isBusyAll)
+            // Nothing to start when every (non-optional) service already runs.
+            .disabled(services.isBusyAll || services.health.level == .allRunning)
             .help("Spustiť všetky služby")
 
             Button {
@@ -74,7 +75,7 @@ struct MainWindow: View {
             } label: {
                 Label("Zastaviť všetko", systemImage: "stop.fill")
             }
-            .disabled(services.isBusyAll)
+            .disabled(services.isBusyAll || services.health.level == .stopped)
             .help("Zastaviť všetky služby")
 
             Button {
