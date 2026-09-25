@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- OPcache JIT (PHP >= 8.0) and PCRE2 JIT map executable memory with MAP_JIT on arm64;
+	     under the hardened runtime that needs allow-jit. Nothing else is relaxed:
+	     library validation stays on (all extensions/dylibs carry the same Team ID). -->
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+</dict>
+</plist>

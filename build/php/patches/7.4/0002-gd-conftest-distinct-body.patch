@@ -1,0 +1,16 @@
+# PHP 7.4.33 — ext/gd/config.m4: the "GD build test" conftest (`char foobar () {}` + main calling
+# it) is built with -O2 -fvisibility=hidden; Xcode 27 ld (ld-27037.1) can deduplicate the
+# identical hidden bodies of foobar and main and write LC_MAIN entryoff 0 → SIGILL → "GD build
+# test failed". Give foobar a distinct body. Source: RAMP-original (same fix as 7.3 patch 0003).
+# Requires ./buildconf --force.
+--- a/ext/gd/config.m4
++++ b/ext/gd/config.m4
+@@ -173,7 +173,7 @@
+ 
+     PHP_TEST_BUILD(foobar, [], [
+       AC_MSG_ERROR([GD build test failed. Please check the config.log for details.])
+-    ], [ $GD_SHARED_LIBADD ], [char foobar () {}])
++    ], [ $GD_SHARED_LIBADD ], [char foobar () { return 1; }])
+ 
+   else
+     extra_sources="gd_compat.c"

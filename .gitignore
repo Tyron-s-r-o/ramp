@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+._*
+
+# Build pipeline outputs (large; reproducible via build/build-all.sh — binaries ship via getramp.net)
+build/.cache/
+build/.stage/
+build/out/
+build/dist/
+dist-app/
+upload/
+
+# Xcode / SwiftPM
+DerivedData/
+**/xcuserdata/
+*.xcuserstate
+.build/
+.swiftpm/
+
+# Design scratch (large generated candidates; final assets are kept)
+design/icon-concepts/
+design/animation/frames*/
+design/animation/*.json
+design/animation/*.err
+design/screenshots/sk/
+
+# Private notes / internal planning (contain local machine + client project details)
+RANO.md
+plan/
+.planning/
+
+# Secrets & local env
+.env
+.env.*
+!.env.example
+*.p12
+*.key
+ramp-sparkle.key
+
+# Logs
+*.log

@@ -1,0 +1,130 @@
+# RAMP.app release: archive → Developer ID export → notarize + staple → zip → EdDSA-signed Sparkle appcast
+# (app/scripts/release-app.sh) → GitHub Release after approval of the "release" environment.
+#
+# Triggers: tag push v<version> (build number = run number unless given) or manual dispatch.
+# Secrets: DEVELOPER_ID_P12_BASE64, DEVELOPER_ID_P12_PASSWORD, KEYCHAIN_PASSWORD, NOTARY_KEY_ID,
+#   NOTARY_ISSUER_ID, NOTARY_KEY_P8_BASE64, SPARKLE_PRIVATE_KEY (build/ci/README.md).
+# The appcast lives at releases/latest/download/appcast.xml (SUFeedURL in app/RAMP/Distribution.xcconfig);
+# every release re-publishes it extended with the new item.
+name: app-release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Marketing version, e.g. 1.0.1"
+        type: string
+        required: true
+      build:
+        description: "CFBundleVersion (monotonic integer); empty = run number"
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: app-release
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ${{ vars.RAMP_APP_RUNNER || 'xcode-27' }}
+    timeout-minutes: 90
+    outputs:
+      version: ${{ steps.ver.outputs.version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Version
+        id: ver
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+          INPUT_BUILD: ${{ inputs.build }}
+          RUN_NUMBER: ${{ github.run_number }}
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_REF_TYPE" == tag ]]; then version="${GITHUB_REF_NAME#v}"; else version="$INPUT_VERSION"; fi
+          build="${INPUT_BUILD:-$RUN_NUMBER}"
+          [[ "$version" =~ ^[0-9]+\.[0-9]+(\.[0-9]+)?$ ]] || { echo "::error::bad version '$version'"; exit 1; }
+          [[ "$build" =~ ^[1-9][0-9]*$ ]] || { echo "::error::bad build '$build'"; exit 1; }
+          { echo "version=$version"; echo "build=$build"; } >>"$GITHUB_OUTPUT"
+
+      - name: Select Xcode 27
+        run: |
+          set -euo pipefail
+          xc="$(find /Applications -maxdepth 1 -name 'Xcode_27*.app' | sort -V | tail -n 1)"
+          if [[ -n "$xc" ]]; then sudo xcode-select -s "$xc"; fi
+          xcodebuild -version
+          brew list xcodegen >/dev/null 2>&1 || brew install xcodegen
+
+      - name: Set up signing keychain
+        env:
+          DEVELOPER_ID_P12_BASE64: ${{ secrets.DEVELOPER_ID_P12_BASE64 }}
+          DEVELOPER_ID_P12_PASSWORD: ${{ secrets.DEVELOPER_ID_P12_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          NOTARY_KEY_P8_BASE64: ${{ secrets.NOTARY_KEY_P8_BASE64 }}
+        run: |
+          set -euo pipefail
+          build/ci/setup-keychain.sh
+
+      - name: Build, notarize, appcast
+        env:
+          VERSION: ${{ steps.ver.outputs.version }}
+          BUILD: ${{ steps.ver.outputs.build }}
+          NOTARY_KEY_ID: ${{ secrets.NOTARY_KEY_ID }}
+          NOTARY_ISSUER_ID: ${{ secrets.NOTARY_ISSUER_ID }}
+          SPARKLE_PRIVATE_KEY: ${{ secrets.SPARKLE_PRIVATE_KEY }}
+          RAMP_APP_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          [[ -n "$SPARKLE_PRIVATE_KEY" ]] || { echo "::error::SPARKLE_PRIVATE_KEY secret missing"; exit 1; }
+          printf '%s' "$SPARKLE_PRIVATE_KEY" | app/scripts/release-app.sh \
+            --version "$VERSION" --build "$BUILD" --out dist-app \
+            --submit --api-key "$NOTARY_KEY_P8" --key-id "$NOTARY_KEY_ID" --issuer "$NOTARY_ISSUER_ID" \
+            --ed-key-file - \
+            --previous-appcast "https://github.com/$GITHUB_REPOSITORY/releases/latest/download/appcast.xml"
+
+      - name: Upload app release payload
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: app-release
+          path: |
+            dist-app/RAMP-*.zip
+            dist-app/RAMP-*.md
+            dist-app/appcast.xml
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Remove signing keychain
+        if: always()
+        run: build/ci/setup-keychain.sh --cleanup
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: write
+    steps:
+      - name: Download payload
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: app-release
+          path: dist-app
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.build.outputs.version }}
+        run: |
+          set -euo pipefail
+          tag="v$VERSION"
+          gh release create "$tag" dist-app/RAMP-"$VERSION".zip dist-app/appcast.xml \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "RAMP $VERSION" \
+            --notes-file "dist-app/RAMP-$VERSION.md" --latest

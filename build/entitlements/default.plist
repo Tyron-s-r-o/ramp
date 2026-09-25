@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!-- Kept for clarity: every non-PHP binary (Apache, Redis, dylibs, modules) is signed with NO
+     entitlements. build/sign.sh does not pass this file; it documents the default. -->
+<dict/>
+</plist>

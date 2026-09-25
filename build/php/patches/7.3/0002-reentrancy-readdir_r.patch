@@ -1,0 +1,15 @@
+# PHP 7.3.33 — main/reentrancy.c: configure misdetects HAVE_OLD_READDIR_R on modern macOS
+# clang (implicit-decl probe), and the 2-arg call is a hard error there; use POSIX 3-arg form.
+# Source: `inreplace "main/reentrancy.c", "readdir_r(dirp, entry)", "readdir_r(dirp, entry, result)"`
+#   https://github.com/shivammathur/homebrew-php/blob/f643ef38a10c08ffcf595b9a4091a896f34d8274/Formula/php@7.3.rb
+--- a/main/reentrancy.c
++++ b/main/reentrancy.c
+@@ -122,7 +122,7 @@
+ 	   (HPUX returns 0 on success whereas Solaris returns non-zero)
+ 	 */
+ 	entry->d_name[0] = '\0';
+-	readdir_r(dirp, entry);
++	readdir_r(dirp, entry, result);
+ 
+ 	if (entry->d_name[0] == '\0') {
+ 		*result = NULL;

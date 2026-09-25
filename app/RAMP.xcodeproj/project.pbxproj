@@ -1,0 +1,938 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0219E97CF440564AF3384019 /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA35137060BDD9C9C8C5E9B /* ServicesView.swift */; };
+		07AAA0CC0BE71D9D0122CBCF /* RedisBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88811D1CAB65A8E4F59A6E8F /* RedisBrowserView.swift */; };
+		0B704127B36D2E63DF6242E8 /* SigningInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1E24BB8999C6AA5B2F2520 /* SigningInfo.swift */; };
+		0C8DDA5A4CA31A65ACE7BAD3 /* ScreenshotMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66429173B4B8AA13153B8BD /* ScreenshotMode.swift */; };
+		0CF0CA3EDF8D10A205BD6B22 /* IniOverrideSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D7B4F1DBDE5E39428F7DB /* IniOverrideSheet.swift */; };
+		16E3752A244C53857D37F7D5 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43542DD02AF0570B961D12F /* DemoData.swift */; };
+		1BD7552CEEC0DDFCC5CF4488 /* MenuVhostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE081BC90DAF6A7920B4DD3 /* MenuVhostList.swift */; };
+		1D8AF4A285F19D550E640491 /* MenuQuickActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D612E74EFEF4E9ABBB871 /* MenuQuickActions.swift */; };
+		20D888166E067A9EA2611DC8 /* HelperSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F18ABD4D3CF33BF2649181D /* HelperSettingsSection.swift */; };
+		210402109169CAF57335E313 /* PHPBranchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA3617E1A3338F5EAB5CD8 /* PHPBranchDetail.swift */; };
+		234ABAB5CB49F9D99DEAABCD /* UpdateApplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE08F99AD400349DC5358B93 /* UpdateApplyModel.swift */; };
+		245C89ED6A9EB6841BCDF33F /* PHPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC49A904B1039DEEA0E684B /* PHPModel.swift */; };
+		2A425FA4C5BB94E342795306 /* MenuBarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA53DBC7ABAD522920565C8 /* MenuBarLabel.swift */; };
+		2A59C7E37465D3786E580588 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC665AEC43A1364C2E71ED /* main.swift */; };
+		2FA452AE4E65D37C4246D4C5 /* ImportDatabaseStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF6A26A011519D0F752D00 /* ImportDatabaseStep.swift */; };
+		306074AD5B8F1E61B409038F /* ElasticsearchSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65570623912D753C386D806 /* ElasticsearchSettingsSection.swift */; };
+		36131ECEC373CD88B2EEE22A /* VhostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D361D95A937CEA732AE4927C /* VhostRow.swift */; };
+		387F97C698460327FA9EE19B /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D97AD80037C131A0FC72F /* AppUpdater.swift */; };
+		389B27B564248E8E51E9F615 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 79BBD17F41FD6E9958C5E081 /* AppIcon.icon */; };
+		46774654449840850C9C9BEB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E87553F0600A73B7EDA6D8 /* SettingsView.swift */; };
+		478803450065B4CDEE976607 /* ServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A57E724ECB8C0FE1AF2581 /* ServiceRow.swift */; };
+		4A7F3B92ABFC2AD2C98572B7 /* MenuServicesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF88DCD5F7298E0682B8C01 /* MenuServicesSection.swift */; };
+		5194F3051BEF8A2A973896C3 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88434C0E2E641DF6C25CFE24 /* AppModel.swift */; };
+		58CFBA70FFD1ADCCFFCF91C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C32A45FE68AC5A0815F98E2 /* Assets.xcassets */; };
+		5BC00C659AD8F90B493D49D1 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D182CD8829B26939E43B11 /* SettingsModel.swift */; };
+		63B1DBFA204D769F715288C2 /* TerminalSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C39A53E782DD3C4D59E18 /* TerminalSettingsSection.swift */; };
+		659E79FA23361E1632CD1860 /* VhostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282C03709FF8891F80246B0 /* VhostsView.swift */; };
+		67806043C4B15A9312AC491F /* VhostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B802DBDE452983E045895AFB /* VhostsModel.swift */; };
+		6A13CC1AF128741FB98D3F45 /* PackageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D5B6467C4E233E396A08E /* PackageProgressView.swift */; };
+		6A6287278947AB7EDAF3E118 /* IniEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1CA21E6E0C5688F894D60 /* IniEditorView.swift */; };
+		6BC907A18B27554858F0AB59 /* RAMPCore in Frameworks */ = {isa = PBXBuildFile; productRef = BDFAE413FF6B3AA0AADD3A1C /* RAMPCore */; };
+		6BC929E2DFE69C14638063EF /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2048781F6E66D6E033E7FFB /* DatabaseModel.swift */; };
+		6C9A669EFA115CED20796D0F /* UninstallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF23C663CB482967163C5F1 /* UninstallModel.swift */; };
+		6D9A26EB4DD2B41367B5325F /* RAMPHostsKit in Frameworks */ = {isa = PBXBuildFile; productRef = B0277A51C5D1EBA499ED998C /* RAMPHostsKit */; };
+		7EEDA20B3BC93B7AF7789DAA /* DockPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15690140B3B1473D36FFDDEA /* DockPolicy.swift */; };
+		8264713BAA49075A8BFF7014 /* ImportWizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D778AE8A2DA71EBAB5E9C /* ImportWizardView.swift */; };
+		8673FD74F2124EA83E24C614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4135089CC05C3BFFED2A2D19 /* AppDelegate.swift */; };
+		89438EDA563B1B9C627E6D19 /* THIRD_PARTY_LICENSES.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE2C9E8EC00AE9CD8C41FD /* THIRD_PARTY_LICENSES.md */; };
+		9B237265C4AC2DD2DF4AD80F /* ElasticsearchServiceViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD096746FF87AF416FC3EF /* ElasticsearchServiceViews.swift */; };
+		9CE77356FAF6E4D50CBA7644 /* MenuBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29593020306C43C28BB16177 /* MenuBarContent.swift */; };
+		9F430631B472A7AD989AEA78 /* RedisBrowserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E008567F07947C6B67B2363B /* RedisBrowserModel.swift */; };
+		A4D8AD51C448D1621611E5CB /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9CADA7577E0A7E9E7D04 /* AppLanguage.swift */; };
+		B1F2AC2D98A4E42F0D68EA80 /* LogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8004119E21648DEB97EB8C /* LogsModel.swift */; };
+		B6CC03659B883D1E259B6049 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5660975E3D85D4014692C67E /* Localizable.xcstrings */; };
+		B905C4F109CA718339D7A981 /* RAMPHostsHelper in Embed Dependencies */ = {isa = PBXBuildFile; fileRef = 7FB3742335D88ADC7658D274 /* RAMPHostsHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA93A7C6EEAA2DD25422DF17 /* TerminalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31A1E0A31789ED64817A31 /* TerminalModel.swift */; };
+		BAA0C39EADB17F13E59826C9 /* ProjectOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD23A7C51F2A8EB87BCE6899 /* ProjectOpener.swift */; };
+		BB1E2EFAE02D32B1663A8560 /* ImportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E22C7C3B674657B97FF8D /* ImportModel.swift */; };
+		BD5858864A917F8910DBF5F9 /* ServicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E71096A0153B42DDB016FE /* ServicesModel.swift */; };
+		C013BD1CBB2E0E4E7C67A008 /* UpdatesSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F359D5A90FB90C004E1D948 /* UpdatesSettingsSection.swift */; };
+		C5DC94FBC37625C0EE3CEA14 /* DatabaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC186194E0CA53EFA8BE5C58 /* DatabaseView.swift */; };
+		C9548946FFE7EAB08C29F316 /* ImportElasticsearchStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224043DBD44EE30181F54A7 /* ImportElasticsearchStep.swift */; };
+		CFDA26B4304E3F8F8B9FAFBF /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = F8648B2C2E54D76EEA6CD7E5 /* Sparkle */; };
+		D23DECB4F18919606BB9410F /* MenuUpdateNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E54CF7A252C327F820D57 /* MenuUpdateNotes.swift */; };
+		D58E4F05AE6E3B4552D54DDE /* sk.tyron.ramp.hostshelper.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 441E4544407CD537EBB8F817 /* sk.tyron.ramp.hostshelper.plist */; };
+		D866B5494EDB4EC6B2D6A2DA /* UninstallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46FDC403B4500A4FBC8C2F0 /* UninstallView.swift */; };
+		D8D30373CBA3E187EED487B8 /* HostsStatusBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA993698314A005A428865A /* HostsStatusBanner.swift */; };
+		DB75237FE1CA4176CD72C8A0 /* VhostEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5208490DCF0F1350CFC5E5 /* VhostEditorSheet.swift */; };
+		DBB9B1C71AA9C3893FB0D5E9 /* StatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BA4C624E48F573638B3A9 /* StatusBadge.swift */; };
+		DEC3E7BA096F00636952B299 /* LoginItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F0308D24587EC0D3B37DA1 /* LoginItem.swift */; };
+		DED11F2597B9E79CE4EEF0E2 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383BDE79DE61B7110B351C1 /* LogsView.swift */; };
+		E04A24D7278999E5C175982F /* HelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33451E6B40FE0E74E467E3B8 /* HelperService.swift */; };
+		E59665F4B10FA4788EA98897 /* HostsHelperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC7BF843667D8BF9EDA207 /* HostsHelperModel.swift */; };
+		E88815F8192A7F2555E19D92 /* UpdatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57E867AB267C3688DE9D6A4 /* UpdatesModel.swift */; };
+		ECA6EFF252744C634CF385C3 /* RAMPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E572C97FB73216366B9FDF /* RAMPApp.swift */; };
+		F066C3640BA2A333E5AB97D4 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3AEA238287FA087C99E10 /* ErrorBanner.swift */; };
+		F5E20C152D6AE538A26D04D4 /* ImportVhostsStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38A79834F414EC89A42998 /* ImportVhostsStep.swift */; };
+		FAB7FA9D322A512FB2F2B8BF /* SidebarSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A425B2B945E17D527A5BF8 /* SidebarSection.swift */; };
+		FAC9FC75774F12950BBA8E95 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E8142EDD70AB486496AFD /* MainWindow.swift */; };
+		FD52E63DC2D4F4B711EE5F29 /* PHPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FF3A5E1895A5A246BE3A4 /* PHPView.swift */; };
+		FDE88B43310569E0B6762D7B /* ElasticsearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC33F38CF1F92F9F3E2CED /* ElasticsearchModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E386A74805436FA6ECC2AF26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25068D15861B9193C06E365B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAE95B465C7C07AFF390B688;
+			remoteInfo = RAMPHostsHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A08C5E5241CE3557DDA0A20 /* Embed Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				B905C4F109CA718339D7A981 /* RAMPHostsHelper in Embed Dependencies */,
+			);
+			name = "Embed Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9937D9909D8ACE066A5226 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchDaemons;
+			dstSubfolderSpec = 1;
+			files = (
+				D58E4F05AE6E3B4552D54DDE /* sk.tyron.ramp.hostshelper.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07CF168056D22FA838B27F62 /* Distribution.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Distribution.xcconfig; sourceTree = "<group>"; };
+		0E8D5B6467C4E233E396A08E /* PackageProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageProgressView.swift; sourceTree = "<group>"; };
+		15690140B3B1473D36FFDDEA /* DockPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockPolicy.swift; sourceTree = "<group>"; };
+		175C39A53E782DD3C4D59E18 /* TerminalSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalSettingsSection.swift; sourceTree = "<group>"; };
+		19AE9CADA7577E0A7E9E7D04 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
+		1C38A79834F414EC89A42998 /* ImportVhostsStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportVhostsStep.swift; sourceTree = "<group>"; };
+		22A1CA21E6E0C5688F894D60 /* IniEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniEditorView.swift; sourceTree = "<group>"; };
+		279E54CF7A252C327F820D57 /* MenuUpdateNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUpdateNotes.swift; sourceTree = "<group>"; };
+		29593020306C43C28BB16177 /* MenuBarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContent.swift; sourceTree = "<group>"; };
+		2BA993698314A005A428865A /* HostsStatusBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsStatusBanner.swift; sourceTree = "<group>"; };
+		2F359D5A90FB90C004E1D948 /* UpdatesSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesSettingsSection.swift; sourceTree = "<group>"; };
+		33451E6B40FE0E74E467E3B8 /* HelperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperService.swift; sourceTree = "<group>"; };
+		3D5208490DCF0F1350CFC5E5 /* VhostEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VhostEditorSheet.swift; sourceTree = "<group>"; };
+		4135089CC05C3BFFED2A2D19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		441E4544407CD537EBB8F817 /* sk.tyron.ramp.hostshelper.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = sk.tyron.ramp.hostshelper.plist; sourceTree = "<group>"; };
+		4BF23C663CB482967163C5F1 /* UninstallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UninstallModel.swift; sourceTree = "<group>"; };
+		51EAACDEF699EBBB8F201B49 /* RAMPCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RAMPCore; path = Packages/RAMPCore; sourceTree = SOURCE_ROOT; };
+		5224043DBD44EE30181F54A7 /* ImportElasticsearchStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportElasticsearchStep.swift; sourceTree = "<group>"; };
+		5660975E3D85D4014692C67E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		58BA3617E1A3338F5EAB5CD8 /* PHPBranchDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPBranchDetail.swift; sourceTree = "<group>"; };
+		5BA3AACE47E4031BE6FC7125 /* RAMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF88DCD5F7298E0682B8C01 /* MenuServicesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServicesSection.swift; sourceTree = "<group>"; };
+		644D7B4F1DBDE5E39428F7DB /* IniOverrideSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniOverrideSheet.swift; sourceTree = "<group>"; };
+		6AD3AEA238287FA087C99E10 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
+		71DC33F38CF1F92F9F3E2CED /* ElasticsearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticsearchModel.swift; sourceTree = "<group>"; };
+		740FF3A5E1895A5A246BE3A4 /* PHPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPView.swift; sourceTree = "<group>"; };
+		74FF6A26A011519D0F752D00 /* ImportDatabaseStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDatabaseStep.swift; sourceTree = "<group>"; };
+		79BBD17F41FD6E9958C5E081 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		7C32A45FE68AC5A0815F98E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CA53DBC7ABAD522920565C8 /* MenuBarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarLabel.swift; sourceTree = "<group>"; };
+		7EE081BC90DAF6A7920B4DD3 /* MenuVhostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVhostList.swift; sourceTree = "<group>"; };
+		7FB3742335D88ADC7658D274 /* RAMPHostsHelper */ = {isa = PBXFileReference; includeInIndex = 0; path = RAMPHostsHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		814D612E74EFEF4E9ABBB871 /* MenuQuickActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuQuickActions.swift; sourceTree = "<group>"; };
+		826E8142EDD70AB486496AFD /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		84E572C97FB73216366B9FDF /* RAMPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMPApp.swift; sourceTree = "<group>"; };
+		85E87553F0600A73B7EDA6D8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		86AC7BF843667D8BF9EDA207 /* HostsHelperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsHelperModel.swift; sourceTree = "<group>"; };
+		87F0308D24587EC0D3B37DA1 /* LoginItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItem.swift; sourceTree = "<group>"; };
+		88434C0E2E641DF6C25CFE24 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		88811D1CAB65A8E4F59A6E8F /* RedisBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedisBrowserView.swift; sourceTree = "<group>"; };
+		8F18ABD4D3CF33BF2649181D /* HelperSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperSettingsSection.swift; sourceTree = "<group>"; };
+		8FA35137060BDD9C9C8C5E9B /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
+		8FCE2C9E8EC00AE9CD8C41FD /* THIRD_PARTY_LICENSES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = THIRD_PARTY_LICENSES.md; sourceTree = "<group>"; };
+		9282C03709FF8891F80246B0 /* VhostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VhostsView.swift; sourceTree = "<group>"; };
+		93A57E724ECB8C0FE1AF2581 /* ServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRow.swift; sourceTree = "<group>"; };
+		96E71096A0153B42DDB016FE /* ServicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesModel.swift; sourceTree = "<group>"; };
+		9E9D97AD80037C131A0FC72F /* AppUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdater.swift; sourceTree = "<group>"; };
+		9EC49A904B1039DEEA0E684B /* PHPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPModel.swift; sourceTree = "<group>"; };
+		A2048781F6E66D6E033E7FFB /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
+		A509F2C53E68BA5B43617CF1 /* RAMP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RAMP.entitlements; sourceTree = "<group>"; };
+		A57E867AB267C3688DE9D6A4 /* UpdatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesModel.swift; sourceTree = "<group>"; };
+		A65570623912D753C386D806 /* ElasticsearchSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticsearchSettingsSection.swift; sourceTree = "<group>"; };
+		AE08F99AD400349DC5358B93 /* UpdateApplyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateApplyModel.swift; sourceTree = "<group>"; };
+		B802DBDE452983E045895AFB /* VhostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VhostsModel.swift; sourceTree = "<group>"; };
+		BA31A1E0A31789ED64817A31 /* TerminalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalModel.swift; sourceTree = "<group>"; };
+		C1A425B2B945E17D527A5BF8 /* SidebarSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarSection.swift; sourceTree = "<group>"; };
+		C37BA4C624E48F573638B3A9 /* StatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadge.swift; sourceTree = "<group>"; };
+		CC186194E0CA53EFA8BE5C58 /* DatabaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseView.swift; sourceTree = "<group>"; };
+		D07E22C7C3B674657B97FF8D /* ImportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportModel.swift; sourceTree = "<group>"; };
+		D30D778AE8A2DA71EBAB5E9C /* ImportWizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportWizardView.swift; sourceTree = "<group>"; };
+		D361D95A937CEA732AE4927C /* VhostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VhostRow.swift; sourceTree = "<group>"; };
+		D46FDC403B4500A4FBC8C2F0 /* UninstallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UninstallView.swift; sourceTree = "<group>"; };
+		D5D182CD8829B26939E43B11 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		D66429173B4B8AA13153B8BD /* ScreenshotMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotMode.swift; sourceTree = "<group>"; };
+		DD23A7C51F2A8EB87BCE6899 /* ProjectOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectOpener.swift; sourceTree = "<group>"; };
+		E008567F07947C6B67B2363B /* RedisBrowserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedisBrowserModel.swift; sourceTree = "<group>"; };
+		EA1E24BB8999C6AA5B2F2520 /* SigningInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningInfo.swift; sourceTree = "<group>"; };
+		F2FD096746FF87AF416FC3EF /* ElasticsearchServiceViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticsearchServiceViews.swift; sourceTree = "<group>"; };
+		F383BDE79DE61B7110B351C1 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
+		F43542DD02AF0570B961D12F /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		F6FC665AEC43A1364C2E71ED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FE8004119E21648DEB97EB8C /* LogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFCEF59DBC6BB9051407D6A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D9A26EB4DD2B41367B5325F /* RAMPHostsKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5837BCF8A004E6A79C5028 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC907A18B27554858F0AB59 /* RAMPCore in Frameworks */,
+				CFDA26B4304E3F8F8B9FAFBF /* Sparkle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03B6E78442594CBCCDEDAB1E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				51EAACDEF699EBBB8F201B49 /* RAMPCore */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		044B73FA545BADC8FD0D43B0 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				29593020306C43C28BB16177 /* MenuBarContent.swift */,
+				7CA53DBC7ABAD522920565C8 /* MenuBarLabel.swift */,
+				814D612E74EFEF4E9ABBB871 /* MenuQuickActions.swift */,
+				5DF88DCD5F7298E0682B8C01 /* MenuServicesSection.swift */,
+				279E54CF7A252C327F820D57 /* MenuUpdateNotes.swift */,
+				7EE081BC90DAF6A7920B4DD3 /* MenuVhostList.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		09DF4C5282BC5AA553475D13 /* RAMPHostsHelper */ = {
+			isa = PBXGroup;
+			children = (
+				33451E6B40FE0E74E467E3B8 /* HelperService.swift */,
+				F6FC665AEC43A1364C2E71ED /* main.swift */,
+				EA1E24BB8999C6AA5B2F2520 /* SigningInfo.swift */,
+			);
+			path = RAMPHostsHelper;
+			sourceTree = "<group>";
+		};
+		121BAC10B158C5C82F3EEA8F /* RAMP */ = {
+			isa = PBXGroup;
+			children = (
+				4135089CC05C3BFFED2A2D19 /* AppDelegate.swift */,
+				79BBD17F41FD6E9958C5E081 /* AppIcon.icon */,
+				7C32A45FE68AC5A0815F98E2 /* Assets.xcassets */,
+				07CF168056D22FA838B27F62 /* Distribution.xcconfig */,
+				5660975E3D85D4014692C67E /* Localizable.xcstrings */,
+				A509F2C53E68BA5B43617CF1 /* RAMP.entitlements */,
+				84E572C97FB73216366B9FDF /* RAMPApp.swift */,
+				CA13587F9D513731E95D668D /* Debug */,
+				53D66E2EEAA8F0B37FEE91A8 /* LaunchDaemons */,
+				044B73FA545BADC8FD0D43B0 /* MenuBar */,
+				CECE5FD9D3FF2B0B170512DA /* Model */,
+				C3E895A1ADDF1890AC5E0FDD /* Support */,
+				9E4450693553316BFC72A0D6 /* Updates */,
+				35AFA961CF5E68B560AF9FD9 /* Views */,
+			);
+			path = RAMP;
+			sourceTree = "<group>";
+		};
+		1807C0E9021564CF86B826F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F2FD096746FF87AF416FC3EF /* ElasticsearchServiceViews.swift */,
+				93A57E724ECB8C0FE1AF2581 /* ServiceRow.swift */,
+				8FA35137060BDD9C9C8C5E9B /* ServicesView.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2EBA315DBFCBBC00C6623AD0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3AEA238287FA087C99E10 /* ErrorBanner.swift */,
+				0E8D5B6467C4E233E396A08E /* PackageProgressView.swift */,
+				C37BA4C624E48F573638B3A9 /* StatusBadge.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		35AFA961CF5E68B560AF9FD9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				826E8142EDD70AB486496AFD /* MainWindow.swift */,
+				C1A425B2B945E17D527A5BF8 /* SidebarSection.swift */,
+				2EBA315DBFCBBC00C6623AD0 /* Common */,
+				B69E06EFE835238D9ED25F49 /* Database */,
+				D6EEA547343AD70D482155BA /* Import */,
+				5A7D11E4481A2EA3363BD403 /* Logs */,
+				4CECE05CC3E5095C3FC999C9 /* PHP */,
+				1807C0E9021564CF86B826F1 /* Services */,
+				F209403636ED1CE809414B4A /* Settings */,
+				82E089CA415D6DB120632383 /* Vhosts */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3936B13E704E1FCC947AE8AA /* RAMP */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE2C9E8EC00AE9CD8C41FD /* THIRD_PARTY_LICENSES.md */,
+			);
+			name = RAMP;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4CECE05CC3E5095C3FC999C9 /* PHP */ = {
+			isa = PBXGroup;
+			children = (
+				22A1CA21E6E0C5688F894D60 /* IniEditorView.swift */,
+				644D7B4F1DBDE5E39428F7DB /* IniOverrideSheet.swift */,
+				58BA3617E1A3338F5EAB5CD8 /* PHPBranchDetail.swift */,
+				740FF3A5E1895A5A246BE3A4 /* PHPView.swift */,
+			);
+			path = PHP;
+			sourceTree = "<group>";
+		};
+		53D66E2EEAA8F0B37FEE91A8 /* LaunchDaemons */ = {
+			isa = PBXGroup;
+			children = (
+				441E4544407CD537EBB8F817 /* sk.tyron.ramp.hostshelper.plist */,
+			);
+			path = LaunchDaemons;
+			sourceTree = "<group>";
+		};
+		5A7D11E4481A2EA3363BD403 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				F383BDE79DE61B7110B351C1 /* LogsView.swift */,
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
+		82E089CA415D6DB120632383 /* Vhosts */ = {
+			isa = PBXGroup;
+			children = (
+				2BA993698314A005A428865A /* HostsStatusBanner.swift */,
+				3D5208490DCF0F1350CFC5E5 /* VhostEditorSheet.swift */,
+				D361D95A937CEA732AE4927C /* VhostRow.swift */,
+				9282C03709FF8891F80246B0 /* VhostsView.swift */,
+			);
+			path = Vhosts;
+			sourceTree = "<group>";
+		};
+		9C08579D7C4D66FB05A1A6A2 = {
+			isa = PBXGroup;
+			children = (
+				03B6E78442594CBCCDEDAB1E /* Packages */,
+				121BAC10B158C5C82F3EEA8F /* RAMP */,
+				3936B13E704E1FCC947AE8AA /* RAMP */,
+				09DF4C5282BC5AA553475D13 /* RAMPHostsHelper */,
+				FADE830804F0FB481C0AFB6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E4450693553316BFC72A0D6 /* Updates */ = {
+			isa = PBXGroup;
+			children = (
+				9E9D97AD80037C131A0FC72F /* AppUpdater.swift */,
+			);
+			path = Updates;
+			sourceTree = "<group>";
+		};
+		B69E06EFE835238D9ED25F49 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				CC186194E0CA53EFA8BE5C58 /* DatabaseView.swift */,
+				88811D1CAB65A8E4F59A6E8F /* RedisBrowserView.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		C3E895A1ADDF1890AC5E0FDD /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				19AE9CADA7577E0A7E9E7D04 /* AppLanguage.swift */,
+				15690140B3B1473D36FFDDEA /* DockPolicy.swift */,
+				87F0308D24587EC0D3B37DA1 /* LoginItem.swift */,
+				DD23A7C51F2A8EB87BCE6899 /* ProjectOpener.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		CA13587F9D513731E95D668D /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				F43542DD02AF0570B961D12F /* DemoData.swift */,
+				D66429173B4B8AA13153B8BD /* ScreenshotMode.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		CECE5FD9D3FF2B0B170512DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88434C0E2E641DF6C25CFE24 /* AppModel.swift */,
+				A2048781F6E66D6E033E7FFB /* DatabaseModel.swift */,
+				71DC33F38CF1F92F9F3E2CED /* ElasticsearchModel.swift */,
+				86AC7BF843667D8BF9EDA207 /* HostsHelperModel.swift */,
+				D07E22C7C3B674657B97FF8D /* ImportModel.swift */,
+				FE8004119E21648DEB97EB8C /* LogsModel.swift */,
+				9EC49A904B1039DEEA0E684B /* PHPModel.swift */,
+				E008567F07947C6B67B2363B /* RedisBrowserModel.swift */,
+				96E71096A0153B42DDB016FE /* ServicesModel.swift */,
+				D5D182CD8829B26939E43B11 /* SettingsModel.swift */,
+				BA31A1E0A31789ED64817A31 /* TerminalModel.swift */,
+				4BF23C663CB482967163C5F1 /* UninstallModel.swift */,
+				AE08F99AD400349DC5358B93 /* UpdateApplyModel.swift */,
+				A57E867AB267C3688DE9D6A4 /* UpdatesModel.swift */,
+				B802DBDE452983E045895AFB /* VhostsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6EEA547343AD70D482155BA /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				74FF6A26A011519D0F752D00 /* ImportDatabaseStep.swift */,
+				5224043DBD44EE30181F54A7 /* ImportElasticsearchStep.swift */,
+				1C38A79834F414EC89A42998 /* ImportVhostsStep.swift */,
+				D30D778AE8A2DA71EBAB5E9C /* ImportWizardView.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		F209403636ED1CE809414B4A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A65570623912D753C386D806 /* ElasticsearchSettingsSection.swift */,
+				8F18ABD4D3CF33BF2649181D /* HelperSettingsSection.swift */,
+				85E87553F0600A73B7EDA6D8 /* SettingsView.swift */,
+				175C39A53E782DD3C4D59E18 /* TerminalSettingsSection.swift */,
+				D46FDC403B4500A4FBC8C2F0 /* UninstallView.swift */,
+				2F359D5A90FB90C004E1D948 /* UpdatesSettingsSection.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FADE830804F0FB481C0AFB6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BA3AACE47E4031BE6FC7125 /* RAMP.app */,
+				7FB3742335D88ADC7658D274 /* RAMPHostsHelper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89CD5122D187ED525350D1CE /* RAMP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82B46BD99C69142812465DD7 /* Build configuration list for PBXNativeTarget "RAMP" */;
+			buildPhases = (
+				6F397C11B97D14FACA2BDA79 /* Sources */,
+				D1166043EA8D4FAE2AEAE811 /* Resources */,
+				BC9937D9909D8ACE066A5226 /* CopyFiles */,
+				FE5837BCF8A004E6A79C5028 /* Frameworks */,
+				5A08C5E5241CE3557DDA0A20 /* Embed Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				318607DC8B67EA11F982A34C /* PBXTargetDependency */,
+			);
+			name = RAMP;
+			packageProductDependencies = (
+				BDFAE413FF6B3AA0AADD3A1C /* RAMPCore */,
+				F8648B2C2E54D76EEA6CD7E5 /* Sparkle */,
+			);
+			productName = RAMP;
+			productReference = 5BA3AACE47E4031BE6FC7125 /* RAMP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAE95B465C7C07AFF390B688 /* RAMPHostsHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67FAC7C464AEF22A09457015 /* Build configuration list for PBXNativeTarget "RAMPHostsHelper" */;
+			buildPhases = (
+				1D570AE69E539ED19188CC07 /* Sources */,
+				BFCEF59DBC6BB9051407D6A0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RAMPHostsHelper;
+			packageProductDependencies = (
+				B0277A51C5D1EBA499ED998C /* RAMPHostsKit */,
+			);
+			productName = RAMPHostsHelper;
+			productReference = 7FB3742335D88ADC7658D274 /* RAMPHostsHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25068D15861B9193C06E365B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					89CD5122D187ED525350D1CE = {
+						DevelopmentTeam = S25RFUK37U;
+					};
+					CAE95B465C7C07AFF390B688 = {
+						DevelopmentTeam = S25RFUK37U;
+					};
+				};
+			};
+			buildConfigurationList = C7D34C352811339525BBFF91 /* Build configuration list for PBXProject "RAMP" */;
+			developmentRegion = sk;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				sk,
+			);
+			mainGroup = 9C08579D7C4D66FB05A1A6A2;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				72D6193741FB991761F81EBA /* XCRemoteSwiftPackageReference "Sparkle" */,
+				11901F30DB8C9EE083F96F25 /* XCLocalSwiftPackageReference "Packages/RAMPCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FADE830804F0FB481C0AFB6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89CD5122D187ED525350D1CE /* RAMP */,
+				CAE95B465C7C07AFF390B688 /* RAMPHostsHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1166043EA8D4FAE2AEAE811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				389B27B564248E8E51E9F615 /* AppIcon.icon in Resources */,
+				58CFBA70FFD1ADCCFFCF91C2 /* Assets.xcassets in Resources */,
+				B6CC03659B883D1E259B6049 /* Localizable.xcstrings in Resources */,
+				89438EDA563B1B9C627E6D19 /* THIRD_PARTY_LICENSES.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D570AE69E539ED19188CC07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E04A24D7278999E5C175982F /* HelperService.swift in Sources */,
+				0B704127B36D2E63DF6242E8 /* SigningInfo.swift in Sources */,
+				2A59C7E37465D3786E580588 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F397C11B97D14FACA2BDA79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8673FD74F2124EA83E24C614 /* AppDelegate.swift in Sources */,
+				A4D8AD51C448D1621611E5CB /* AppLanguage.swift in Sources */,
+				5194F3051BEF8A2A973896C3 /* AppModel.swift in Sources */,
+				387F97C698460327FA9EE19B /* AppUpdater.swift in Sources */,
+				6BC929E2DFE69C14638063EF /* DatabaseModel.swift in Sources */,
+				C5DC94FBC37625C0EE3CEA14 /* DatabaseView.swift in Sources */,
+				16E3752A244C53857D37F7D5 /* DemoData.swift in Sources */,
+				7EEDA20B3BC93B7AF7789DAA /* DockPolicy.swift in Sources */,
+				FDE88B43310569E0B6762D7B /* ElasticsearchModel.swift in Sources */,
+				9B237265C4AC2DD2DF4AD80F /* ElasticsearchServiceViews.swift in Sources */,
+				306074AD5B8F1E61B409038F /* ElasticsearchSettingsSection.swift in Sources */,
+				F066C3640BA2A333E5AB97D4 /* ErrorBanner.swift in Sources */,
+				20D888166E067A9EA2611DC8 /* HelperSettingsSection.swift in Sources */,
+				E59665F4B10FA4788EA98897 /* HostsHelperModel.swift in Sources */,
+				D8D30373CBA3E187EED487B8 /* HostsStatusBanner.swift in Sources */,
+				2FA452AE4E65D37C4246D4C5 /* ImportDatabaseStep.swift in Sources */,
+				C9548946FFE7EAB08C29F316 /* ImportElasticsearchStep.swift in Sources */,
+				BB1E2EFAE02D32B1663A8560 /* ImportModel.swift in Sources */,
+				F5E20C152D6AE538A26D04D4 /* ImportVhostsStep.swift in Sources */,
+				8264713BAA49075A8BFF7014 /* ImportWizardView.swift in Sources */,
+				6A6287278947AB7EDAF3E118 /* IniEditorView.swift in Sources */,
+				0CF0CA3EDF8D10A205BD6B22 /* IniOverrideSheet.swift in Sources */,
+				DEC3E7BA096F00636952B299 /* LoginItem.swift in Sources */,
+				B1F2AC2D98A4E42F0D68EA80 /* LogsModel.swift in Sources */,
+				DED11F2597B9E79CE4EEF0E2 /* LogsView.swift in Sources */,
+				FAC9FC75774F12950BBA8E95 /* MainWindow.swift in Sources */,
+				9CE77356FAF6E4D50CBA7644 /* MenuBarContent.swift in Sources */,
+				2A425FA4C5BB94E342795306 /* MenuBarLabel.swift in Sources */,
+				1D8AF4A285F19D550E640491 /* MenuQuickActions.swift in Sources */,
+				4A7F3B92ABFC2AD2C98572B7 /* MenuServicesSection.swift in Sources */,
+				D23DECB4F18919606BB9410F /* MenuUpdateNotes.swift in Sources */,
+				1BD7552CEEC0DDFCC5CF4488 /* MenuVhostList.swift in Sources */,
+				210402109169CAF57335E313 /* PHPBranchDetail.swift in Sources */,
+				245C89ED6A9EB6841BCDF33F /* PHPModel.swift in Sources */,
+				FD52E63DC2D4F4B711EE5F29 /* PHPView.swift in Sources */,
+				6A13CC1AF128741FB98D3F45 /* PackageProgressView.swift in Sources */,
+				BAA0C39EADB17F13E59826C9 /* ProjectOpener.swift in Sources */,
+				ECA6EFF252744C634CF385C3 /* RAMPApp.swift in Sources */,
+				9F430631B472A7AD989AEA78 /* RedisBrowserModel.swift in Sources */,
+				07AAA0CC0BE71D9D0122CBCF /* RedisBrowserView.swift in Sources */,
+				0C8DDA5A4CA31A65ACE7BAD3 /* ScreenshotMode.swift in Sources */,
+				478803450065B4CDEE976607 /* ServiceRow.swift in Sources */,
+				BD5858864A917F8910DBF5F9 /* ServicesModel.swift in Sources */,
+				0219E97CF440564AF3384019 /* ServicesView.swift in Sources */,
+				5BC00C659AD8F90B493D49D1 /* SettingsModel.swift in Sources */,
+				46774654449840850C9C9BEB /* SettingsView.swift in Sources */,
+				FAB7FA9D322A512FB2F2B8BF /* SidebarSection.swift in Sources */,
+				DBB9B1C71AA9C3893FB0D5E9 /* StatusBadge.swift in Sources */,
+				BA93A7C6EEAA2DD25422DF17 /* TerminalModel.swift in Sources */,
+				63B1DBFA204D769F715288C2 /* TerminalSettingsSection.swift in Sources */,
+				6C9A669EFA115CED20796D0F /* UninstallModel.swift in Sources */,
+				D866B5494EDB4EC6B2D6A2DA /* UninstallView.swift in Sources */,
+				234ABAB5CB49F9D99DEAABCD /* UpdateApplyModel.swift in Sources */,
+				E88815F8192A7F2555E19D92 /* UpdatesModel.swift in Sources */,
+				C013BD1CBB2E0E4E7C67A008 /* UpdatesSettingsSection.swift in Sources */,
+				DB75237FE1CA4176CD72C8A0 /* VhostEditorSheet.swift in Sources */,
+				36131ECEC373CD88B2EEE22A /* VhostRow.swift in Sources */,
+				67806043C4B15A9312AC491F /* VhostsModel.swift in Sources */,
+				659E79FA23361E1632CD1860 /* VhostsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		318607DC8B67EA11F982A34C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAE95B465C7C07AFF390B688 /* RAMPHostsHelper */;
+			targetProxy = E386A74805436FA6ECC2AF26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		26F24F07987791B6CE647C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S25RFUK37U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6;
+				VALID_ARCHS = arm64;
+			};
+			name = Release;
+		};
+		3316E28FB7C3135373CF3C38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RAMPHostsHelper/RAMPHostsHelper.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = RAMPHostsHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sk.tyron.ramp.hostshelper;
+				PRODUCT_NAME = sk.tyron.ramp.hostshelper;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		486B7ECA3E84435EDF67C185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CF168056D22FA838B27F62 /* Distribution.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RAMP/RAMP.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "$(RAMP_BUILD_NUMBER)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RAMP/Info.plist;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Tyron s.r.o.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sk.tyron.ramp;
+				PRODUCT_NAME = RAMP;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		6C6F1B1168CD11FFE4B31B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S25RFUK37U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6;
+				VALID_ARCHS = arm64;
+			};
+			name = Debug;
+		};
+		CF77E7370ABB73A34A9C9F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RAMPHostsHelper/RAMPHostsHelper.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = RAMPHostsHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sk.tyron.ramp.hostshelper;
+				PRODUCT_NAME = sk.tyron.ramp.hostshelper;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D9ADDD9E5AFB54C0D2052292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CF168056D22FA838B27F62 /* Distribution.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RAMP/RAMP.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "$(RAMP_BUILD_NUMBER)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RAMP/Info.plist;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Tyron s.r.o.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sk.tyron.ramp;
+				PRODUCT_NAME = RAMP;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67FAC7C464AEF22A09457015 /* Build configuration list for PBXNativeTarget "RAMPHostsHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3316E28FB7C3135373CF3C38 /* Debug */,
+				CF77E7370ABB73A34A9C9F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		82B46BD99C69142812465DD7 /* Build configuration list for PBXNativeTarget "RAMP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9ADDD9E5AFB54C0D2052292 /* Debug */,
+				486B7ECA3E84435EDF67C185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C7D34C352811339525BBFF91 /* Build configuration list for PBXProject "RAMP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C6F1B1168CD11FFE4B31B52 /* Debug */,
+				26F24F07987791B6CE647C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		11901F30DB8C9EE083F96F25 /* XCLocalSwiftPackageReference "Packages/RAMPCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/RAMPCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72D6193741FB991761F81EBA /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = exactVersion;
+				version = 2.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0277A51C5D1EBA499ED998C /* RAMPHostsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RAMPHostsKit;
+		};
+		BDFAE413FF6B3AA0AADD3A1C /* RAMPCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RAMPCore;
+		};
+		F8648B2C2E54D76EEA6CD7E5 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72D6193741FB991761F81EBA /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 25068D15861B9193C06E365B /* Project object */;
+}

@@ -1,0 +1,26 @@
+# PHP 7.3.33 — build/libtool.m4: the bundled (libtool 1.5-era) darwin case only knows
+# MACOSX_DEPLOYMENT_TARGET 10.x. With 27.0 allow_undefined_flag stays empty, so every shared
+# extension (opcache.so here, and every phpize-built PECL ext later) fails to link with
+# "symbol(s) not found" for symbols provided by the php binary. Treat 11+ like 10.3+
+# (-undefined dynamic_lookup), as newer libtool does.
+# Source: RAMP-original. Requires ./buildconf --force (also installed into lib/php/build for phpize).
+--- a/build/libtool.m4
++++ b/build/libtool.m4
+@@ -340,7 +340,7 @@
+      _lt_dar_allow_undefined='${wl}-undefined ${wl}dynamic_lookup' ;;
+    10.[[012]]*)
+      _lt_dar_allow_undefined='${wl}-flat_namespace ${wl}-undefined ${wl}suppress' ;;
+-   10.*)
++   10.*|1[[1-9]]*|[[2-9]][[0-9]]*)
+      _lt_dar_allow_undefined='${wl}-undefined ${wl}dynamic_lookup' ;;
+       esac
+     ;;
+@@ -5799,7 +5799,7 @@
+              10.[[012]])
+                _LT_AC_TAGVAR(allow_undefined_flag, $1)='${wl}-flat_namespace ${wl}-undefined ${wl}suppress'
+                ;;
+-             10.*)
++             10.*|1[[1-9]]*|[[2-9]][[0-9]]*)
+                _LT_AC_TAGVAR(allow_undefined_flag, $1)='${wl}-undefined ${wl}dynamic_lookup'
+                ;;
+            esac

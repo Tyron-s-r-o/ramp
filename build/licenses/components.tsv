@@ -1,0 +1,55 @@
+# RAMP third-party components — single source for THIRD_PARTY_LICENSES.md (build/third-party-licenses.sh).
+# Every <NAME>_VERSION in build/versions.env MUST have exactly one row here (the generator fails otherwise).
+# Columns (TAB-separated):
+#   version_var  name  spdx  license_name  license_url  source  copyleft  distribution  note
+#   source: "@" = the pinned source tarball (<NAME>_URL in versions.env); otherwise a URL template where
+#           {version} = pinned version, {version_} = version with dots replaced by underscores.
+#   copyleft: yes → "Source code:" link is emitted (GPL/LGPL/AGPL/MPL obligations).
+#   distribution: bundled | downloaded (fetched from upstream at the user's request, never redistributed)
+#   note: free text or "-".
+HTTPD_VERSION	Apache HTTP Server	Apache-2.0	Apache License 2.0	https://www.apache.org/licenses/LICENSE-2.0	@	no	bundled	-
+APR_VERSION	Apache Portable Runtime (APR)	Apache-2.0	Apache License 2.0	https://www.apache.org/licenses/LICENSE-2.0	@	no	bundled	Linked into Apache httpd.
+APR_UTIL_VERSION	APR-util	Apache-2.0	Apache License 2.0	https://www.apache.org/licenses/LICENSE-2.0	@	no	bundled	Linked into Apache httpd.
+PCRE2_VERSION	PCRE2	BSD-3-Clause WITH PCRE2-exception	BSD 3-Clause with PCRE2 binary-like-packages exception	https://github.com/PCRE2Project/pcre2/blob/pcre2-{version}/LICENCE.md	@	no	bundled	Used by Apache httpd and PHP.
+PHP85_VERSION	PHP	PHP-3.01	PHP License 3.01	https://www.php.net/license/3_01.txt	@	no	bundled	Refer to the LICENSE file in the source tarball for the authoritative terms of each branch.
+PHP84_VERSION	PHP	PHP-3.01	PHP License 3.01	https://www.php.net/license/3_01.txt	@	no	bundled	-
+PHP83_VERSION	PHP	PHP-3.01	PHP License 3.01	https://www.php.net/license/3_01.txt	@	no	bundled	-
+PHP82_VERSION	PHP	PHP-3.01	PHP License 3.01	https://www.php.net/license/3_01.txt	@	no	bundled	-
+PHP81_VERSION	PHP	PHP-3.01	PHP License 3.01	https://www.php.net/license/3_01.txt	@	no	bundled	-
+PHP74_VERSION	PHP	PHP-3.01	PHP License 3.01	https://www.php.net/license/3_01.txt	@	no	bundled	Built with RAMP compatibility patches (build/php/patches).
+PHP73_VERSION	PHP	PHP-3.01	PHP License 3.01	https://www.php.net/license/3_01.txt	@	no	bundled	Built with RAMP compatibility patches (build/php/patches).
+PECL_REDIS_VERSION	PhpRedis (PECL redis)	PHP-3.01	PHP License 3.01	https://github.com/phpredis/phpredis/blob/{version}/COPYING	@	no	bundled	PHP 8.x builds.
+PHP73_PECL_REDIS_VERSION	PhpRedis (PECL redis, PHP 7.3 branch)	PHP-3.01	PHP License 3.01	https://github.com/phpredis/phpredis/blob/{version}/COPYING	@	no	bundled	PHP 7.3 build.
+PECL_APCU_VERSION	APCu	PHP-3.01	PHP License 3.01	https://github.com/krakjoe/apcu/blob/v{version}/LICENSE	@	no	bundled	-
+PECL_YAML_VERSION	PECL yaml	MIT	MIT License	https://github.com/php/pecl-file_formats-yaml/blob/{version}/LICENSE	@	no	bundled	-
+PECL_IMAGICK_VERSION	PECL imagick	PHP-3.01	PHP License 3.01	https://github.com/Imagick/imagick/blob/{version}/LICENSE	@	no	bundled	-
+PECL_MEMCACHED_VERSION	PECL memcached	PHP-3.01	PHP License 3.01	https://github.com/php-memcached-dev/php-memcached/blob/v{version}/LICENSE	@	no	bundled	-
+XDEBUG_VERSION	Xdebug	Xdebug-1.03	Xdebug License 1.03	https://xdebug.org/license	@	no	bundled	PHP 8.x builds. Not loaded unless enabled.
+PHP73_XDEBUG_VERSION	Xdebug (PHP 7.3 branch)	Xdebug-1.03	Xdebug License 1.03	https://xdebug.org/license	@	no	bundled	PHP 7.3 build. Not loaded unless enabled.
+PHP74_XDEBUG_VERSION	Xdebug (PHP 7.4 branch)	Xdebug-1.03	Xdebug License 1.03	https://xdebug.org/license	@	no	bundled	PHP 7.4 build. Not loaded unless enabled.
+PHALCON_VERSION	Phalcon (cphalcon)	BSD-3-Clause	BSD 3-Clause License	https://github.com/phalcon/cphalcon/blob/v{version}/LICENSE.txt	@	no	bundled	-
+OPENSSL_VERSION	OpenSSL	Apache-2.0	Apache License 2.0	https://www.openssl.org/source/license.html	@	no	bundled	-
+CACERT_VERSION	Mozilla CA certificate bundle	MPL-2.0	Mozilla Public License 2.0	https://www.mozilla.org/MPL/2.0/	@	yes	bundled	Extracted from Mozilla NSS by the curl project (cacert.pem).
+ICU_VERSION	ICU (International Components for Unicode)	Unicode-3.0	Unicode License v3	https://github.com/unicode-org/icu/blob/release-{version}/LICENSE	@	no	bundled	-
+LIBXML2_VERSION	libxml2	MIT	MIT License	https://gitlab.gnome.org/GNOME/libxml2/-/blob/v{version}/Copyright	@	no	bundled	-
+LIBXSLT_VERSION	libxslt	MIT	MIT License	https://gitlab.gnome.org/GNOME/libxslt/-/blob/v{version}/Copyright	@	no	bundled	-
+ONIG_VERSION	Oniguruma	BSD-2-Clause	BSD 2-Clause License	https://github.com/kkos/oniguruma/blob/v{version}/COPYING	@	no	bundled	Used by PHP mbstring.
+LIBZIP_VERSION	libzip	BSD-3-Clause	BSD 3-Clause License	https://github.com/nih-at/libzip/blob/v{version}/LICENSE	@	no	bundled	-
+LIBSODIUM_VERSION	libsodium	ISC	ISC License	https://github.com/jedisct1/libsodium/blob/{version}-RELEASE/LICENSE	@	no	bundled	-
+GMP_VERSION	GNU MP (GMP)	LGPL-3.0-or-later OR GPL-2.0-or-later	GNU LGPL v3 or GNU GPL v2 (dual)	https://gmplib.org/manual/Copying	@	yes	bundled	Dynamically linked shared library (libgmp.dylib); may be replaced by the user.
+SQLITE_VERSION	SQLite	blessing	Public domain (SQLite blessing)	https://sqlite.org/copyright.html	@	no	bundled	-
+CURL_VERSION	curl / libcurl	curl	curl License	https://curl.se/docs/copyright.html	@	no	bundled	-
+LIBPNG_VERSION	libpng	libpng-2.0	PNG Reference Library License v2	http://www.libpng.org/pub/png/src/libpng-LICENSE.txt	@	no	bundled	-
+LIBJPEG_TURBO_VERSION	libjpeg-turbo	IJG AND BSD-3-Clause AND Zlib	IJG License, BSD 3-Clause, zlib License	https://github.com/libjpeg-turbo/libjpeg-turbo/blob/{version}/LICENSE.md	@	no	bundled	This software is based in part on the work of the Independent JPEG Group.
+LIBWEBP_VERSION	libwebp	BSD-3-Clause	BSD 3-Clause License	https://chromium.googlesource.com/webm/libwebp/+/refs/tags/v{version}/COPYING	@	no	bundled	-
+FREETYPE_VERSION	FreeType	FTL OR GPL-2.0-or-later	FreeType License (chosen) or GNU GPL v2	https://freetype.org/license.html	@	no	bundled	Distributed under the FreeType License (FTL). Portions of this software are copyright The FreeType Project (www.freetype.org).
+LIBYAML_VERSION	LibYAML	MIT	MIT License	https://github.com/yaml/libyaml/blob/{version}/License	@	no	bundled	-
+IMAGEMAGICK_VERSION	ImageMagick	ImageMagick	ImageMagick License	https://imagemagick.org/script/license.php	@	no	bundled	Built without modules and with PNG/JPEG/WebP/FreeType delegates only.
+LIBMEMCACHED_VERSION	libmemcached-awesome	BSD-3-Clause	BSD 3-Clause License	https://github.com/awesomized/libmemcached/blob/{version}/LICENSE	@	no	bundled	-
+REDIS_VERSION	Redis	AGPL-3.0-only OR RSALv2 OR SSPL-1.0	AGPLv3, Redis Source Available License v2 or SSPLv1 (tri-license)	https://github.com/redis/redis/blob/{version}/LICENSE.txt	https://github.com/redis/redis/tree/{version}	yes	bundled	Unmodified upstream source (core build, no modules).
+MYSQL97_VERSION	MySQL Community Server	GPL-2.0-only WITH Universal-FOSS-exception-1.0	GNU GPL v2 with Universal FOSS Exception	https://github.com/mysql/mysql-server/blob/mysql-{version}/LICENSE	https://github.com/mysql/mysql-server/tree/mysql-{version}	yes	bundled	Oracle's official macOS arm64 binaries, repackaged without debug binaries (otherwise unmodified).
+MYSQL84_VERSION	MySQL Community Server	GPL-2.0-only WITH Universal-FOSS-exception-1.0	GNU GPL v2 with Universal FOSS Exception	https://github.com/mysql/mysql-server/blob/mysql-{version}/LICENSE	https://github.com/mysql/mysql-server/tree/mysql-{version}	yes	bundled	Used only as the intermediate step of the MySQL 8.0 → 9.7 migration. Oracle binaries, repackaged without debug binaries.
+PHPMYADMIN_VERSION	phpMyAdmin	GPL-2.0-or-later	GNU GPL v2 or later	https://github.com/phpmyadmin/phpmyadmin/blob/RELEASE_{version_}/LICENSE	https://github.com/phpmyadmin/phpmyadmin/tree/RELEASE_{version_}	yes	bundled	Unmodified release; bundled JavaScript/PHP libraries carry their own licenses (see the package's composer.json / js/vendor).
+ES_VERSION	Elasticsearch	AGPL-3.0-only OR Elastic-2.0 OR SSPL-1.0	AGPLv3, Elastic License 2.0 or SSPLv1	https://github.com/elastic/elasticsearch/blob/v{version}/LICENSE.txt	https://github.com/elastic/elasticsearch/tree/v{version}	yes	downloaded	Optional. Downloaded by the app from artifacts.elastic.co at the user's request; not redistributed by RAMP.
+ELASTICVUE_VERSION	Elasticvue	MIT	MIT License	https://github.com/cars10/elasticvue/blob/v{version}/LICENSE	@	no	bundled	Web build of the pinned tag (RAMP patches: default-cluster path, update check off); installed with Elasticsearch. Bundled npm dependencies carry their own licenses (package-lock.json).
+SPARKLE_VERSION	Sparkle	MIT	MIT License	https://github.com/sparkle-project/Sparkle/blob/{version}/LICENSE	https://github.com/sparkle-project/Sparkle/tree/{version}	no	bundled	App update framework, embedded in RAMP.app (integration planned, Phase 8).

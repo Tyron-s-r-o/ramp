@@ -1,0 +1,206 @@
+# Build, sign, notarize and (after approval) publish the RAMP service binaries + manifest.json.
+#
+# Layout (08-02 checkpoint — PENDING user decision, prepared for "two repos, hosted runner"):
+#   this workflow + build/ live in the binaries repo (RAMP_BINARIES_REPO in build/versions.env);
+#   the app resolves https://github.com/<owner>/<repo>/releases/latest/download/manifest.json.
+# Runner: repository variable RAMP_BINARIES_RUNNER (default "xcode-27" = GitHub-hosted macOS 27 arm64
+#   with Xcode 27; set e.g. "ramp-mac" for a self-hosted runner carrying that label).
+# Secrets (build/ci/README.md): DEVELOPER_ID_P12_BASE64, DEVELOPER_ID_P12_PASSWORD, KEYCHAIN_PASSWORD,
+#   NOTARY_KEY_ID, NOTARY_ISSUER_ID, NOTARY_KEY_P8_BASE64. Without them the build is unsigned (ad-hoc).
+# Publishing only via workflow_dispatch with publish=true AND approval of the "release" environment.
+name: binaries
+
+on:
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: "build-all.sh steps (space separated) or 'all' (package + manifest always run)"
+        type: string
+        default: all
+      sign:
+        description: "Developer ID sign + notarize (needs secrets)"
+        type: boolean
+        default: true
+      publish:
+        description: "Publish a GitHub Release (requires approval of the 'release' environment)"
+        type: boolean
+        default: false
+  schedule:
+    # weekly rebuild/validation (upstream bumps land as versions.env PRs); never publishes, never signs
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: binaries
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ${{ vars.RAMP_BINARIES_RUNNER || 'xcode-27' }}
+    timeout-minutes: 350
+    outputs:
+      tag: ${{ steps.assemble.outputs.tag }}
+      signed: ${{ steps.signing.outputs.signed }}
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+      HOMEBREW_NO_INSTALL_CLEANUP: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Select Xcode 27
+        run: |
+          set -euo pipefail
+          xc="$(find /Applications -maxdepth 1 -name 'Xcode_27*.app' | sort -V | tail -n 1)"
+          if [[ -n "$xc" ]]; then sudo xcode-select -s "$xc"; fi
+          xcodebuild -version
+          sw_vers
+
+      - name: Cache source tarballs
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: build/.cache/src
+          key: src-${{ hashFiles('build/versions.env') }}
+          restore-keys: src-
+
+      - name: Cache shared C deps
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          # deps are skipped via .stage/.built markers; component markers are harmless because
+          # php/apache/redis/mysql also require their out/ tree (not cached) to skip.
+          path: |
+            build/.stage/deps
+            build/.stage/.built
+            build/.stage/sys-pkgconfig
+          key: deps-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('build/versions.env', 'build/deps/**', 'build/lib/**') }}
+
+      - name: Toolchain (Homebrew build tools)
+        run: |
+          set -euo pipefail
+          build/bootstrap-toolchain.sh
+
+      - name: Build
+        env:
+          STEPS: ${{ inputs.steps || 'all' }}
+        run: |
+          set -euo pipefail
+          if [[ "$STEPS" == all ]]; then STEPS="deps php8 php73 ext apache redis mysql pma"; fi
+          read -r -a steps <<<"$STEPS"
+          build/build-all.sh "${steps[@]}"
+
+      - name: Signing secrets present?
+        id: signing
+        env:
+          WANT_SIGN: ${{ github.event_name == 'workflow_dispatch' && inputs.sign }}
+          DEVELOPER_ID_P12_BASE64: ${{ secrets.DEVELOPER_ID_P12_BASE64 }}
+          DEVELOPER_ID_P12_PASSWORD: ${{ secrets.DEVELOPER_ID_P12_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [[ "$WANT_SIGN" == true ]] && build/ci/setup-keychain.sh --check; then
+            echo "signed=true" >>"$GITHUB_OUTPUT"
+          else
+            echo "signed=false" >>"$GITHUB_OUTPUT"
+            echo "::notice::unsigned build (sign=false, scheduled run, or secrets missing)"
+          fi
+
+      - name: Set up signing keychain
+        if: steps.signing.outputs.signed == 'true'
+        env:
+          DEVELOPER_ID_P12_BASE64: ${{ secrets.DEVELOPER_ID_P12_BASE64 }}
+          DEVELOPER_ID_P12_PASSWORD: ${{ secrets.DEVELOPER_ID_P12_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          NOTARY_KEY_P8_BASE64: ${{ secrets.NOTARY_KEY_P8_BASE64 }}
+        run: |
+          set -euo pipefail
+          build/ci/setup-keychain.sh
+
+      - name: Package
+        run: |
+          set -euo pipefail
+          # SIGN_IDENTITY / SIGN_KEYCHAIN come from $GITHUB_ENV when signing is set up; unset = ad-hoc
+          build/package.sh
+
+      - name: Notarize self-built packages
+        if: steps.signing.outputs.signed == 'true'
+        env:
+          NOTARY_KEY_ID: ${{ secrets.NOTARY_KEY_ID }}
+          NOTARY_ISSUER_ID: ${{ secrets.NOTARY_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${NOTARY_KEY_P8:-}" || -z "$NOTARY_KEY_ID" || -z "$NOTARY_ISSUER_ID" ]]; then
+            echo "::warning::notary secrets missing — packages are signed but NOT notarized"
+            exit 0
+          fi
+          shopt -s nullglob
+          pkgs=(build/dist/php-*-darwin-arm64.tar.xz build/dist/apache-*-darwin-arm64.tar.xz build/dist/redis-*-darwin-arm64.tar.xz)
+          build/notarize.sh --submit --api-key "$NOTARY_KEY_P8" --key-id "$NOTARY_KEY_ID" --issuer "$NOTARY_ISSUER_ID" "${pkgs[@]}"
+
+      - name: Manifest
+        run: |
+          set -euo pipefail
+          build/manifest.sh
+
+      - name: Build rampctl (manifest decode check)
+        run: |
+          set -euo pipefail
+          swift build --package-path app/Packages/RAMPCore --product rampctl -c release
+          echo "RAMPCTL=$(swift build --package-path app/Packages/RAMPCore -c release --show-bin-path)/rampctl" >>"$GITHUB_ENV"
+
+      - name: Assemble release payload
+        id: assemble
+        run: |
+          set -euo pipefail
+          build/ci/assemble-release.sh build/dist release
+          cat release/release-notes.md >>"$GITHUB_STEP_SUMMARY"
+
+      - name: Upload release payload
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: binaries-release
+          path: release/
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Upload logs
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: build-logs
+          path: build/.stage/logs/
+          retention-days: 7
+
+      - name: Remove signing keychain
+        if: always()
+        run: build/ci/setup-keychain.sh --cleanup
+
+  publish:
+    needs: build
+    if: github.event_name == 'workflow_dispatch' && inputs.publish
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: write
+    steps:
+      - name: Download release payload
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: binaries-release
+          path: release
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ needs.build.outputs.tag }}
+          SIGNED: ${{ needs.build.outputs.signed }}
+        run: |
+          set -euo pipefail
+          [[ -n "$TAG" ]] || { echo "::error::no release tag from build job"; exit 1; }
+          flags=(--latest)
+          if [[ "$SIGNED" != true ]]; then flags=(--prerelease); echo "::warning::unsigned payload → published as prerelease (not 'latest')"; fi
+          gh release create "$TAG" release/* --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "$TAG" --notes-file release/release-notes.md "${flags[@]}"

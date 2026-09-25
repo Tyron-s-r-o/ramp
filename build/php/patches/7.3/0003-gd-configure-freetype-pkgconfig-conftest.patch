@@ -1,0 +1,44 @@
+# PHP 7.3.33 — ext/gd/config.m4, two configure-time fixes (RAMP-original, no upstream 7.3 fix):
+#  1. FreeType >= 2.9.1 no longer installs freetype-config by default (RAMP builds FreeType 2.14
+#     without it) → fall back to `pkg-config freetype2` (what PHP 7.4+ does via PKG_CHECK_MODULES).
+#  2. The "GD build test" conftest (`char foobar () {}` + `int main(){foobar();return 0;}`) is
+#     built with -O2 -fvisibility=hidden; Xcode 27 ld (ld-27037.1) deduplicates the identical
+#     hidden bodies of foobar and main and then writes LC_MAIN entryoff 0 → conftest dies with
+#     SIGILL (status 132) → "GD build test failed". Give foobar a distinct body (return 1).
+# Requires ./buildconf --force.
+--- a/ext/gd/config.m4
++++ b/ext/gd/config.m4
+@@ -192,13 +192,19 @@
+       fi
+     done
+ 
+-    if test -z "$FREETYPE2_DIR"; then
+-      AC_MSG_ERROR([freetype-config not found.])
++    if test -n "$FREETYPE2_DIR"; then
++      FREETYPE2_CFLAGS=`$FREETYPE2_CONFIG --cflags`
++      FREETYPE2_LIBS=`$FREETYPE2_CONFIG --libs`
++    elif test -n "$PKG_CONFIG" && $PKG_CONFIG --exists freetype2; then
++      FREETYPE2_CFLAGS=`$PKG_CONFIG --cflags freetype2`
++      FREETYPE2_LIBS=`$PKG_CONFIG --libs freetype2`
++    elif pkg-config --exists freetype2 2>/dev/null; then
++      FREETYPE2_CFLAGS=`pkg-config --cflags freetype2`
++      FREETYPE2_LIBS=`pkg-config --libs freetype2`
++    else
++      AC_MSG_ERROR([freetype-config not found (and no freetype2 pkg-config module).])
+     fi
+ 
+-    FREETYPE2_CFLAGS=`$FREETYPE2_CONFIG --cflags`
+-    FREETYPE2_LIBS=`$FREETYPE2_CONFIG --libs`
+-
+     PHP_EVAL_INCLINE($FREETYPE2_CFLAGS)
+     PHP_EVAL_LIBLINE($FREETYPE2_LIBS, GD_SHARED_LIBADD)
+     AC_DEFINE(HAVE_LIBFREETYPE,1,[ ])
+@@ -352,7 +358,7 @@
+ 
+     PHP_TEST_BUILD(foobar, [], [
+       AC_MSG_ERROR([GD build test failed. Please check the config.log for details.])
+-    ], [ $GD_SHARED_LIBADD ], [char foobar () {}])
++    ], [ $GD_SHARED_LIBADD ], [char foobar () { return 1; }])
+   else
+     GD_HEADER_DIRS="ext/gd/"
+     GDLIB_CFLAGS="-I$GD_INCLUDE $GDLIB_CFLAGS"

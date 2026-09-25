@@ -1,0 +1,18 @@
+# PHP 7.3.33 — ext/libxml/libxml.c: libxml2 >= 2.14 no longer exports the ATTRIBUTE_UNUSED
+# macro from its public headers → "expected ')'" at php_libxml_output_buffer_create_filename.
+# Define it locally when missing. (Remaining libxml2 2.12+ const-xmlError changes are only
+# warnings under -Wno-incompatible-function-pointer-types.)
+# Source: RAMP-original (php-src 8.x dropped the attribute instead).
+--- a/ext/libxml/libxml.c
++++ b/ext/libxml/libxml.c
+@@ -24,6 +24,10 @@
+ #endif
+ 
+ #include "php.h"
++
++#ifndef ATTRIBUTE_UNUSED
++# define ATTRIBUTE_UNUSED __attribute__((unused))
++#endif
+ #include "SAPI.h"
+ 
+ #define PHP_XML_INTERNAL

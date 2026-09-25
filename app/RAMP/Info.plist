@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Merged with the generated Info.plist (GENERATE_INFOPLIST_FILE=YES). Custom keys only — values come
+     from RAMP/Distribution.xcconfig (08-03). -->
+<plist version="1.0">
+<dict>
+	<!-- Sparkle 2 (app self-update, signed appcast) -->
+	<key>SUFeedURL</key>
+	<string>$(RAMP_APPCAST_URL)</string>
+	<key>SUPublicEDKey</key>
+	<string>$(RAMP_SPARKLE_PUBLIC_KEY)</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
+	<key>SUVerifyUpdateBeforeExtraction</key>
+	<true/>
+	<key>SURequireSignedFeed</key>
+	<true/>
+	<!-- Service binaries manifest used when ramp.json has no manifestURL yet (fresh install) -->
+	<key>RAMPDefaultManifestURL</key>
+	<string>$(RAMP_MANIFEST_URL)</string>
+</dict>
+</plist>
