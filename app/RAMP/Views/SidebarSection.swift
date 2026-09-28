@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum SidebarSection: String, CaseIterable, Identifiable, Hashable {
-    case services, vhosts, php, database, logs, settings
+    case services, vhosts, php, database, ftp, logs, settings
 
     var id: String { rawValue }
 
@@ -11,6 +11,7 @@ enum SidebarSection: String, CaseIterable, Identifiable, Hashable {
         case .vhosts: "Vhosty"
         case .php: "PHP"
         case .database: "Databáza"
+        case .ftp: "FTP"
         case .logs: "Logy"
         case .settings: "Nastavenia"
         }
@@ -22,6 +23,7 @@ enum SidebarSection: String, CaseIterable, Identifiable, Hashable {
         case .vhosts: "globe"
         case .php: "chevron.left.forwardslash.chevron.right"
         case .database: "cylinder.split.1x2"
+        case .ftp: "externaldrive.connected.to.line.below"
         case .logs: "doc.text.magnifyingglass"
         case .settings: "gearshape"
         }

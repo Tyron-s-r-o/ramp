@@ -23,6 +23,9 @@ design/animation/frames*/
 design/animation/*.json
 design/animation/*.err
 design/screenshots/sk/
+# 1080p elephant: keep only the chosen master (comparisons, rejected upscale, web encodes live elsewhere)
+design/animation/hires/*
+!design/animation/hires/gen-1080.mp4
 
 # Private notes / internal planning (contain local machine + client project details)
 RANO.md
@@ -46,3 +49,9 @@ ramp-sparkle.key
 *.xcarchive/
 *.zip
 *.dmg
+
+# local session index
+.claude-sessions.md
+
+# SwiftPM scratch builds
+.build-*/

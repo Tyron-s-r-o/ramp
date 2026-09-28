@@ -11,10 +11,16 @@ let package = Package(
         // Dev CLI: install / up / status / reload / paths without the GUI (plan 02-05).
         .executable(name: "rampctl", targets: ["rampctl"]),
     ],
+    dependencies: [
+        // Phase 9: SFTP client (pure Swift, SwiftNIO SSH). MIT.
+        .package(url: "https://github.com/orlandos-nl/Citadel.git", from: "0.12.1"),
+    ],
     targets: [
+        // Phase 9: FTP/FTPS via the macOS system libcurl (SDK headers + libcurl.tbd).
+        .systemLibrary(name: "CCurl", path: "Sources/CCurl"),
         // Swift 6 language mode implies complete strict concurrency checking.
         .target(name: "RAMPHostsKit"),
-        .target(name: "RAMPCore", dependencies: ["RAMPHostsKit"]),
+        .target(name: "RAMPCore", dependencies: ["RAMPHostsKit", "CCurl", .product(name: "Citadel", package: "Citadel")]),
         .executableTarget(name: "rampctl", dependencies: ["RAMPCore"]),
         // Fixtures/mamp: anonymized MAMP PRO confs (plan 07-03), read via #filePath, not bundled.
         .testTarget(name: "RAMPCoreTests", dependencies: ["RAMPCore"], exclude: ["Fixtures/mamp"]),

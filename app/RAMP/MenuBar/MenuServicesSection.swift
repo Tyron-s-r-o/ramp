@@ -14,7 +14,10 @@ struct MenuServicesSection: View {
         let optional = rows.filter { ServicesModel.optionalServices.contains($0.id) }
         VStack(alignment: .leading, spacing: 4) {
             MenuSectionTitle("Služby")
-            ForEach(core) { MenuServiceRow(row: $0) }
+            // PHP-FPM branches collapse into one row (like the Služby section); the rest stay one per service.
+            let php = core.filter(\.isPHPFPM)
+            if !php.isEmpty { MenuPHPGroupRow(rows: php) }
+            ForEach(core.filter { !$0.isPHPFPM }) { MenuServiceRow(row: $0) }
             if !optional.isEmpty {
                 Divider()
                 ForEach(optional) { MenuServiceRow(row: $0) }
@@ -40,6 +43,71 @@ struct MenuServicesSection: View {
             if case .phpFPM(let b) = row.id { return branches[b]?.enabled ?? true }
             return true
         }
+    }
+}
+
+private extension ServiceRowState {
+    var isPHPFPM: Bool { if case .phpFPM = id { true } else { false } }
+}
+
+/// "PHP-FPM · 7.4 · 8.2 …" with one switch for all branches; the chevron (or a failure) shows the branches.
+private struct MenuPHPGroupRow: View {
+    @Environment(AppModel.self) private var app
+    @AppStorage("menuPHPExpanded") private var expandedPref = false
+    let rows: [ServiceRowState]
+
+    var body: some View {
+        let services = app.services
+        let running = rows.filter { $0.state.isRunning }.count
+        let anyFailed = rows.contains { if case .failed = $0.state { true } else { false } }
+        let busy = services.isBusyAll || rows.contains(where: \.isTransitioning)
+        let expanded = expandedPref || anyFailed
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 8) {
+                Circle()
+                    .fill(running == rows.count ? Color.green : (running == 0 ? Color.secondary : Color.orange))
+                    .frame(width: 9, height: 9)
+                Button {
+                    expandedPref.toggle()
+                } label: {
+                    HStack(spacing: 4) {
+                        Text(verbatim: "PHP-FPM")
+                        Text(verbatim: versions)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                        Image(systemName: "chevron.right")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(.secondary)
+                            .rotationEffect(.degrees(expanded ? 90 : 0))
+                    }
+                    .contentShape(.rect)
+                }
+                .buttonStyle(.plain)
+                .disabled(anyFailed)
+                .help(expanded ? Text("Skryť jednotlivé verzie") : Text("Zobraziť jednotlivé verzie"))
+                Spacer()
+                if busy { ProgressView().controlSize(.mini) }
+                Toggle(isOn: Binding(
+                    get: { running > 0 },
+                    set: { on in
+                        let ids = rows.filter { on ? !$0.state.isRunning : $0.state.isRunning }.map(\.id)
+                        Task { for id in ids { on ? await services.start(id) : await services.stop(id) } }
+                    })) { Text(verbatim: "PHP-FPM") }
+                    .labelsHidden()
+                    .toggleStyle(.switch)
+                    .controlSize(.mini)
+                    .disabled(busy)
+            }
+            if expanded {
+                ForEach(rows) { MenuServiceRow(row: $0) }
+                    .padding(.leading, 17)
+            }
+        }
+    }
+
+    private var versions: String {
+        rows.compactMap { row -> String? in if case .phpFPM(let b) = row.id { b } else { nil } }.joined(separator: " · ")
     }
 }
 

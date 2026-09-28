@@ -26,6 +26,7 @@
 		36131ECEC373CD88B2EEE22A /* VhostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D361D95A937CEA732AE4927C /* VhostRow.swift */; };
 		387F97C698460327FA9EE19B /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D97AD80037C131A0FC72F /* AppUpdater.swift */; };
 		389B27B564248E8E51E9F615 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 79BBD17F41FD6E9958C5E081 /* AppIcon.icon */; };
+		459F4DCC9BFD0C124CFE4705 /* FTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C53D3134A1B37D3654F5F /* FTPView.swift */; };
 		46774654449840850C9C9BEB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E87553F0600A73B7EDA6D8 /* SettingsView.swift */; };
 		478803450065B4CDEE976607 /* ServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A57E724ECB8C0FE1AF2581 /* ServiceRow.swift */; };
 		4A7F3B92ABFC2AD2C98572B7 /* MenuServicesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF88DCD5F7298E0682B8C01 /* MenuServicesSection.swift */; };
@@ -35,10 +36,12 @@
 		63B1DBFA204D769F715288C2 /* TerminalSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C39A53E782DD3C4D59E18 /* TerminalSettingsSection.swift */; };
 		659E79FA23361E1632CD1860 /* VhostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282C03709FF8891F80246B0 /* VhostsView.swift */; };
 		67806043C4B15A9312AC491F /* VhostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B802DBDE452983E045895AFB /* VhostsModel.swift */; };
+		68DEDE7D9B6F5755A0712FBD /* FTPImportSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7E7C8BA72BCA3C8122F6F /* FTPImportSheet.swift */; };
 		6A13CC1AF128741FB98D3F45 /* PackageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D5B6467C4E233E396A08E /* PackageProgressView.swift */; };
 		6A6287278947AB7EDAF3E118 /* IniEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1CA21E6E0C5688F894D60 /* IniEditorView.swift */; };
 		6BC907A18B27554858F0AB59 /* RAMPCore in Frameworks */ = {isa = PBXBuildFile; productRef = BDFAE413FF6B3AA0AADD3A1C /* RAMPCore */; };
 		6BC929E2DFE69C14638063EF /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2048781F6E66D6E033E7FFB /* DatabaseModel.swift */; };
+		6C1CEBE6A756E7A657D5CF65 /* RemoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB2339030AEE2A7D926DB9 /* RemoteModel.swift */; };
 		6C9A669EFA115CED20796D0F /* UninstallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF23C663CB482967163C5F1 /* UninstallModel.swift */; };
 		6D9A26EB4DD2B41367B5325F /* RAMPHostsKit in Frameworks */ = {isa = PBXBuildFile; productRef = B0277A51C5D1EBA499ED998C /* RAMPHostsKit */; };
 		7EEDA20B3BC93B7AF7789DAA /* DockPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15690140B3B1473D36FFDDEA /* DockPolicy.swift */; };
@@ -47,8 +50,12 @@
 		89438EDA563B1B9C627E6D19 /* THIRD_PARTY_LICENSES.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE2C9E8EC00AE9CD8C41FD /* THIRD_PARTY_LICENSES.md */; };
 		9B237265C4AC2DD2DF4AD80F /* ElasticsearchServiceViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD096746FF87AF416FC3EF /* ElasticsearchServiceViews.swift */; };
 		9CE77356FAF6E4D50CBA7644 /* MenuBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29593020306C43C28BB16177 /* MenuBarContent.swift */; };
+		9D7DFC9B7AAA622FEAA47C57 /* FTPBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D448A4DDFBC9C7F2EA6ACE6C /* FTPBrowserView.swift */; };
 		9F430631B472A7AD989AEA78 /* RedisBrowserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E008567F07947C6B67B2363B /* RedisBrowserModel.swift */; };
+		A3B424BC0F3EB12240C6276D /* FTPSiteEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C970863ABC85D744D7FA02B9 /* FTPSiteEditorSheet.swift */; };
 		A4D8AD51C448D1621611E5CB /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9CADA7577E0A7E9E7D04 /* AppLanguage.swift */; };
+		ADA2AF3E7BDD53346D5C6FDF /* RemoteFileTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA7E6BCFD81611D43F2130 /* RemoteFileTable.swift */; };
+		ADF6E944F9F5D08319BF0510 /* FTPVaultSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A449E2280C1C6E5F2DA44 /* FTPVaultSheets.swift */; };
 		B1F2AC2D98A4E42F0D68EA80 /* LogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8004119E21648DEB97EB8C /* LogsModel.swift */; };
 		B6CC03659B883D1E259B6049 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5660975E3D85D4014692C67E /* Localizable.xcstrings */; };
 		B905C4F109CA718339D7A981 /* RAMPHostsHelper in Embed Dependencies */ = {isa = PBXBuildFile; fileRef = 7FB3742335D88ADC7658D274 /* RAMPHostsHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -57,6 +64,7 @@
 		BB1E2EFAE02D32B1663A8560 /* ImportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E22C7C3B674657B97FF8D /* ImportModel.swift */; };
 		BD5858864A917F8910DBF5F9 /* ServicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E71096A0153B42DDB016FE /* ServicesModel.swift */; };
 		C013BD1CBB2E0E4E7C67A008 /* UpdatesSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F359D5A90FB90C004E1D948 /* UpdatesSettingsSection.swift */; };
+		C388BCA287C968AC02168F35 /* GroupActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178939C9B23EF7779C954D32 /* GroupActions.swift */; };
 		C5DC94FBC37625C0EE3CEA14 /* DatabaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC186194E0CA53EFA8BE5C58 /* DatabaseView.swift */; };
 		C9548946FFE7EAB08C29F316 /* ImportElasticsearchStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224043DBD44EE30181F54A7 /* ImportElasticsearchStep.swift */; };
 		CFDA26B4304E3F8F8B9FAFBF /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = F8648B2C2E54D76EEA6CD7E5 /* Sparkle */; };
@@ -74,6 +82,7 @@
 		ECA6EFF252744C634CF385C3 /* RAMPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E572C97FB73216366B9FDF /* RAMPApp.swift */; };
 		F066C3640BA2A333E5AB97D4 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3AEA238287FA087C99E10 /* ErrorBanner.swift */; };
 		F5E20C152D6AE538A26D04D4 /* ImportVhostsStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38A79834F414EC89A42998 /* ImportVhostsStep.swift */; };
+		F618989D4625E7CAF9324CF2 /* RemoteBrowserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDB5A0051854D38D6E71A7 /* RemoteBrowserModel.swift */; };
 		FAB7FA9D322A512FB2F2B8BF /* SidebarSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A425B2B945E17D527A5BF8 /* SidebarSection.swift */; };
 		FAC9FC75774F12950BBA8E95 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E8142EDD70AB486496AFD /* MainWindow.swift */; };
 		FD52E63DC2D4F4B711EE5F29 /* PHPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FF3A5E1895A5A246BE3A4 /* PHPView.swift */; };
@@ -119,10 +128,13 @@
 		0E8D5B6467C4E233E396A08E /* PackageProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageProgressView.swift; sourceTree = "<group>"; };
 		15690140B3B1473D36FFDDEA /* DockPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockPolicy.swift; sourceTree = "<group>"; };
 		175C39A53E782DD3C4D59E18 /* TerminalSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalSettingsSection.swift; sourceTree = "<group>"; };
+		178939C9B23EF7779C954D32 /* GroupActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupActions.swift; sourceTree = "<group>"; };
 		19AE9CADA7577E0A7E9E7D04 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
+		1BDDB5A0051854D38D6E71A7 /* RemoteBrowserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBrowserModel.swift; sourceTree = "<group>"; };
 		1C38A79834F414EC89A42998 /* ImportVhostsStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportVhostsStep.swift; sourceTree = "<group>"; };
 		22A1CA21E6E0C5688F894D60 /* IniEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniEditorView.swift; sourceTree = "<group>"; };
 		279E54CF7A252C327F820D57 /* MenuUpdateNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUpdateNotes.swift; sourceTree = "<group>"; };
+		28E7E7C8BA72BCA3C8122F6F /* FTPImportSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPImportSheet.swift; sourceTree = "<group>"; };
 		29593020306C43C28BB16177 /* MenuBarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContent.swift; sourceTree = "<group>"; };
 		2BA993698314A005A428865A /* HostsStatusBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsStatusBanner.swift; sourceTree = "<group>"; };
 		2F359D5A90FB90C004E1D948 /* UpdatesSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesSettingsSection.swift; sourceTree = "<group>"; };
@@ -146,7 +158,7 @@
 		7C32A45FE68AC5A0815F98E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CA53DBC7ABAD522920565C8 /* MenuBarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarLabel.swift; sourceTree = "<group>"; };
 		7EE081BC90DAF6A7920B4DD3 /* MenuVhostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVhostList.swift; sourceTree = "<group>"; };
-		7FB3742335D88ADC7658D274 /* RAMPHostsHelper */ = {isa = PBXFileReference; includeInIndex = 0; path = RAMPHostsHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB3742335D88ADC7658D274 /* RAMPHostsHelper */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = file; name = RAMPHostsHelper; path = sk.tyron.ramp.hostshelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		814D612E74EFEF4E9ABBB871 /* MenuQuickActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuQuickActions.swift; sourceTree = "<group>"; };
 		826E8142EDD70AB486496AFD /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
 		84E572C97FB73216366B9FDF /* RAMPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMPApp.swift; sourceTree = "<group>"; };
@@ -168,20 +180,26 @@
 		A57E867AB267C3688DE9D6A4 /* UpdatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesModel.swift; sourceTree = "<group>"; };
 		A65570623912D753C386D806 /* ElasticsearchSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticsearchSettingsSection.swift; sourceTree = "<group>"; };
 		AE08F99AD400349DC5358B93 /* UpdateApplyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateApplyModel.swift; sourceTree = "<group>"; };
+		B2FA7E6BCFD81611D43F2130 /* RemoteFileTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFileTable.swift; sourceTree = "<group>"; };
 		B802DBDE452983E045895AFB /* VhostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VhostsModel.swift; sourceTree = "<group>"; };
 		BA31A1E0A31789ED64817A31 /* TerminalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalModel.swift; sourceTree = "<group>"; };
 		C1A425B2B945E17D527A5BF8 /* SidebarSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarSection.swift; sourceTree = "<group>"; };
 		C37BA4C624E48F573638B3A9 /* StatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadge.swift; sourceTree = "<group>"; };
+		C970863ABC85D744D7FA02B9 /* FTPSiteEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPSiteEditorSheet.swift; sourceTree = "<group>"; };
+		C98C53D3134A1B37D3654F5F /* FTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPView.swift; sourceTree = "<group>"; };
 		CC186194E0CA53EFA8BE5C58 /* DatabaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseView.swift; sourceTree = "<group>"; };
 		D07E22C7C3B674657B97FF8D /* ImportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportModel.swift; sourceTree = "<group>"; };
 		D30D778AE8A2DA71EBAB5E9C /* ImportWizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportWizardView.swift; sourceTree = "<group>"; };
 		D361D95A937CEA732AE4927C /* VhostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VhostRow.swift; sourceTree = "<group>"; };
+		D448A4DDFBC9C7F2EA6ACE6C /* FTPBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPBrowserView.swift; sourceTree = "<group>"; };
 		D46FDC403B4500A4FBC8C2F0 /* UninstallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UninstallView.swift; sourceTree = "<group>"; };
 		D5D182CD8829B26939E43B11 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		D66429173B4B8AA13153B8BD /* ScreenshotMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotMode.swift; sourceTree = "<group>"; };
 		DD23A7C51F2A8EB87BCE6899 /* ProjectOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectOpener.swift; sourceTree = "<group>"; };
 		E008567F07947C6B67B2363B /* RedisBrowserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedisBrowserModel.swift; sourceTree = "<group>"; };
 		EA1E24BB8999C6AA5B2F2520 /* SigningInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningInfo.swift; sourceTree = "<group>"; };
+		EFFB2339030AEE2A7D926DB9 /* RemoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteModel.swift; sourceTree = "<group>"; };
+		F08A449E2280C1C6E5F2DA44 /* FTPVaultSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPVaultSheets.swift; sourceTree = "<group>"; };
 		F2FD096746FF87AF416FC3EF /* ElasticsearchServiceViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticsearchServiceViews.swift; sourceTree = "<group>"; };
 		F383BDE79DE61B7110B351C1 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
 		F43542DD02AF0570B961D12F /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
@@ -276,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				6AD3AEA238287FA087C99E10 /* ErrorBanner.swift */,
+				178939C9B23EF7779C954D32 /* GroupActions.swift */,
 				0E8D5B6467C4E233E396A08E /* PackageProgressView.swift */,
 				C37BA4C624E48F573638B3A9 /* StatusBadge.swift */,
 			);
@@ -289,6 +308,7 @@
 				C1A425B2B945E17D527A5BF8 /* SidebarSection.swift */,
 				2EBA315DBFCBBC00C6623AD0 /* Common */,
 				B69E06EFE835238D9ED25F49 /* Database */,
+				F259C7C0C9E0A5819B492461 /* FTP */,
 				D6EEA547343AD70D482155BA /* Import */,
 				5A7D11E4481A2EA3363BD403 /* Logs */,
 				4CECE05CC3E5095C3FC999C9 /* PHP */,
@@ -405,6 +425,8 @@
 				FE8004119E21648DEB97EB8C /* LogsModel.swift */,
 				9EC49A904B1039DEEA0E684B /* PHPModel.swift */,
 				E008567F07947C6B67B2363B /* RedisBrowserModel.swift */,
+				1BDDB5A0051854D38D6E71A7 /* RemoteBrowserModel.swift */,
+				EFFB2339030AEE2A7D926DB9 /* RemoteModel.swift */,
 				96E71096A0153B42DDB016FE /* ServicesModel.swift */,
 				D5D182CD8829B26939E43B11 /* SettingsModel.swift */,
 				BA31A1E0A31789ED64817A31 /* TerminalModel.swift */,
@@ -438,6 +460,19 @@
 				2F359D5A90FB90C004E1D948 /* UpdatesSettingsSection.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		F259C7C0C9E0A5819B492461 /* FTP */ = {
+			isa = PBXGroup;
+			children = (
+				D448A4DDFBC9C7F2EA6ACE6C /* FTPBrowserView.swift */,
+				28E7E7C8BA72BCA3C8122F6F /* FTPImportSheet.swift */,
+				C970863ABC85D744D7FA02B9 /* FTPSiteEditorSheet.swift */,
+				F08A449E2280C1C6E5F2DA44 /* FTPVaultSheets.swift */,
+				C98C53D3134A1B37D3654F5F /* FTPView.swift */,
+				B2FA7E6BCFD81611D43F2130 /* RemoteFileTable.swift */,
+			);
+			path = FTP;
 			sourceTree = "<group>";
 		};
 		FADE830804F0FB481C0AFB6F /* Products */ = {
@@ -578,6 +613,12 @@
 				9B237265C4AC2DD2DF4AD80F /* ElasticsearchServiceViews.swift in Sources */,
 				306074AD5B8F1E61B409038F /* ElasticsearchSettingsSection.swift in Sources */,
 				F066C3640BA2A333E5AB97D4 /* ErrorBanner.swift in Sources */,
+				9D7DFC9B7AAA622FEAA47C57 /* FTPBrowserView.swift in Sources */,
+				68DEDE7D9B6F5755A0712FBD /* FTPImportSheet.swift in Sources */,
+				A3B424BC0F3EB12240C6276D /* FTPSiteEditorSheet.swift in Sources */,
+				ADF6E944F9F5D08319BF0510 /* FTPVaultSheets.swift in Sources */,
+				459F4DCC9BFD0C124CFE4705 /* FTPView.swift in Sources */,
+				C388BCA287C968AC02168F35 /* GroupActions.swift in Sources */,
 				20D888166E067A9EA2611DC8 /* HelperSettingsSection.swift in Sources */,
 				E59665F4B10FA4788EA98897 /* HostsHelperModel.swift in Sources */,
 				D8D30373CBA3E187EED487B8 /* HostsStatusBanner.swift in Sources */,
@@ -606,6 +647,9 @@
 				ECA6EFF252744C634CF385C3 /* RAMPApp.swift in Sources */,
 				9F430631B472A7AD989AEA78 /* RedisBrowserModel.swift in Sources */,
 				07AAA0CC0BE71D9D0122CBCF /* RedisBrowserView.swift in Sources */,
+				F618989D4625E7CAF9324CF2 /* RemoteBrowserModel.swift in Sources */,
+				ADA2AF3E7BDD53346D5C6FDF /* RemoteFileTable.swift in Sources */,
+				6C1CEBE6A756E7A657D5CF65 /* RemoteModel.swift in Sources */,
 				0C8DDA5A4CA31A65ACE7BAD3 /* ScreenshotMode.swift in Sources */,
 				478803450065B4CDEE976607 /* ServiceRow.swift in Sources */,
 				BD5858864A917F8910DBF5F9 /* ServicesModel.swift in Sources */,
@@ -732,7 +776,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RAMP/RAMP.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "$(RAMP_BUILD_NUMBER)";
+				CURRENT_PROJECT_VERSION = 5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RAMP/Info.plist;
 				INFOPLIST_KEY_LSUIElement = NO;
@@ -743,7 +787,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 27.0;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = sk.tyron.ramp;
 				PRODUCT_NAME = RAMP;
 				SDKROOT = macosx;
@@ -849,7 +893,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RAMP/RAMP.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "$(RAMP_BUILD_NUMBER)";
+				CURRENT_PROJECT_VERSION = 5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RAMP/Info.plist;
 				INFOPLIST_KEY_LSUIElement = NO;
@@ -860,7 +904,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 27.0;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = sk.tyron.ramp;
 				PRODUCT_NAME = RAMP;
 				SDKROOT = macosx;

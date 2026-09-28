@@ -268,6 +268,13 @@ final class VhostsModel {
 
     func startAdd() { editor = .new() }
 
+    /// Group header › "Pridať vhost do skupiny".
+    func startAdd(inGroup group: String?) {
+        var draft = VhostDraft.new()
+        draft.group = group ?? ""
+        editor = draft
+    }
+
     func startEdit(_ vhost: Vhost) { editor = VhostDraft(vhost) }
 
     func startEdit(id: UUID) {
@@ -333,6 +340,23 @@ final class VhostsModel {
         }
         await app.reloadConfig()
     }
+
+    /// Renames a group (merges into an existing one of the same name); "" / whitespace = ungroup.
+    /// UI-only like `move`: ramp.json only, Apache/hosts untouched.
+    func renameGroup(_ old: String, to new: String) async {
+        let trimmed = new.trimmingCharacters(in: .whitespacesAndNewlines)
+        let target = trimmed.isEmpty ? nil : trimmed
+        guard target != old else { return }
+        let ids = Set(vhosts.filter { $0.group == old }.map(\.id))
+        if collapsedGroups.remove(old) != nil {
+            collapsedGroups.insert(target ?? "")
+            UserDefaults.standard.set(collapsedGroups.sorted(), forKey: Self.collapsedGroupsKey)
+        }
+        await move(ids, toGroup: target)
+    }
+
+    /// "Zrušiť skupinu": its vhosts move to "Bez skupiny" (nothing is deleted).
+    func ungroup(_ group: String) async { await renameGroup(group, to: "") }
 
     /// "Zoskupiť podľa priečinkov v Sites": fills the group of ungrouped vhosts only.
     func autoGroup() async {

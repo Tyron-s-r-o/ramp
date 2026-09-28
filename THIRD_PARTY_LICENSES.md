@@ -58,6 +58,16 @@ the linked version tag / source tarball.
 | [Elasticsearch](#es-version) | 9.5.4 | `AGPL-3.0-only OR Elastic-2.0 OR SSPL-1.0` | downloaded |
 | [Elasticvue](#elasticvue-version) | 1.16.0 | `MIT` | bundled |
 | [Sparkle](#sparkle-version) | 2.10.0 | `MIT` | bundled |
+| [Citadel](#citadel-version) | 0.12.1 | `MIT` | bundled |
+| [swift-nio-ssh (Citadel fork)](#swift-nio-ssh-version) | 0.3.7 | `Apache-2.0` | bundled |
+| [SwiftNIO](#swift-nio-version) | 2.103.0 | `Apache-2.0` | bundled |
+| [swift-crypto (incl. BoringSSL)](#swift-crypto-version) | 3.15.1 | `Apache-2.0 AND OpenSSL AND ISC` | bundled |
+| [swift-asn1](#swift-asn1-version) | 1.7.3 | `Apache-2.0` | bundled |
+| [swift-atomics](#swift-atomics-version) | 1.3.1 | `Apache-2.0` | bundled |
+| [swift-collections](#swift-collections-version) | 1.7.1 | `Apache-2.0` | bundled |
+| [swift-log](#swift-log-version) | 1.15.1 | `Apache-2.0` | bundled |
+| [swift-system](#swift-system-version) | 1.8.1 | `Apache-2.0` | bundled |
+| [BigInt](#bigint-version) | 5.7.0 | `MIT` | bundled |
 
 System libraries (zlib, libiconv, bzip2, libedit, libc++) are provided by macOS and are not distributed.
 
@@ -363,3 +373,73 @@ System libraries (zlib, libiconv, bzip2, libedit, libc++) are provided by macOS 
 - License: [MIT License](https://github.com/sparkle-project/Sparkle/blob/2.10.0/LICENSE) (`MIT`)
 - Source: <https://github.com/sparkle-project/Sparkle/tree/2.10.0>
 - Note: App update framework, embedded in RAMP.app (integration planned, Phase 8).
+
+<a id="citadel-version"></a>
+### Citadel 0.12.1
+
+- License: [MIT License](https://github.com/orlandos-nl/Citadel/blob/0.12.1/LICENSE) (`MIT`)
+- Source: <https://github.com/orlandos-nl/Citadel/tree/0.12.1>
+- Note: SFTP client (SSH), linked into RAMP.app.
+
+<a id="swift-nio-ssh-version"></a>
+### swift-nio-ssh (Citadel fork) 0.3.7
+
+- License: [Apache License 2.0](https://github.com/Wellz26/swift-nio-ssh/blob/0.3.7/LICENSE.txt) (`Apache-2.0`)
+- Source: <https://github.com/Wellz26/swift-nio-ssh/tree/0.3.7>
+- Note: SSH protocol for Citadel, linked into RAMP.app.
+
+<a id="swift-nio-version"></a>
+### SwiftNIO 2.103.0
+
+- License: [Apache License 2.0](https://github.com/apple/swift-nio/blob/2.103.0/LICENSE.txt) (`Apache-2.0`)
+- Source: <https://github.com/apple/swift-nio/tree/2.103.0>
+- Note: Networking for SFTP, linked into RAMP.app.
+
+<a id="swift-crypto-version"></a>
+### swift-crypto (incl. BoringSSL) 3.15.1
+
+- License: [Apache License 2.0; BoringSSL: OpenSSL + ISC](https://github.com/apple/swift-crypto/blob/3.15.1/LICENSE.txt) (`Apache-2.0 AND OpenSSL AND ISC`)
+- Source: <https://github.com/apple/swift-crypto/tree/3.15.1>
+- Note: Cryptography for SFTP, linked into RAMP.app.
+
+<a id="swift-asn1-version"></a>
+### swift-asn1 1.7.3
+
+- License: [Apache License 2.0](https://github.com/apple/swift-asn1/blob/1.7.3/LICENSE.txt) (`Apache-2.0`)
+- Source: <https://github.com/apple/swift-asn1/tree/1.7.3>
+- Note: Dependency of swift-crypto, linked into RAMP.app.
+
+<a id="swift-atomics-version"></a>
+### swift-atomics 1.3.1
+
+- License: [Apache License 2.0](https://github.com/apple/swift-atomics/blob/1.3.1/LICENSE.txt) (`Apache-2.0`)
+- Source: <https://github.com/apple/swift-atomics/tree/1.3.1>
+- Note: Dependency of SwiftNIO, linked into RAMP.app.
+
+<a id="swift-collections-version"></a>
+### swift-collections 1.7.1
+
+- License: [Apache License 2.0](https://github.com/apple/swift-collections/blob/1.7.1/LICENSE.txt) (`Apache-2.0`)
+- Source: <https://github.com/apple/swift-collections/tree/1.7.1>
+- Note: Dependency of SwiftNIO, linked into RAMP.app.
+
+<a id="swift-log-version"></a>
+### swift-log 1.15.1
+
+- License: [Apache License 2.0](https://github.com/apple/swift-log/blob/1.15.1/LICENSE.txt) (`Apache-2.0`)
+- Source: <https://github.com/apple/swift-log/tree/1.15.1>
+- Note: Dependency of Citadel, linked into RAMP.app.
+
+<a id="swift-system-version"></a>
+### swift-system 1.8.1
+
+- License: [Apache License 2.0](https://github.com/apple/swift-system/blob/1.8.1/LICENSE.txt) (`Apache-2.0`)
+- Source: <https://github.com/apple/swift-system/tree/1.8.1>
+- Note: Dependency of SwiftNIO, linked into RAMP.app.
+
+<a id="bigint-version"></a>
+### BigInt 5.7.0
+
+- License: [MIT License](https://github.com/attaswift/BigInt/blob/v5.7.0/LICENSE.md) (`MIT`)
+- Source: <https://github.com/attaswift/BigInt/tree/v5.7.0>
+- Note: Dependency of Citadel, linked into RAMP.app.

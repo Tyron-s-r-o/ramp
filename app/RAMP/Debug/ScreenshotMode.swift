@@ -16,7 +16,12 @@ enum ScreenshotMode {
         guard let i = args.firstIndex(of: "-RAMPScreenshots"), i + 1 < args.count else { return nil }
         return URL(filePath: (args[i + 1] as NSString).expandingTildeInPath, directoryHint: .isDirectory)
     }()
-    nonisolated static var isActive: Bool { outputDir != nil }
+    /// `-RAMPSandbox`: same throw-away sandbox + demo stack, but the app stays open for manual testing and
+    /// the FTP section works for real (real network, real vault in the sandbox). Nothing is rendered.
+    nonisolated static let interactiveSandbox = CommandLine.arguments.contains("-RAMPSandbox")
+    nonisolated static var isActive: Bool { outputDir != nil || interactiveSandbox }
+    /// Rendering marketing shots: demo data everywhere, including FTP.
+    nonisolated static var isRendering: Bool { outputDir != nil }
 
     nonisolated static let sandbox = URL(filePath: "/tmp/ramp-shots", directoryHint: .isDirectory)
     nonisolated static var rampHome: URL { sandbox.appending(path: "ramp", directoryHint: .isDirectory) }
@@ -25,7 +30,8 @@ enum ScreenshotMode {
     /// UserDefaults keys the run may change (window frames, tabs…) — restored before exit.
     private static var savedDefaults: [String: Any] = [:]
     private static let touchedPrefixes = ["NSWindow Frame", "NSSplitView", "NSToolbar", "NSTableView",
-                                          DatabaseTab.storageKey, VhostsModel.collapsedGroupsKey, "redisBrowserTree"]
+                                          DatabaseTab.storageKey, VhostsModel.collapsedGroupsKey, "redisBrowserTree",
+                                          RemoteModel.collapsedGroupsKey]
 
     // MARK: Setup (before AppModel exists)
 
@@ -101,6 +107,11 @@ enum ScreenshotMode {
             UserDefaults.standard.set(false, forKey: "redisBrowserTree")   // flat list: every demo key visible
             app.selection = .database
         },
+        // 09-03: demo sites + a connected SFTP browser with a fake listing and transfers (no network).
+        Shot(name: "ftp") { app in
+            app.selection = .ftp
+            app.remote.onAppear()
+        },
         Shot(name: "terminal-settings") { app in
             app.selection = .settings
             try? await Task.sleep(for: .milliseconds(900))
@@ -118,6 +129,7 @@ enum ScreenshotMode {
         guard let outputDir else { return }
         try FileManager.default.createDirectory(at: outputDir, withIntermediateDirectories: true)
         UserDefaults.standard.removeObject(forKey: VhostsModel.collapsedGroupsKey)
+        UserDefaults.standard.removeObject(forKey: RemoteModel.collapsedGroupsKey)
         await app.reloadConfig()
         await app.hostsHelper.refreshStatus()
         await app.services.refresh()
@@ -374,6 +386,26 @@ enum ScreenshotMode {
         try data.write(to: url)
     }
 
+    // MARK: Interactive sandbox
+
+    /// `-RAMPSandbox`: `DistributedNotificationCenter` post of "sk.tyron.ramp.debug.snap" with the output PNG
+    /// path as `object` captures the main window plus any attached sheets (lets scripted UI tests take
+    /// screenshots without Screen Recording permission).
+    static func startSandbox() {
+        DistributedNotificationCenter.default().addObserver(forName: .init("sk.tyron.ramp.debug.snap"),
+                                                            object: nil, queue: .main) { note in
+            guard let path = note.object as? String else { return }
+            MainActor.assumeIsolated {
+                let visible = NSApp.windows.filter { $0.isVisible && $0.className != "NSStatusBarWindow" }
+                guard let base = visible.first(where: { $0.sheetParent == nil && $0.frame.width > 600 }) else { return }
+                var windows = [base]
+                var sheet = base.attachedSheet
+                while let s = sheet { windows.append(s); sheet = s.attachedSheet }
+                do { try captureWindows(windows, to: URL(filePath: path)) } catch { log("snap failed: \(error)") }
+            }
+        }
+    }
+
     // MARK: Cleanup
 
     private static func restoreDefaults() {
@@ -394,6 +426,7 @@ private final class KeyPanel: NSPanel {
 /// Release builds: screenshot mode does not exist.
 enum ScreenshotMode {
     static let isActive = false
+    static let isRendering = false
     static func prepare() {}
 }
 #endif

@@ -46,6 +46,8 @@ final class AppModel {
     let mampImport: ImportModel
     /// Nastavenia › Terminál: ~/.ramp/bin shims, PATH block, MAMP lines.
     let terminal: TerminalModel
+    /// FTP section (09-03): saved FTP/FTPS/SFTP sites, master-password vault, connected browser.
+    let remote: RemoteModel
 
     var selection: SidebarSection = .services
     var lastError: UserFacingError?
@@ -78,6 +80,7 @@ final class AppModel {
         elasticsearch = ElasticsearchModel(stack: stack, paths: paths, configStore: store)
         mampImport = ImportModel()
         terminal = TerminalModel()
+        remote = RemoteModel(paths: paths)
         services.app = self
         php.app = self
         database.app = self
@@ -87,6 +90,7 @@ final class AppModel {
         elasticsearch.app = self
         mampImport.app = self
         terminal.app = self
+        remote.app = self
     }
 
     var localhostURL: URL {

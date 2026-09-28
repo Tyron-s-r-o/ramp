@@ -51,6 +51,8 @@ struct MainWindow: View {
             PHPView()
         case .database:
             DatabaseView()
+        case .ftp:
+            FTPView()
         case .logs:
             LogsView()
         case .settings:

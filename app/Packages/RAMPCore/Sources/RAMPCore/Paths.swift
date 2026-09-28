@@ -32,6 +32,7 @@ public enum PathsError: Error, Equatable, CustomStringConvertible {
 /// <root>/redis-data/
 /// <root>/elasticsearch-data/<branch>/   <root>/tmp/elasticsearch/   <logs>/elasticsearch/
 /// <root>/www/default/index.php          default docroot for http://localhost/
+/// <root>/remote/                      sites.json, vault.json, known_hosts.json (FTP/SFTP manager)
 /// <root>/downloads/  <root>/.staging/  <root>/tmp/  <root>/backups/ (automatic MySQL dumps)
 /// <logs>/                               all logs (~/Library/Logs/RAMP)
 /// ```
@@ -158,6 +159,11 @@ public struct Paths: Sendable, Equatable {
     public var defaultDocroot: URL { dir("www", "default") }
     /// Elasticsearch `path.data`, e.g. `<root>/elasticsearch-data/9.5`.
     public func elasticsearchData(branch: String) -> URL { dir("elasticsearch-data", branch) }
+
+    // MARK: Remote (FTP/SFTP manager)
+
+    /// `<root>/remote/` — sites.json, vault.json, known_hosts.json (0700).
+    public var remote: URL { root.appending(path: "remote", directoryHint: .isDirectory) }
 
     // MARK: Scratch
 

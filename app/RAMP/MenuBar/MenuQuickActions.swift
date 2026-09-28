@@ -2,7 +2,7 @@ import AppKit
 import SwiftUI
 import RAMPCore
 
-/// Rýchle akcie: OPcache / Xdebug per branch (via PHPModel → PHPManager), phpMyAdmin, logs.
+/// Rýchle akcie: OPcache / Xdebug per branch (via PHPModel → PHPManager), FTP sites, phpMyAdmin, logs.
 struct MenuQuickActions: View {
     @Environment(AppModel.self) private var app
     @Environment(\.openWindow) private var openWindow
@@ -41,6 +41,8 @@ struct MenuQuickActions: View {
                     }
                 }
                 .disabled(branches.isEmpty)
+
+                ftpMenu
             }
             .fixedSize()
             HStack(spacing: 6) {
@@ -57,6 +59,47 @@ struct MenuQuickActions: View {
             }
         }
         .controlSize(.small)
+        .onAppear {   // the FTP section may not have been opened in this run yet
+            if !ScreenshotMode.isRendering { app.remote.reloadSites() }
+        }
+    }
+
+    /// FTP: saved sites (groups as submenus) — a click opens the main window on FTP and connects there
+    /// (the master password prompt, if needed, appears in that window).
+    private var ftpMenu: some View {
+        let remote = app.remote
+        let open = MainWindowOpener(app: app, openWindow: openWindow, dismiss: dismiss)
+        let sections = RemoteSiteSection.make(remote.sites)
+        func item(_ site: RemoteSite) -> some View {
+            Button {
+                open(.ftp)
+                remote.connect(site)
+            } label: {
+                Text(verbatim: "\(site.name) — \(FTPProtocolStyle.label(site.proto))")
+            }
+        }
+        return Menu("FTP") {
+            if remote.sites.isEmpty {
+                Text("Žiadne prístupy")
+            }
+            ForEach(sections) { section in
+                if let group = section.group {
+                    Menu {
+                        ForEach(section.sites) { item($0) }
+                    } label: {
+                        Text(verbatim: group)
+                    }
+                } else {
+                    if sections.count > 1 { Divider() }
+                    ForEach(section.sites) { item($0) }
+                }
+            }
+            Divider()
+            Button("Pridať prístup…") {
+                open(.ftp)
+                remote.startAdd()
+            }
+        }
     }
 
     private var runningFPMBranches: [String] {

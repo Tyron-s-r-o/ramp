@@ -29,6 +29,14 @@ struct RAMPApp: App {
                 CheckForUpdatesCommand()   // 08-03 Sparkle
                 UninstallMenuButton()   // 07-07
             }
+            CommandGroup(after: .importExport) {
+                // 09-03: FTP › FileZilla import (also in Settings › Pokročilé and the empty FTP section).
+                Button("Importovať z FileZilla…") {
+                    appModel.selection = .ftp
+                    appModel.remote.importing = true
+                    NSApplication.shared.activate()
+                }
+            }
         }
 
         // Uninstall (07-07): plan preview, typed confirmation, progress, report.

@@ -5,6 +5,7 @@ import RAMPCore
 /// Nastavenia (05-06): sidebar section of the main window and the `Settings` scene (⌘,).
 struct SettingsView: View {
     @Environment(AppModel.self) private var app
+    @Environment(\.openWindow) private var openWindow
     /// `true` inside the `Settings` scene (⌘,) — activates RAMP when the Dock icon is hidden.
     var isSettingsScene = false
 
@@ -146,6 +147,17 @@ struct SettingsView: View {
                 MAMPImportButton()   // 07-05 wizard window
             } label: {
                 Text("Prevezme vhosty, databázy a dáta Elasticsearch z MAMP PRO — najprv náhľad, nič sa nemení bez potvrdenia.")
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+            }
+            LabeledContent {
+                Button("Importovať z FileZilla…") {   // 09-03: opens the FTP section's import sheet
+                    app.selection = .ftp
+                    app.remote.importing = true
+                    if isSettingsScene { openWindow(id: "main") }
+                }
+            } label: {
+                Text("Prevezme FTP/SFTP prístupy zo Správcu serverov FileZilla, aj heslá chránené hlavným heslom FileZilla.")
                     .font(.callout)
                     .foregroundStyle(.secondary)
             }

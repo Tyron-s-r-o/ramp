@@ -14,6 +14,7 @@ struct VhostsView: View {
     @State private var newGroupIDs: Set<UUID>?
     @State private var newGroupName = ""
     @State private var autoGroupCount: Int?
+    @State private var renamingGroup: GroupRename?
     @FocusState private var searchFocused: Bool
 
     var body: some View {
@@ -75,6 +76,7 @@ struct VhostsView: View {
         .sheet(item: $bindable.editor) { draft in
             VhostEditorSheet(model: model, draft: draft)
         }
+        .groupRenameAlert($renamingGroup) { old, new in Task { await model.renameGroup(old, to: new) } }
         .confirmationDialog(deleteTitle, isPresented: deleteBinding, titleVisibility: .visible,
                             presenting: pendingDelete) { vhost in
             Button("Odstrániť", role: .destructive) { Task { await model.remove(vhost) } }
@@ -133,6 +135,14 @@ struct VhostsView: View {
                             }
                         } header: {
                             VhostGroupHeader(section: section, expanded: expanded) { model.toggleExpanded(section) }
+                                .contextMenu {
+                                    GroupHeaderMenu(group: section.group, expanded: expanded,
+                                                    addTitle: "Pridať vhost do skupiny",
+                                                    add: { model.startAdd(inGroup: section.group) },
+                                                    rename: { if let g = section.group { renamingGroup = GroupRename(g) } },
+                                                    ungroup: { if let g = section.group { Task { await model.ungroup(g) } } },
+                                                    toggle: { model.toggleExpanded(section) })
+                                }
                         }
                     }
                 } else {

@@ -146,6 +146,46 @@ enum DemoData {
         }
     }
 
+    // MARK: FTP (09-03)
+
+    static let remoteConnectedSite = "shop.example – produkcia"
+    static let remotePath = "/var/www/shop/public"
+
+    static let remoteSites: [RemoteSite] = [
+        RemoteSite(name: "shop.example – produkcia", proto: .sftp, host: "shop.example.com", username: "deploy",
+                   auth: .privateKey, privateKeyPath: "/Users/demo/.ssh/id_ed25519", initialPath: remotePath,
+                   group: "Acme"),
+        RemoteSite(name: "shop.example – staging", proto: .sftp, host: "staging.shop.example.com", username: "deploy",
+                   auth: .privateKey, privateKeyPath: "/Users/demo/.ssh/id_ed25519", group: "Acme"),
+        RemoteSite(name: "docs.example", proto: .ftpes, host: "ftp.docs.example.com", username: "docs", group: "Acme"),
+        RemoteSite(name: "crm.example", proto: .ftpes, host: "ftp.crm.example.net", username: "crm_ftp", group: "Client X"),
+        RemoteSite(name: "legacy-erp", proto: .ftp, host: "192.0.2.14", username: "erp", group: "Client X"),
+        RemoteSite(name: "newsroom.example", proto: .ftps, host: "ftps.newsroom.example.org", username: "web",
+                   group: "Client X"),
+        RemoteSite(name: "blog.example", proto: .sftp, host: "blog.example.dev", port: 2222, username: "me"),
+    ]
+
+    static var remoteItems: [RemoteItem] {
+        let now = Date()
+        func item(_ name: String, _ kind: RemoteItem.Kind, _ size: Int64? = nil, days: Double,
+                  _ perms: String = "rw-r--r--") -> RemoteItem {
+            RemoteItem(path: remotePath + "/" + name, name: name, kind: kind, size: kind == .directory ? nil : size,
+                       modified: now.addingTimeInterval(-days * 86_400), permissions: kind == .directory ? "rwxr-xr-x" : perms)
+        }
+        return [
+            item("assets", .directory, days: 2),
+            item("bundles", .directory, days: 12),
+            item("media", .directory, days: 0.2),
+            item("uploads", .directory, days: 0.05),
+            item(".htaccess", .file, 2_418, days: 40),
+            item("favicon.ico", .file, 15_086, days: 210),
+            item("index.php", .file, 1_204, days: 12),
+            item("robots.txt", .file, 212, days: 90),
+            item("sitemap.xml", .file, 846_320, days: 1),
+            item("storage", .symlink, days: 60, "rwxrwxrwx"),
+        ]
+    }
+
     static let esHealth = ElasticsearchClusterHealth(clusterName: "ramp", status: "green", numberOfNodes: 1)
     static let esIndices: [ElasticsearchIndexInfo] = [
         ElasticsearchIndexInfo(index: "acme_products", health: "green", status: "open", docsCount: 48_210,

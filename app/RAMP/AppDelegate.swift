@@ -15,7 +15,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         #if DEBUG
         // Marketing screenshots: demo data only — no Sparkle, stack launch, helper or hosts sync.
-        if ScreenshotMode.isActive, let model = Self.appModel { ScreenshotMode.start(model); return }
+        if ScreenshotMode.isActive {
+            // -RAMPSandbox: stay open without the stack for manual testing (FTP works for real).
+            if ScreenshotMode.isRendering, let model = Self.appModel { ScreenshotMode.start(model) }
+            else { ScreenshotMode.startSandbox() }
+            return
+        }
         #endif
         AppUpdater.shared.start()   // 08-03 Sparkle (no-op in DEBUG / unconfigured builds)
         guard let model = Self.appModel else { return }
