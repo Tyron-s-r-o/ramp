@@ -59,12 +59,14 @@ struct VhostEditorSheet: View {
                 Section {
                     LabeledContent("Docroot") {
                         HStack {
-                            Text(draft.docroot.isEmpty ? String(localized: "Nevybraný") : draft.docroot)
-                                .lineLimit(1)
-                                .truncationMode(.middle)
-                                .foregroundStyle(draft.docroot.isEmpty ? .secondary : .primary)
+                            // Editable: paths the folder picker can't reach comfortably (hidden folders such as
+                            // .claude/worktrees/…) can be typed or pasted; "~" is expanded on commit.
+                            TextField("Docroot", text: $draft.docroot, prompt: Text("Nevybraný"))
+                                .labelsHidden()
+                                .multilineTextAlignment(.trailing)
+                                .autocorrectionDisabled()
                                 .help(Text(verbatim: draft.docroot))
-                                .textSelection(.enabled)
+                                .onSubmit { draft.docroot = Self.normalizedDocroot(draft.docroot) }
                             Button("Vybrať…") { pickingFolder = true }
                         }
                     }
@@ -112,6 +114,7 @@ struct VhostEditorSheet: View {
                 }
             }
             .formStyle(.grouped)
+            .disabled(model.saving)   // no edits while the vhost is being saved / Apache reloaded
 
             Divider()
             HStack {
@@ -122,6 +125,7 @@ struct VhostEditorSheet: View {
                 Spacer()
                 Button("Zrušiť") { cancel() }
                     .keyboardShortcut(.cancelAction)
+                    .disabled(model.saving)
                 Button(draft.isNew ? "Pridať" : "Uložiť") { Task { await save() } }
                     .keyboardShortcut(.defaultAction)
                     .disabled(!canSave(issues))
@@ -129,6 +133,7 @@ struct VhostEditorSheet: View {
             .padding(12)
         }
         .frame(minWidth: 520, idealWidth: 560, minHeight: 460)
+        .fileDialogBrowserOptions(.includeHiddenFiles)   // .claude, .worktrees… are valid docroots
         .fileImporter(isPresented: $pickingFolder, allowedContentTypes: [.folder]) { result in
             // Not sandboxed → a plain path is enough, no security-scoped bookmark.
             if case .success(let url) = result {
@@ -179,7 +184,15 @@ struct VhostEditorSheet: View {
         dismiss()
     }
 
+    /// Typed paths: trims whitespace, expands "~", drops a trailing slash (pickers already return clean paths).
+    static func normalizedDocroot(_ text: String) -> String {
+        var path = (text.trimmingCharacters(in: .whitespacesAndNewlines) as NSString).expandingTildeInPath
+        while path.count > 1, path.hasSuffix("/") { path.removeLast() }
+        return path
+    }
+
     private func save() async {
+        draft.docroot = Self.normalizedDocroot(draft.docroot)
         switch await model.save(draft) {
         case .saved: dismiss()
         case .invalid(let issues): serverIssues = issues

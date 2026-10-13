@@ -19,6 +19,7 @@ import RAMPCore
 let vhostUsageText = """
        rampctl vhost list
        rampctl vhost add <domain> <docroot> [--php <branch>] [--alias <name>]… [--group <name>]
+       rampctl vhost set <domain> [--docroot <path>] [--php <branch>|default] [--alias <name>]… [--no-aliases]
        rampctl vhost group <domain> <name|--none>
        rampctl vhost rm|enable|disable <domain>
        rampctl hosts sync | status
@@ -141,6 +142,25 @@ func vhostCommand(_ args: [String]) async -> Int32 {
             }
             result = try await service.add(Vhost(domain: domain, aliases: aliases, docroot: docroot, phpBranch: php,
                                                  group: group))
+        case "set":
+            // Edits an existing vhost in place (docroot / PHP / aliases); unnamed fields keep their value.
+            guard a.count >= 3 else { throw VhostUsageError() }
+            var vhost = try await service.find(a.removeFirst())
+            var aliases: [String]?
+            while !a.isEmpty {
+                let flag = a.removeFirst()
+                if flag == "--no-aliases" { aliases = []; continue }
+                guard !a.isEmpty else { throw VhostUsageError() }
+                let value = a.removeFirst()
+                switch flag {
+                case "--docroot": vhost.docroot = absolutePath(value)
+                case "--php": vhost.phpBranch = value == "default" ? nil : value
+                case "--alias": aliases = (aliases ?? []) + [value]
+                default: throw VhostUsageError()
+                }
+            }
+            if let aliases { vhost.aliases = aliases }
+            result = try await service.update(vhost)
         case "group":
             guard a.count == 2 else { throw VhostUsageError() }
             let vhost = try await service.find(a[0])

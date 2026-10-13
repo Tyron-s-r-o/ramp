@@ -1,4 +1,5 @@
 import AppKit
+import RAMPCore
 
 /// Starts the stack on launch and stops it before the app quits (services must not outlive RAMP).
 @MainActor
@@ -22,10 +23,33 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
         #endif
-        AppUpdater.shared.start()   // 08-03 Sparkle (no-op in DEBUG / unconfigured builds)
         guard let model = Self.appModel else { return }
+        // One supervisor per RAMP home: a second copy (e.g. a Debug build next to /Applications/RAMP.app) would
+        // start PHP-FPM & co. again and collide on sockets/ports — tell the user, bring up the other copy, quit.
+        guard let lock = InstanceLock.acquire(paths: model.paths) else {
+            Self.quitAsDuplicate(owner: InstanceLock.holderPID(paths: model.paths))
+            return
+        }
+        Self.instanceLock = lock
+        AppUpdater.shared.start()   // 08-03 Sparkle (no-op in DEBUG / unconfigured builds)
         Task { await model.launch() }
         Task { await HelperUpgradeCheck.run(model.hostsHelper.helper) }   // 08-03 helper after app update
+    }
+
+    /// Held for the whole process lifetime (released by the kernel when RAMP exits).
+    private static var instanceLock: InstanceLock?
+
+    private static func quitAsDuplicate(owner: pid_t?) {
+        let alert = NSAlert()
+        alert.messageText = String(localized: "RAMP už beží")
+        alert.informativeText = owner.map { pid in String(localized: "Služby už spravuje iná spustená kópia RAMP (PID \(String(pid))). Táto kópia sa ukončí, aby nespúšťala služby druhýkrát.") }   // String: no "87 797" grouping
+            ?? String(localized: "Služby už spravuje iná spustená kópia RAMP. Táto kópia sa ukončí, aby nespúšťala služby druhýkrát.")
+        alert.addButton(withTitle: String(localized: "OK"))
+        NSApplication.shared.activate()
+        alert.runModal()
+        if let owner { NSRunningApplication(processIdentifier: owner)?.activate() }
+        // exit, not terminate: applicationShouldTerminate would stop the stack — which belongs to the other copy.
+        exit(0)
     }
 
     /// The menu bar keeps RAMP alive without windows.

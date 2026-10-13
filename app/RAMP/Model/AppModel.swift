@@ -140,6 +140,36 @@ final class AppModel {
         await services.startAll()
         await syncHosts()
         updates.start()
+        watchConfigFile()
+    }
+
+    // MARK: External ramp.json changes (rampctl, scripts, coding agents)
+
+    @ObservationIgnored private var configWatcher: (any DispatchSourceFileSystemObject)?
+    @ObservationIgnored private var configReload: Task<Void, Never>?
+
+    /// ramp.json is replaced atomically (rename), so the directory is watched, not the file. Debounced; reloading
+    /// is read-only, so RAMP's own saves just cause one harmless extra load.
+    private func watchConfigFile() {
+        guard configWatcher == nil else { return }
+        let fd = open(paths.root.path(percentEncoded: false), O_EVTONLY)
+        guard fd >= 0 else { return }
+        let source = DispatchSource.makeFileSystemObjectSource(fileDescriptor: fd, eventMask: .write, queue: .main)
+        source.setEventHandler { [weak self] in
+            MainActor.assumeIsolated {
+                self?.configReload?.cancel()
+                self?.configReload = Task { @MainActor [weak self] in
+                    try? await Task.sleep(for: .milliseconds(400))
+                    guard !Task.isCancelled, let self else { return }
+                    let before = self.config
+                    await self.reloadConfig()
+                    if self.config != before { self.vhosts.refreshMissing() }
+                }
+            }
+        }
+        source.setCancelHandler { close(fd) }
+        source.resume()
+        configWatcher = source
     }
 
     /// Brings the /etc/hosts RAMP block in line with ramp.json (helper, else password prompt — only when

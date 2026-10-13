@@ -27,6 +27,7 @@ import Testing
             "sql_mode=\"STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION\"",
             "max_allowed_packet=1G",
             "innodb_buffer_pool_size=4G",
+            "innodb_redo_log_capacity=2G",
             "character-set-server=utf8mb4",
             "collation-server=utf8mb4_0900_ai_ci",
             "tmpdir=\"\(root)/tmp\"",
@@ -135,6 +136,7 @@ log-error="/Users/t/Library/Logs/RAMP/mysql9.7.err"
 sql_mode="STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
 max_allowed_packet=1G
 innodb_buffer_pool_size=4G
+innodb_redo_log_capacity=2G
 character-set-server=utf8mb4
 collation-server=utf8mb4_0900_ai_ci
 tmpdir="/Users/t/Library/Application Support/RAMP/tmp"

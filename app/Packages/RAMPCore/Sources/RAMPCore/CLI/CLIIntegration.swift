@@ -149,8 +149,19 @@ public struct CLIIntegration: Sendable {
             }
         }
         try ConfigWriter(paths: paths).write(files)
-        let shims = CLIShimGenerator(config: effective, paths: paths, shimDir: shimDir).shims()
+        let shims = CLIShimGenerator(config: effective, paths: paths, shimDir: shimDir,
+                                     rampctl: Self.bundledRampctl()).shims()
         return try CLIShimWriter(shimDir: shimDir).sync(shims)
+    }
+
+    /// `…/RAMP.app/Contents/MacOS/rampctl` next to the running executable (RAMP itself or the bundled rampctl).
+    /// nil for dev builds outside an app bundle, so a `swift run rampctl` never points the shim at `.build/`.
+    public static func bundledRampctl(executable: URL? = Bundle.main.executableURL) -> URL? {
+        guard let dir = executable?.resolvingSymlinksInPath().deletingLastPathComponent(),
+              dir.path(percentEncoded: false).hasSuffix(".app/Contents/MacOS/") || dir.path(percentEncoded: false).hasSuffix(".app/Contents/MacOS")
+        else { return nil }
+        let url = dir.appending(path: "rampctl", directoryHint: .notDirectory)
+        return FileManager.default.isExecutableFile(atPath: url.path(percentEncoded: false)) ? url : nil
     }
 
     /// Removes the managed shims, then `~/.ramp/bin` and `~/.ramp` when empty.
@@ -163,6 +174,6 @@ public struct CLIIntegration: Sendable {
     }
 
     public func commandNames(config: RampConfig) -> [String] {
-        CLIShimGenerator(config: config, paths: paths, shimDir: shimDir).commandNames()
+        CLIShimGenerator(config: config, paths: paths, shimDir: shimDir, rampctl: Self.bundledRampctl()).commandNames()
     }
 }

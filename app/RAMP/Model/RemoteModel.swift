@@ -489,11 +489,42 @@ final class RemoteModel {
         }
         browser.secrets = secrets.value
         await browser.connect()
+        if self.browser === browser { watchIdle(browser) }
     }
 
     func disconnect() {
+        idleWatch?.cancel()
         browser?.disconnect()
         browser = nil
+    }
+
+    // MARK: Idle auto-disconnect
+
+    /// A connected session with no user action and no running transfer for this long is closed.
+    static let idleTimeout: TimeInterval = {
+        #if DEBUG
+        if let s = ProcessInfo.processInfo.environment["RAMP_FTP_IDLE_SECONDS"].flatMap(TimeInterval.init) { return s }
+        #endif
+        return 10 * 60
+    }()
+    @ObservationIgnored private var idleWatch: Task<Void, Never>?
+
+    private func watchIdle(_ browser: RemoteBrowserModel) {
+        idleWatch?.cancel()
+        idleWatch = Task { @MainActor [weak self] in
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(min(30, Self.idleTimeout / 4)))
+                guard let self, !Task.isCancelled, self.browser === browser else { return }
+                guard browser.state == .connected else { continue }
+                if browser.hasActiveJobs { browser.touch(); continue }   // transfers count as activity
+                if Date().timeIntervalSince(browser.lastActivity) >= Self.idleTimeout {
+                    let name = browser.site.name
+                    self.disconnect()
+                    self.showNotice(String(localized: "Odpojené od \(name) po 10 minútach nečinnosti"))
+                    return
+                }
+            }
+        }
     }
 
     /// nil = the user cancelled; `.some(nil)` = connect without secrets.

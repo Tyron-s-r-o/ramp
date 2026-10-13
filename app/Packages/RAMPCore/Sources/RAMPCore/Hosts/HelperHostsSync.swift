@@ -11,6 +11,8 @@ public actor HelperHostsSync: PrivilegedHostsSyncing {
 
     private let timeout: Duration
     private var versionChecked = false
+    /// One repair attempt per app run (see `repairRegistration`).
+    private var repairTried = false
 
     public init(timeout: Duration = .seconds(10)) {
         self.timeout = timeout
@@ -54,7 +56,37 @@ public actor HelperHostsSync: PrivilegedHostsSyncing {
         SMAppService.openSystemSettingsLoginItems()
     }
 
+    /// After an app update (Sparkle replaces RAMP.app) launchd can keep a stale launch constraint for the
+    /// daemon: every spawn fails with EX_CONFIG and XPC calls just time out, while `SMAppService` still says
+    /// `.enabled`. Unregister + register makes launchd re-read the bundled helper. Tried once per app run;
+    /// `true` when the daemon is enabled again (no new approval is needed for an already approved team).
+    private func repairRegistration() async -> Bool {
+        guard !repairTried else { return false }
+        repairTried = true
+        try? await service.unregister()
+        try? await Task.sleep(for: .milliseconds(500))
+        return (try? register()) == .enabled
+    }
+
+    /// The helper did not answer or the connection broke — as opposed to an error reported BY the helper.
+    private static func isUnreachable(_ error: any Error) -> Bool {
+        switch error as? HostsSyncError {
+        case .timeout, .helperFailed: true
+        default: false
+        }
+    }
+
     public func apply(names: [String]) async throws -> HostsSyncOutcome {
+        do {
+            return try await applyOnce(names: names)
+        } catch where Self.isUnreachable(error) {
+            guard await repairRegistration() else { throw error }
+            versionChecked = false
+            return try await applyOnce(names: names)
+        }
+    }
+
+    private func applyOnce(names: [String]) async throws -> HostsSyncOutcome {
         guard let team = Self.ownTeamID() else {
             throw HostsSyncError.helperUnavailable("RAMP is not signed with a Team ID")
         }
@@ -82,11 +114,15 @@ public actor HelperHostsSync: PrivilegedHostsSyncing {
     public func verifyRegisteredVersion() async -> (running: String, bundled: String, reregistered: Bool)? {
         guard status == .enabled, let team = Self.ownTeamID(),
               let requirement = try? RAMPHostsHelper.codeSigningRequirement(identifier: Self.helperIdentifier,
-                                                                           teamID: team),
-              let running: String = try? await call(requirement, { proxy, shot in
-                  proxy.version { shot.resume(.success($0)) }
-              })
+                                                                           teamID: team)
         else { return nil }
+        guard let running: String = try? await call(requirement, { proxy, shot in
+            proxy.version { shot.resume(.success($0)) }
+        }) else {
+            // Enabled but unreachable → stale registration after an update: repair it now, not at the first vhost save.
+            guard await repairRegistration() else { return nil }
+            return ("unreachable", RAMPHostsHelper.version, true)
+        }
         versionChecked = true
         guard running != RAMPHostsHelper.version else {
             return (running, RAMPHostsHelper.version, false)

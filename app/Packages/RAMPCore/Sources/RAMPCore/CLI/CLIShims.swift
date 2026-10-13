@@ -21,6 +21,7 @@ public struct CLIShim: Sendable, Equatable {
 /// - `mysql`, `mysqldump`, `mysqladmin`, `mysqlcheck` → RAMP's MySQL client, `--socket=<RAMP socket>` added
 ///   unless the call names its own `--socket/-S/--host/-h/--protocol` (no default user is injected).
 /// - `redis-cli` → RAMP's redis-cli with `-p <port>` unless `-p/-h/-s/-u` is given.
+/// - `rampctl` → the CLI bundled in RAMP.app (only when the generator is given its path).
 ///
 /// Every shim carries `managedHeader` on line 2; only such files are ever replaced or removed.
 public struct CLIShimGenerator: Sendable {
@@ -31,11 +32,14 @@ public struct CLIShimGenerator: Sendable {
     public let paths: Paths
     /// `~/.ramp/bin` (baked into the unversioned / composer shims).
     public let shimDir: URL
+    /// `rampctl` inside RAMP.app (`Contents/MacOS/rampctl`), nil when not running from the app bundle → no shim.
+    public let rampctl: URL?
 
-    public init(config: RampConfig, paths: Paths, shimDir: URL) {
+    public init(config: RampConfig, paths: Paths, shimDir: URL, rampctl: URL? = nil) {
         self.config = config
         self.paths = paths
         self.shimDir = shimDir
+        self.rampctl = rampctl
     }
 
     /// Installed + enabled branches with a usable install record (ascending).
@@ -81,6 +85,13 @@ public struct CLIShimGenerator: Sendable {
         }
         if let redis = GeneratorSupport.highestBranch(config, component: "redis") {
             out.append(CLIShim(name: "redis-cli", contents: redisCLI(branch: redis)))
+        }
+        if let rampctl {
+            // CLI for scripts and coding agents: `rampctl vhost list|add|set|rm`, `rampctl status`, … (talks to the
+            // same ramp.json as the app; the app picks the change up).
+            out.append(CLIShim(name: "rampctl", contents: Self.script(
+                header("rampctl (RAMP) — vhosts, PHP, services from the terminal: rampctl vhost list")
+                    + ["exec \(Self.sq(ConfigText.path(rampctl))) \"$@\""])))
         }
         return out.sorted { $0.name < $1.name }
     }

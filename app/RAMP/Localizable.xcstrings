@@ -1,70 +1,6 @@
 {
   "sourceLanguage" : "sk",
   "strings" : {
-    "· zostáva %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "· %@ left"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "· zostáva %@"
-          }
-        }
-      }
-    },
-    "/etc/hosts je aktuálny" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "/etc/hosts is up to date"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "/etc/hosts je aktuálny"
-          }
-        }
-      }
-    },
-    "/etc/hosts nie je aktuálny" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "/etc/hosts is out of date"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "/etc/hosts nie je aktuálny"
-          }
-        }
-      }
-    },
-    "%@ · vypnutá" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ · disabled"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ · vypnutá"
-          }
-        }
-      }
-    },
     "%@ (kópia)" : {
       "localizations" : {
         "en" : {
@@ -205,6 +141,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ zapnutý · Apache znovu načítaný"
+          }
+        }
+      }
+    },
+    "%@ · vypnutá" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · disabled"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · vypnutá"
           }
         }
       }
@@ -357,18 +309,34 @@
         }
       }
     },
-    "⌥-klik otvorí" : {
+    "/etc/hosts je aktuálny" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⌥-click opens"
+            "value" : "/etc/hosts is up to date"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⌥-klik otvorí"
+            "value" : "/etc/hosts je aktuálny"
+          }
+        }
+      }
+    },
+    "/etc/hosts nie je aktuálny" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/etc/hosts is out of date"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/etc/hosts nie je aktuálny"
           }
         }
       }
@@ -437,6 +405,54 @@
         }
       }
     },
+    "APCu nie je v balíku" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "APCu is not in the package"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "APCu nie je v balíku"
+          }
+        }
+      }
+    },
+    "APCu pre PHP %@ vyčistené" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "APCu cleared for PHP %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "APCu pre PHP %@ vyčistené"
+          }
+        }
+      }
+    },
+    "APFS klon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "APFS clone"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "APFS klon"
+          }
+        }
+      }
+    },
     "Adresa" : {
       "localizations" : {
         "en" : {
@@ -479,38 +495,6 @@
         }
       }
     },
-    "Aktivácia v RAMP" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activation in RAMP"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktivácia v RAMP"
-          }
-        }
-      }
-    },
-    "Aktívna podpora" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Active support"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktívna podpora"
-          }
-        }
-      }
-    },
     "Aktivuje sa len s XDEBUG_TRIGGER, PhpStorm port 9003" : {
       "localizations" : {
         "en" : {
@@ -543,66 +527,18 @@
         }
       }
     },
-    "Aktualizácia zlyhala – podrobnosti v Nastaveniach" : {
+    "Aktivácia v RAMP" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "An update failed – details in Settings"
+            "value" : "Activation in RAMP"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktualizácia zlyhala – podrobnosti v Nastaveniach"
-          }
-        }
-      }
-    },
-    "Aktualizácie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Updates"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktualizácie"
-          }
-        }
-      }
-    },
-    "Aktualizácie aplikácie nie sú v tejto verzii nakonfigurované." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App updates are not configured in this build."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktualizácie aplikácie nie sú v tejto verzii nakonfigurované."
-          }
-        }
-      }
-    },
-    "Aktualizácie služieb" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Service updates"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktualizácie služieb"
+            "value" : "Aktivácia v RAMP"
           }
         }
       }
@@ -671,6 +607,70 @@
         }
       }
     },
+    "Aktualizácia zlyhala – podrobnosti v Nastaveniach" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An update failed – details in Settings"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualizácia zlyhala – podrobnosti v Nastaveniach"
+          }
+        }
+      }
+    },
+    "Aktualizácie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updates"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualizácie"
+          }
+        }
+      }
+    },
+    "Aktualizácie aplikácie nie sú v tejto verzii nakonfigurované." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App updates are not configured in this build."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualizácie aplikácie nie sú v tejto verzii nakonfigurované."
+          }
+        }
+      }
+    },
+    "Aktualizácie služieb" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Service updates"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualizácie služieb"
+          }
+        }
+      }
+    },
     "Aktuálne" : {
       "localizations" : {
         "en" : {
@@ -683,6 +683,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aktuálne"
+          }
+        }
+      }
+    },
+    "Aktívna podpora" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active support"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktívna podpora"
           }
         }
       }
@@ -719,22 +735,6 @@
         }
       }
     },
-    "áno" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "yes"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "áno"
-          }
-        }
-      }
-    },
     "Apache konfiguráciu odmietol — zmena bola vrátená späť" : {
       "localizations" : {
         "en" : {
@@ -763,54 +763,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apache nebeží — Elasticvue sa otvára cez http://localhost."
-          }
-        }
-      }
-    },
-    "APCu nie je v balíku" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "APCu is not in the package"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "APCu nie je v balíku"
-          }
-        }
-      }
-    },
-    "APCu pre PHP %@ vyčistené" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "APCu cleared for PHP %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "APCu pre PHP %@ vyčistené"
-          }
-        }
-      }
-    },
-    "APFS klon" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "APFS clone"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "APFS klon"
           }
         }
       }
@@ -891,22 +843,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Auto-stop vypnutý"
-          }
-        }
-      }
-    },
-    "automaticky" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "automatic"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "automaticky"
           }
         }
       }
@@ -1055,22 +991,6 @@
         }
       }
     },
-    "bez ServerName" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "no ServerName"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "bez ServerName"
-          }
-        }
-      }
-    },
     "Bez skupiny" : {
       "localizations" : {
         "en" : {
@@ -1135,54 +1055,6 @@
         }
       }
     },
-    "beží na nej phpMyAdmin" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "phpMyAdmin runs on it"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "beží na nej phpMyAdmin"
-          }
-        }
-      }
-    },
-    "bezpečnostné opravy do %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "security fixes until %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "bezpečnostné opravy do %@"
-          }
-        }
-      }
-    },
-    "Binárne (hex)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Binary (hex)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Binárne (hex)"
-          }
-        }
-      }
-    },
     "Binlogy (vynechané)" : {
       "localizations" : {
         "en" : {
@@ -1199,66 +1071,18 @@
         }
       }
     },
-    "Čaká" : {
+    "Binárne (hex)" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Waiting"
+            "value" : "Binary (hex)"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Čaká"
-          }
-        }
-      }
-    },
-    "čaká na schválenie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "awaiting approval"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "čaká na schválenie"
-          }
-        }
-      }
-    },
-    "Čaká na schválenie v Nastaveniach systému › Položky pri prihlásení" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Awaiting approval in System Settings › Login Items"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Čaká na schválenie v Nastaveniach systému › Položky pri prihlásení"
-          }
-        }
-      }
-    },
-    "Čaká sa…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Waiting…"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Čaká sa…"
+            "value" : "Binárne (hex)"
           }
         }
       }
@@ -1321,22 +1145,6 @@
         }
       }
     },
-    "Čiastočne beží" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partially running"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Čiastočne beží"
-          }
-        }
-      }
-    },
     "Cieľ" : {
       "localizations" : {
         "en" : {
@@ -1349,22 +1157,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cieľ"
-          }
-        }
-      }
-    },
-    "Člen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Member"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Člen"
           }
         }
       }
@@ -1417,66 +1209,18 @@
         }
       }
     },
-    "Ďalej" : {
+    "DEBUG: falošný domovský priečinok (RAMP_UNINSTALL_FAKE_HOME) — systémové položky sa nemenia." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Next"
+            "value" : "DEBUG: fake home folder (RAMP_UNINSTALL_FAKE_HOME) — system items are left unchanged."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ďalej"
-          }
-        }
-      }
-    },
-    "Ďalšie akcie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "More actions"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ďalšie akcie"
-          }
-        }
-      }
-    },
-    "Dáta" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dáta"
-          }
-        }
-      }
-    },
-    "Dáta presunuté do RAMP" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data moved into RAMP"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dáta presunuté do RAMP"
+            "value" : "DEBUG: falošný domovský priečinok (RAMP_UNINSTALL_FAKE_HOME) — systémové položky sa nemenia."
           }
         }
       }
@@ -1513,22 +1257,6 @@
         }
       }
     },
-    "Databáza je prázdna" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Database is empty"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Databáza je prázdna"
-          }
-        }
-      }
-    },
     "Databáza Redisu (SELECT)" : {
       "localizations" : {
         "en" : {
@@ -1541,6 +1269,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Databáza Redisu (SELECT)"
+          }
+        }
+      }
+    },
+    "Databáza je prázdna" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Database is empty"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Databáza je prázdna"
           }
         }
       }
@@ -1573,22 +1317,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Debug"
-          }
-        }
-      }
-    },
-    "DEBUG: falošný domovský priečinok (RAMP_UNINSTALL_FAKE_HOME) — systémové položky sa nemenia." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DEBUG: fake home folder (RAMP_UNINSTALL_FAKE_HOME) — system items are left unchanged."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DEBUG: falošný domovský priečinok (RAMP_UNINSTALL_FAKE_HOME) — systémové položky sa nemenia."
           }
         }
       }
@@ -1673,22 +1401,6 @@
         }
       }
     },
-    "dostupné aktualizácie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "updates available"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "dostupné aktualizácie"
-          }
-        }
-      }
-    },
     "Dostupné aktualizácie (%lld)" : {
       "localizations" : {
         "en" : {
@@ -1721,22 +1433,6 @@
         }
       }
     },
-    "Dôverovať a pripojiť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trust and Connect"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dôverovať a pripojiť"
-          }
-        }
-      }
-    },
     "Dump po databázach" : {
       "localizations" : {
         "en" : {
@@ -1749,22 +1445,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dump po databázach"
-          }
-        }
-      }
-    },
-    "duplicitný záznam" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "duplicate entry"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "duplicitný záznam"
           }
         }
       }
@@ -1797,6 +1477,54 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dvojklikom na prístup sa pripojíte."
+          }
+        }
+      }
+    },
+    "Dáta" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dáta"
+          }
+        }
+      }
+    },
+    "Dáta presunuté do RAMP" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data moved into RAMP"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dáta presunuté do RAMP"
+          }
+        }
+      }
+    },
+    "Dôverovať a pripojiť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trust and Connect"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dôverovať a pripojiť"
           }
         }
       }
@@ -1961,22 +1689,6 @@
         }
       }
     },
-    "Ešte neprebehla kontrola" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Not checked yet"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ešte neprebehla kontrola"
-          }
-        }
-      }
-    },
     "Existujúce skupiny" : {
       "localizations" : {
         "en" : {
@@ -2009,66 +1721,18 @@
         }
       }
     },
-    "Filtrovať direktívy" : {
+    "Ešte neprebehla kontrola" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Filter directives"
+            "value" : "Not checked yet"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Filtrovať direktívy"
-          }
-        }
-      }
-    },
-    "Filtrovať podľa verzie PHP" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter by PHP version"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filtrovať podľa verzie PHP"
-          }
-        }
-      }
-    },
-    "Filtrovať riadky" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter lines"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filtrovať riadky"
-          }
-        }
-      }
-    },
-    "Finder" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Finder"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Finder"
+            "value" : "Ešte neprebehla kontrola"
           }
         }
       }
@@ -2085,22 +1749,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "FLUSHALL zlyhal"
-          }
-        }
-      }
-    },
-    "Formátované" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Formatted"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Formátované"
           }
         }
       }
@@ -2195,6 +1843,86 @@
         }
       }
     },
+    "Filtrovať direktívy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter directives"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrovať direktívy"
+          }
+        }
+      }
+    },
+    "Filtrovať podľa verzie PHP" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter by PHP version"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrovať podľa verzie PHP"
+          }
+        }
+      }
+    },
+    "Filtrovať riadky" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter lines"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrovať riadky"
+          }
+        }
+      }
+    },
+    "Finder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finder"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finder"
+          }
+        }
+      }
+    },
+    "Formátované" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formatted"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formátované"
+          }
+        }
+      }
+    },
     "Globálne" : {
       "localizations" : {
         "en" : {
@@ -2243,6 +1971,22 @@
         }
       }
     },
+    "HTTP" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HTTP"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HTTP"
+          }
+        }
+      }
+    },
     "Heap" : {
       "localizations" : {
         "en" : {
@@ -2271,54 +2015,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heap %@"
-          }
-        }
-      }
-    },
-    "Heslá (%lld) sú vo FileZille chránené jej hlavným heslom. Zadajte ho, aby sa preniesli aj heslá." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passwords (%lld) are protected by the FileZilla master password. Enter it to import the passwords too."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heslá (%lld) sú vo FileZille chránené jej hlavným heslom. Zadajte ho, aby sa preniesli aj heslá."
-          }
-        }
-      }
-    },
-    "Heslá k FTP prístupom sa ukladajú zašifrované týmto heslom. RAMP si ho vypýta raz za spustenie, keď ho prvý raz potrebuje." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "FTP passwords are stored encrypted with this password. RAMP asks for it once per launch, the first time it is needed."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heslá k FTP prístupom sa ukladajú zašifrované týmto heslom. RAMP si ho vypýta raz za spustenie, keď ho prvý raz potrebuje."
-          }
-        }
-      }
-    },
-    "Heslá z FileZilly sú odomknuté." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "FileZilla passwords are unlocked."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heslá z FileZilly sú odomknuté."
           }
         }
       }
@@ -2467,92 +2163,50 @@
         }
       }
     },
-    "Hľadať FTP" : {
+    "Heslá (%lld) sú vo FileZille chránené jej hlavným heslom. Zadajte ho, aby sa preniesli aj heslá." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search FTP"
-          }
-        }
-      }
-    },
-    "Hľadať prístupy" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search sites"
+            "value" : "Passwords (%lld) are protected by the FileZilla master password. Enter it to import the passwords too."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hľadať prístupy"
+            "value" : "Heslá (%lld) sú vo FileZille chránené jej hlavným heslom. Zadajte ho, aby sa preniesli aj heslá."
           }
         }
       }
     },
-    "Hľadať v hodnote" : {
+    "Heslá k FTP prístupom sa ukladajú zašifrované týmto heslom. RAMP si ho vypýta raz za spustenie, keď ho prvý raz potrebuje." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search in value"
+            "value" : "FTP passwords are stored encrypted with this password. RAMP asks for it once per launch, the first time it is needed."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hľadať v hodnote"
+            "value" : "Heslá k FTP prístupom sa ukladajú zašifrované týmto heslom. RAMP si ho vypýta raz za spustenie, keď ho prvý raz potrebuje."
           }
         }
       }
     },
-    "Hľadať v načítaných" : {
+    "Heslá z FileZilly sú odomknuté." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search loaded"
+            "value" : "FileZilla passwords are unlocked."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hľadať v načítaných"
-          }
-        }
-      }
-    },
-    "Hľadať vhost" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search vhosts"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hľadať vhost"
-          }
-        }
-      }
-    },
-    "Hľadať vhosty" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search vhosts"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hľadať vhosty"
+            "value" : "Heslá z FileZilly sú odomknuté."
           }
         }
       }
@@ -2717,18 +2371,92 @@
         }
       }
     },
-    "HTTP" : {
+    "Hľadať FTP" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HTTP"
+            "value" : "Search FTP"
+          }
+        }
+      }
+    },
+    "Hľadať prístupy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search sites"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HTTP"
+            "value" : "Hľadať prístupy"
+          }
+        }
+      }
+    },
+    "Hľadať v hodnote" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search in value"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hľadať v hodnote"
+          }
+        }
+      }
+    },
+    "Hľadať v načítaných" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search loaded"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hľadať v načítaných"
+          }
+        }
+      }
+    },
+    "Hľadať vhost" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search vhosts"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hľadať vhost"
+          }
+        }
+      }
+    },
+    "Hľadať vhosty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search vhosts"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hľadať vhosty"
           }
         }
       }
@@ -3005,50 +2733,18 @@
         }
       }
     },
-    "Inštalácia a odinštalovanie PHP verzií" : {
+    "Interval kontroly: %lld h" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Install and uninstall PHP versions"
+            "value" : "Check interval: %lld h"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inštalácia a odinštalovanie PHP verzií"
-          }
-        }
-      }
-    },
-    "Inštalácia balíkov zlyhala" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Package installation failed"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inštalácia balíkov zlyhala"
-          }
-        }
-      }
-    },
-    "Inštalácia zlyhala" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Installation failed"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inštalácia zlyhala"
+            "value" : "Interval kontroly: %lld h"
           }
         }
       }
@@ -3101,50 +2797,50 @@
         }
       }
     },
-    "Interval kontroly: %lld h" : {
+    "Inštalácia a odinštalovanie PHP verzií" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Check interval: %lld h"
+            "value" : "Install and uninstall PHP versions"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Interval kontroly: %lld h"
+            "value" : "Inštalácia a odinštalovanie PHP verzií"
           }
         }
       }
     },
-    "Jazyk" : {
+    "Inštalácia balíkov zlyhala" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Language"
+            "value" : "Package installation failed"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jazyk"
+            "value" : "Inštalácia balíkov zlyhala"
           }
         }
       }
     },
-    "je predvolená verzia (Nastavenia)" : {
+    "Inštalácia zlyhala" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "it is the default version (Settings)"
+            "value" : "Installation failed"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "je predvolená verzia (Nastavenia)"
+            "value" : "Inštalácia zlyhala"
           }
         }
       }
@@ -3197,6 +2893,22 @@
         }
       }
     },
+    "Jazyk" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jazyk"
+          }
+        }
+      }
+    },
     "Klaster" : {
       "localizations" : {
         "en" : {
@@ -3241,198 +2953,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klon súborov MySQL 8.0 (bez binlogov) → upgrade 8.4 → 9.7. MAMP MySQL musí byť zastavený."
-          }
-        }
-      }
-    },
-    "Kľúč" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Key"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúč"
-          }
-        }
-      }
-    },
-    "Kľúč „%@“ sa natrvalo vymaže." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Key “%@” will be deleted permanently."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúč „%@“ sa natrvalo vymaže."
-          }
-        }
-      }
-    },
-    "Kľúč „%@“ už existuje." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Key “%@” already exists."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúč „%@“ už existuje."
-          }
-        }
-      }
-    },
-    "Kľúč sa nepodarilo premenovať" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not rename the key"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúč sa nepodarilo premenovať"
-          }
-        }
-      }
-    },
-    "Kľúč sa nepodarilo vymazať" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not delete the key"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúč sa nepodarilo vymazať"
-          }
-        }
-      }
-    },
-    "Kľúč servera sa nepodarilo odstrániť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not remove the server key"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúč servera sa nepodarilo odstrániť"
-          }
-        }
-      }
-    },
-    "Kľúč servera sa nepodarilo uložiť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not save the server key"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúč servera sa nepodarilo uložiť"
-          }
-        }
-      }
-    },
-    "Kľúč už neexistuje" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Key no longer exists"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúč už neexistuje"
-          }
-        }
-      }
-    },
-    "Kľúče" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keys"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúče"
-          }
-        }
-      }
-    },
-    "Kľúče sa nepodarilo spočítať" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not count the keys"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúče sa nepodarilo spočítať"
-          }
-        }
-      }
-    },
-    "Kľúče sa nepodarilo vymazať" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not delete the keys"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúče sa nepodarilo vymazať"
-          }
-        }
-      }
-    },
-    "Kľúče: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keys: %lld"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kľúče: %lld"
           }
         }
       }
@@ -3533,38 +3053,6 @@
         }
       }
     },
-    "Kópia datadiru" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datadir copy"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kópia datadiru"
-          }
-        }
-      }
-    },
-    "Kópia datadiru + upgrade — odporúčané" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datadir copy + upgrade — recommended"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kópia datadiru + upgrade — odporúčané"
-          }
-        }
-      }
-    },
     "Kopírovať" : {
       "localizations" : {
         "en" : {
@@ -3661,6 +3149,230 @@
         }
       }
     },
+    "Kópia datadiru" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datadir copy"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kópia datadiru"
+          }
+        }
+      }
+    },
+    "Kópia datadiru + upgrade — odporúčané" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datadir copy + upgrade — recommended"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kópia datadiru + upgrade — odporúčané"
+          }
+        }
+      }
+    },
+    "Kľúč" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúč"
+          }
+        }
+      }
+    },
+    "Kľúč sa nepodarilo premenovať" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not rename the key"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúč sa nepodarilo premenovať"
+          }
+        }
+      }
+    },
+    "Kľúč sa nepodarilo vymazať" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not delete the key"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúč sa nepodarilo vymazať"
+          }
+        }
+      }
+    },
+    "Kľúč servera sa nepodarilo odstrániť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not remove the server key"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúč servera sa nepodarilo odstrániť"
+          }
+        }
+      }
+    },
+    "Kľúč servera sa nepodarilo uložiť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not save the server key"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúč servera sa nepodarilo uložiť"
+          }
+        }
+      }
+    },
+    "Kľúč už neexistuje" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key no longer exists"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúč už neexistuje"
+          }
+        }
+      }
+    },
+    "Kľúč „%@“ sa natrvalo vymaže." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key “%@” will be deleted permanently."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúč „%@“ sa natrvalo vymaže."
+          }
+        }
+      }
+    },
+    "Kľúč „%@“ už existuje." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key “%@” already exists."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúč „%@“ už existuje."
+          }
+        }
+      }
+    },
+    "Kľúče" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keys"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúče"
+          }
+        }
+      }
+    },
+    "Kľúče sa nepodarilo spočítať" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not count the keys"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúče sa nepodarilo spočítať"
+          }
+        }
+      }
+    },
+    "Kľúče sa nepodarilo vymazať" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not delete the keys"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúče sa nepodarilo vymazať"
+          }
+        }
+      }
+    },
+    "Kľúče: %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keys: %lld"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kľúče: %lld"
+          }
+        }
+      }
+    },
     "Label" : {
       "localizations" : {
         "en" : {
@@ -3725,38 +3437,6 @@
         }
       }
     },
-    "len HTTPS" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "HTTPS only"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "len HTTPS"
-          }
-        }
-      }
-    },
-    "len presmerovanie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "redirect only"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "len presmerovanie"
-          }
-        }
-      }
-    },
     "Licencie tretích strán" : {
       "localizations" : {
         "en" : {
@@ -3769,22 +3449,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Licencie tretích strán"
-          }
-        }
-      }
-    },
-    "localhost patrí RAMP" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "localhost belongs to RAMP"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "localhost patrí RAMP"
           }
         }
       }
@@ -3933,6 +3597,22 @@
         }
       }
     },
+    "Migrovať dáta" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Migrate Data"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Migrovať dáta"
+          }
+        }
+      }
+    },
     "Migrácia dokončená" : {
       "localizations" : {
         "en" : {
@@ -3961,32 +3641,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Migrácie"
-          }
-        }
-      }
-    },
-    "Migrovať dáta" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Migrate Data"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Migrovať dáta"
-          }
-        }
-      }
-    },
-    "Môj web" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "My site"
           }
         }
       }
@@ -4055,18 +3709,12 @@
         }
       }
     },
-    "mysqldump každej databázy do RAMP MySQL. MAMP MySQL musí bežať." : {
+    "Môj web" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "mysqldump of each database into RAMP MySQL. MAMP MySQL must be running."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "mysqldump každej databázy do RAMP MySQL. MAMP MySQL musí bežať."
+            "value" : "My site"
           }
         }
       }
@@ -4115,86 +3763,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na serveri už existuje: %lld"
-          }
-        }
-      }
-    },
-    "Načítané: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Loaded: %lld"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Načítané: %lld"
-          }
-        }
-      }
-    },
-    "Načítané: %lld z %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Loaded: %1$lld of %2$lld"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Načítané: %1$lld z %2$lld"
-          }
-        }
-      }
-    },
-    "Načítať ďalšie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Load more"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Načítať ďalšie"
-          }
-        }
-      }
-    },
-    "Načítať znova" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reload"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Načítať znova"
-          }
-        }
-      }
-    },
-    "Náhľad" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preview"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Náhľad"
           }
         }
       }
@@ -4391,6 +3959,70 @@
         }
       }
     },
+    "Nastavenia" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavenia"
+          }
+        }
+      }
+    },
+    "Nastavenia Elasticsearch…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elasticsearch Settings…"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavenia Elasticsearch…"
+          }
+        }
+      }
+    },
+    "Nastavenia aktualizácií sa nepodarilo uložiť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not save the update settings"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavenia aktualizácií sa nepodarilo uložiť"
+          }
+        }
+      }
+    },
+    "Nastavenia sa nepodarilo uložiť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings could not be saved"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavenia sa nepodarilo uložiť"
+          }
+        }
+      }
+    },
     "Nastavené — otvorte nový terminál" : {
       "localizations" : {
         "en" : {
@@ -4423,70 +4055,6 @@
         }
       }
     },
-    "Nastavenia" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavenia"
-          }
-        }
-      }
-    },
-    "Nastavenia aktualizácií sa nepodarilo uložiť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not save the update settings"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavenia aktualizácií sa nepodarilo uložiť"
-          }
-        }
-      }
-    },
-    "Nastavenia Elasticsearch…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elasticsearch Settings…"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavenia Elasticsearch…"
-          }
-        }
-      }
-    },
-    "Nastavenia sa nepodarilo uložiť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings could not be saved"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavenia sa nepodarilo uložiť"
-          }
-        }
-      }
-    },
     "Nastaviť" : {
       "localizations" : {
         "en" : {
@@ -4499,22 +4067,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nastaviť"
-          }
-        }
-      }
-    },
-    "Nastaviť terminál" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Set up terminal"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastaviť terminál"
           }
         }
       }
@@ -4551,6 +4103,22 @@
         }
       }
     },
+    "Nastaviť terminál" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set up terminal"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastaviť terminál"
+          }
+        }
+      }
+    },
     "Nastavte hlavné heslo" : {
       "localizations" : {
         "en" : {
@@ -4583,82 +4151,66 @@
         }
       }
     },
-    "Návrhy" : {
+    "Načítané: %lld" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Suggestions"
+            "value" : "Loaded: %lld"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Návrhy"
+            "value" : "Načítané: %lld"
           }
         }
       }
     },
-    "Názov" : {
+    "Načítané: %lld z %lld" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Name"
+            "value" : "Loaded: %1$lld of %2$lld"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Názov"
+            "value" : "Načítané: %1$lld z %2$lld"
           }
         }
       }
     },
-    "Názov môže mať najviac %lld znakov." : {
+    "Načítať znova" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The name can have at most %lld characters."
+            "value" : "Reload"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Názov môže mať najviac %lld znakov."
+            "value" : "Načítať znova"
           }
         }
       }
     },
-    "Názov priečinka" : {
+    "Načítať ďalšie" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Folder name"
+            "value" : "Load more"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Názov priečinka"
-          }
-        }
-      }
-    },
-    "Názov skupiny" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Group name"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Názov skupiny"
+            "value" : "Načítať ďalšie"
           }
         }
       }
@@ -4675,22 +4227,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nechajte prázdne, ak sa uložené heslo nemá meniť."
-          }
-        }
-      }
-    },
-    "nenájdený v RAMP.app" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "not found in RAMP.app"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nenájdený v RAMP.app"
           }
         }
       }
@@ -4727,22 +4263,6 @@
         }
       }
     },
-    "Neplatná veľkosť — napr. 128M alebo 1G" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Invalid size — e.g. 128M or 1G"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neplatná veľkosť — napr. 128M alebo 1G"
-          }
-        }
-      }
-    },
     "Neplatná veľkosť pamäte (napr. 768m, 3g; 256m – 31g)" : {
       "localizations" : {
         "en" : {
@@ -4755,6 +4275,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Neplatná veľkosť pamäte (napr. 768m, 3g; 256m – 31g)"
+          }
+        }
+      }
+    },
+    "Neplatná veľkosť — napr. 128M alebo 1G" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid size — e.g. 128M or 1G"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neplatná veľkosť — napr. 128M alebo 1G"
           }
         }
       }
@@ -4787,22 +4323,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Neprevedené účty (mysql_native_password, v MySQL 9.7 sa neprihlásia):"
-          }
-        }
-      }
-    },
-    "neregistrovaný" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "not registered"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "neregistrovaný"
           }
         }
       }
@@ -4919,54 +4439,6 @@
         }
       }
     },
-    "Nič sa nenašlo" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nothing found"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nič sa nenašlo"
-          }
-        }
-      }
-    },
-    "Nič sa nezapíše, kým neklikneš Importovať. MAMP PRO konfigurácia sa len číta." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nothing is written until you click Import. The MAMP PRO configuration is only read."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nič sa nezapíše, kým neklikneš Importovať. MAMP PRO konfigurácia sa len číta."
-          }
-        }
-      }
-    },
-    "nie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "no"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nie"
-          }
-        }
-      }
-    },
     "Nie je nainštalovaný" : {
       "localizations" : {
         "en" : {
@@ -4979,22 +4451,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nie je nainštalovaný"
-          }
-        }
-      }
-    },
-    "nie je v balíku" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "not in the package"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nie je v balíku"
           }
         }
       }
@@ -5027,6 +4483,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Niektoré služby sa nepodarilo spustiť"
+          }
+        }
+      }
+    },
+    "Nič sa nenašlo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing found"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nič sa nenašlo"
+          }
+        }
+      }
+    },
+    "Nič sa nezapíše, kým neklikneš Importovať. MAMP PRO konfigurácia sa len číta." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing is written until you click Import. The MAMP PRO configuration is only read."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nič sa nezapíše, kým neklikneš Importovať. MAMP PRO konfigurácia sa len číta."
           }
         }
       }
@@ -5127,6 +4615,102 @@
         }
       }
     },
+    "Náhľad" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Náhľad"
+          }
+        }
+      }
+    },
+    "Návrhy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggestions"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Návrhy"
+          }
+        }
+      }
+    },
+    "Názov" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Názov"
+          }
+        }
+      }
+    },
+    "Názov môže mať najviac %lld znakov." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The name can have at most %lld characters."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Názov môže mať najviac %lld znakov."
+          }
+        }
+      }
+    },
+    "Názov priečinka" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Folder name"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Názov priečinka"
+          }
+        }
+      }
+    },
+    "Názov skupiny" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Group name"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Názov skupiny"
+          }
+        }
+      }
+    },
     "O aplikácii" : {
       "localizations" : {
         "en" : {
@@ -5155,6 +4739,70 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O priečinok vyššie"
+          }
+        }
+      }
+    },
+    "ODINSTALOVAT" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UNINSTALL"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ODINSTALOVAT"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "OPcache pre PHP %@ vyčistená" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OPcache cleared for PHP %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OPcache pre PHP %@ vyčistená"
+          }
+        }
+      }
+    },
+    "OPcache zapnutý" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OPcache enabled"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OPcache zapnutý"
           }
         }
       }
@@ -5307,18 +4955,18 @@
         }
       }
     },
-    "od %@" : {
+    "Odinštalovanie PHP %@ zlyhalo" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "since %@"
+            "value" : "Uninstalling PHP %@ failed"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "od %@"
+            "value" : "Odinštalovanie PHP %@ zlyhalo"
           }
         }
       }
@@ -5351,38 +4999,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Odinštalovanie je zablokované — tieto cesty RAMP nesmie zmazať:"
-          }
-        }
-      }
-    },
-    "Odinštalovanie PHP %@ zlyhalo" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uninstalling PHP %@ failed"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odinštalovanie PHP %@ zlyhalo"
-          }
-        }
-      }
-    },
-    "ODINSTALOVAT" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "UNINSTALL"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ODINSTALOVAT"
           }
         }
       }
@@ -5531,6 +5147,16 @@
         }
       }
     },
+    "Odpojené od %@ po 10 minútach nečinnosti" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disconnected from %@ after 10 minutes of inactivity"
+          }
+        }
+      }
+    },
     "Odpojiť" : {
       "localizations" : {
         "en" : {
@@ -5659,38 +5285,6 @@
         }
       }
     },
-    "Odstrániť alias" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Remove alias"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odstrániť alias"
-          }
-        }
-      }
-    },
-    "Odstrániť expiráciu (PERSIST)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Remove expiry (PERSIST)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odstrániť expiráciu (PERSIST)"
-          }
-        }
-      }
-    },
     "Odstrániť LaunchAgent" : {
       "localizations" : {
         "en" : {
@@ -5703,22 +5297,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Odstrániť LaunchAgent"
-          }
-        }
-      }
-    },
-    "Odstrániť nastavenia %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Remove preferences %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odstrániť nastavenia %@"
           }
         }
       }
@@ -5751,6 +5329,54 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Odstrániť RAMP z položiek pri prihlásení"
+          }
+        }
+      }
+    },
+    "Odstrániť alias" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove alias"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odstrániť alias"
+          }
+        }
+      }
+    },
+    "Odstrániť expiráciu (PERSIST)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove expiry (PERSIST)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odstrániť expiráciu (PERSIST)"
+          }
+        }
+      }
+    },
+    "Odstrániť nastavenia %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove preferences %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odstrániť nastavenia %@"
           }
         }
       }
@@ -5835,54 +5461,6 @@
         }
       }
     },
-    "OK" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        }
-      }
-    },
-    "OPcache pre PHP %@ vyčistená" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OPcache cleared for PHP %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OPcache pre PHP %@ vyčistená"
-          }
-        }
-      }
-    },
-    "OPcache zapnutý" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OPcache enabled"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OPcache zapnutý"
-          }
-        }
-      }
-    },
     "Ostatné" : {
       "localizations" : {
         "en" : {
@@ -5895,22 +5473,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ostatné"
-          }
-        }
-      }
-    },
-    "Otvorí Elasticvue v predvolenom prehliadači (%@)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opens Elasticvue in the default browser (%@)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Otvorí Elasticvue v predvolenom prehliadači (%@)"
           }
         }
       }
@@ -5947,6 +5509,38 @@
         }
       }
     },
+    "Otvoriť Nastavenia systému" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open System Settings"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otvoriť Nastavenia systému"
+          }
+        }
+      }
+    },
+    "Otvoriť RAMP" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open RAMP"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otvoriť RAMP"
+          }
+        }
+      }
+    },
     "Otvoriť import" : {
       "localizations" : {
         "en" : {
@@ -5975,22 +5569,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otvoriť log v inej aplikácii"
-          }
-        }
-      }
-    },
-    "Otvoriť Nastavenia systému" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open System Settings"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Otvoriť Nastavenia systému"
           }
         }
       }
@@ -6044,38 +5622,6 @@
         }
       }
     },
-    "Otvoriť RAMP" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open RAMP"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Otvoriť RAMP"
-          }
-        }
-      }
-    },
-    "Otvoriť v editore" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open in editor"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Otvoriť v editore"
-          }
-        }
-      }
-    },
     "Otvoriť v Konzole" : {
       "localizations" : {
         "en" : {
@@ -6104,6 +5650,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otvoriť v PhpStorme"
+          }
+        }
+      }
+    },
+    "Otvoriť v editore" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in editor"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otvoriť v editore"
           }
         }
       }
@@ -6156,6 +5718,22 @@
         }
       }
     },
+    "Otvorí Elasticvue v predvolenom prehliadači (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens Elasticvue in the default browser (%@)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otvorí Elasticvue v predvolenom prehliadači (%@)"
+          }
+        }
+      }
+    },
     "Overenie" : {
       "localizations" : {
         "en" : {
@@ -6184,86 +5762,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Overuje sa kontrolný súčet…"
-          }
-        }
-      }
-    },
-    "Pamäť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Memory"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pamäť"
-          }
-        }
-      }
-    },
-    "Pamäť (heap)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Memory (heap)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pamäť (heap)"
-          }
-        }
-      }
-    },
-    "Pasívny režim" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passive mode"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pasívny režim"
-          }
-        }
-      }
-    },
-    "Passphrase" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passphrase"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passphrase"
-          }
-        }
-      }
-    },
-    "Passphrase ku kľúču pre %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Key passphrase for %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passphrase ku kľúču pre %@"
           }
         }
       }
@@ -6540,22 +6038,6 @@
         }
       }
     },
-    "php v novom termináli" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "php in a new terminal"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "php v novom termináli"
-          }
-        }
-      }
-    },
     "PHP verzia" : {
       "localizations" : {
         "en" : {
@@ -6572,34 +6054,114 @@
         }
       }
     },
-    "php.ini direktívy pre všetky PHP verzie" : {
+    "PID %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "php.ini directives for all PHP versions"
+            "value" : "PID %@"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "php.ini direktívy pre všetky PHP verzie"
+            "value" : "PID %@"
           }
         }
       }
     },
-    "phpMyAdmin" : {
+    "POZOR: Kľúč servera sa zmenil!" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "phpMyAdmin"
+            "value" : "WARNING: The server key has changed!"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "phpMyAdmin"
+            "value" : "POZOR: Kľúč servera sa zmenil!"
+          }
+        }
+      }
+    },
+    "Pamäť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memory"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pamäť"
+          }
+        }
+      }
+    },
+    "Pamäť (heap)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memory (heap)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pamäť (heap)"
+          }
+        }
+      }
+    },
+    "Passphrase" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passphrase"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passphrase"
+          }
+        }
+      }
+    },
+    "Passphrase ku kľúču pre %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key passphrase for %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passphrase ku kľúču pre %@"
+          }
+        }
+      }
+    },
+    "Pasívny režim" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passive mode"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasívny režim"
           }
         }
       }
@@ -6664,22 +6226,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "PhpStorm sa nepodarilo spustiť"
-          }
-        }
-      }
-    },
-    "PID %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "PID %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "PID %@"
           }
         }
       }
@@ -6808,38 +6354,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Po migrácii overiť (spustí a zastaví RAMP Elasticsearch)"
-          }
-        }
-      }
-    },
-    "Počet vhostov: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vhosts: %lld"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Počet vhostov: %lld"
-          }
-        }
-      }
-    },
-    "Počiatočný priečinok" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Initial folder"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Počiatočný priečinok"
           }
         }
       }
@@ -7036,6 +6550,38 @@
         }
       }
     },
+    "Port MySQL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MySQL port"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Port MySQL"
+          }
+        }
+      }
+    },
+    "Port Redis" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redis port"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Port Redis"
+          }
+        }
+      }
+    },
     "Port musí byť číslo" : {
       "localizations" : {
         "en" : {
@@ -7080,38 +6626,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Port musí byť číslo 1–65535"
-          }
-        }
-      }
-    },
-    "Port MySQL" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "MySQL port"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Port MySQL"
-          }
-        }
-      }
-    },
-    "Port Redis" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Redis port"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Port Redis"
           }
         }
       }
@@ -7212,22 +6726,6 @@
         }
       }
     },
-    "používajú ju vhosty (%lld): %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "used by vhosts (%1$lld): %2$@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "používajú ju vhosty (%1$lld): %2$@"
-          }
-        }
-      }
-    },
     "Používateľ" : {
       "localizations" : {
         "en" : {
@@ -7240,38 +6738,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Používateľ"
-          }
-        }
-      }
-    },
-    "Pôvodné dáta RAMP" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Previous RAMP data"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pôvodné dáta RAMP"
-          }
-        }
-      }
-    },
-    "povolený" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "enabled"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "povolený"
           }
         }
       }
@@ -7340,50 +6806,34 @@
         }
       }
     },
-    "POZOR: Kľúč servera sa zmenil!" : {
+    "Počet vhostov: %lld" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "WARNING: The server key has changed!"
+            "value" : "Vhosts: %lld"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "POZOR: Kľúč servera sa zmenil!"
+            "value" : "Počet vhostov: %lld"
           }
         }
       }
     },
-    "Práva" : {
+    "Počiatočný priečinok" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Permissions"
+            "value" : "Initial folder"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Práva"
-          }
-        }
-      }
-    },
-    "Prázdny priečinok" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Empty folder"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prázdny priečinok"
+            "value" : "Počiatočný priečinok"
           }
         }
       }
@@ -7436,22 +6886,6 @@
         }
       }
     },
-    "Prebieha…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Running…"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prebieha…"
-          }
-        }
-      }
-    },
     "Prebiehajú prenosy" : {
       "localizations" : {
         "en" : {
@@ -7464,6 +6898,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prebiehajú prenosy"
+          }
+        }
+      }
+    },
+    "Prebieha…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running…"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prebieha…"
           }
         }
       }
@@ -7500,54 +6950,6 @@
         }
       }
     },
-    "Predĺžené" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extended"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Predĺžené"
-          }
-        }
-      }
-    },
-    "Predĺžiť o 1 h" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extend by 1 h"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Predĺžiť o 1 h"
-          }
-        }
-      }
-    },
-    "predvolená" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "default"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "predvolená"
-          }
-        }
-      }
-    },
     "Predvolená" : {
       "localizations" : {
         "en" : {
@@ -7560,22 +6962,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Predvolená"
-          }
-        }
-      }
-    },
-    "predvolená (%@)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "default (%@)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "predvolená (%@)"
           }
         }
       }
@@ -7628,34 +7014,34 @@
         }
       }
     },
-    "predvolene len 8.2" : {
+    "Predĺžené" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "default on 8.2 only"
+            "value" : "Extended"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "predvolene len 8.2"
+            "value" : "Predĺžené"
           }
         }
       }
     },
-    "predvolený catch-all vhost" : {
+    "Predĺžiť o 1 h" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "default catch-all vhost"
+            "value" : "Extend by 1 h"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "predvolený catch-all vhost"
+            "value" : "Predĺžiť o 1 h"
           }
         }
       }
@@ -8306,54 +7692,6 @@
         }
       }
     },
-    "Príkazy terminálu sa nepodarilo pripraviť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terminal commands could not be prepared"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Príkazy terminálu sa nepodarilo pripraviť"
-          }
-        }
-      }
-    },
-    "Pripájam sa k %@…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Connecting to %@…"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pripájam sa k %@…"
-          }
-        }
-      }
-    },
-    "Pripojené" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Connected"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pripojené"
-          }
-        }
-      }
-    },
     "Pripojenie bolo ukončené." : {
       "localizations" : {
         "en" : {
@@ -8418,6 +7756,32 @@
         }
       }
     },
+    "Pripojené" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connected"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pripojené"
+          }
+        }
+      }
+    },
+    "Pripojené k %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connected to %@"
+          }
+        }
+      }
+    },
     "Pripojiť" : {
       "localizations" : {
         "en" : {
@@ -8467,50 +7831,18 @@
         }
       }
     },
-    "Prístup sa nepodarilo duplikovať" : {
+    "Pripájam sa k %@…" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Could not duplicate the site"
+            "value" : "Connecting to %@…"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prístup sa nepodarilo duplikovať"
-          }
-        }
-      }
-    },
-    "Prístup sa nepodarilo odstrániť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not delete the site"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prístup sa nepodarilo odstrániť"
-          }
-        }
-      }
-    },
-    "Prístup sa nepodarilo uložiť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not save the site"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prístup sa nepodarilo uložiť"
+            "value" : "Pripájam sa k %@…"
           }
         }
       }
@@ -8607,6 +7939,118 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prvkov: %lld"
+          }
+        }
+      }
+    },
+    "Práva" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permissions"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Práva"
+          }
+        }
+      }
+    },
+    "Prázdny priečinok" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empty folder"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prázdny priečinok"
+          }
+        }
+      }
+    },
+    "Príkazy terminálu sa nepodarilo pripraviť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminal commands could not be prepared"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Príkazy terminálu sa nepodarilo pripraviť"
+          }
+        }
+      }
+    },
+    "Prístup sa nepodarilo duplikovať" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not duplicate the site"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prístup sa nepodarilo duplikovať"
+          }
+        }
+      }
+    },
+    "Prístup sa nepodarilo odstrániť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not delete the site"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prístup sa nepodarilo odstrániť"
+          }
+        }
+      }
+    },
+    "Prístup sa nepodarilo uložiť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not save the site"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prístup sa nepodarilo uložiť"
+          }
+        }
+      }
+    },
+    "Pôvodné dáta RAMP" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous RAMP data"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pôvodné dáta RAMP"
           }
         }
       }
@@ -8739,6 +8183,16 @@
         }
       }
     },
+    "RAMP už beží" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RAMP is already running"
+          }
+        }
+      }
+    },
     "RAMP vypol riadky MAMPu: %lld — dajú sa obnoviť." : {
       "localizations" : {
         "en" : {
@@ -8787,22 +8241,6 @@
         }
       }
     },
-    "RAMP: čiastočne beží" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RAMP: partially running"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "RAMP: čiastočne beží"
-          }
-        }
-      }
-    },
     "RAMP: všetko beží" : {
       "localizations" : {
         "en" : {
@@ -8835,9 +8273,39 @@
         }
       }
     },
-    "Redis" : {
-
+    "RAMP: čiastočne beží" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RAMP: partially running"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RAMP: čiastočne beží"
+          }
+        }
+      }
     },
+    "RSA kľúč: moderné servery (OpenSSH 8.8+) ho môžu odmietnuť, lebo RAMP ním zatiaľ podpisuje cez SHA-1. Odporúčame kľúč ed25519 (ssh-keygen -t ed25519)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RSA key: modern servers (OpenSSH 8.8+) may reject it because RAMP still signs with SHA-1. An ed25519 key is recommended (ssh-keygen -t ed25519)."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RSA kľúč: moderné servery (OpenSSH 8.8+) ho môžu odmietnuť, lebo RAMP ním zatiaľ podpisuje cez SHA-1. Odporúčame kľúč ed25519 (ssh-keygen -t ed25519)."
+          }
+        }
+      }
+    },
+    "Redis" : {},
     "Redis nebeží" : {
       "localizations" : {
         "en" : {
@@ -9142,22 +8610,6 @@
         }
       }
     },
-    "Rozšírenia" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extensions"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rozšírenia"
-          }
-        }
-      }
-    },
     "Rozumiem, RAMP ho odstráni (plist pôjde do Koša)" : {
       "localizations" : {
         "en" : {
@@ -9174,18 +8626,18 @@
         }
       }
     },
-    "RSA kľúč: moderné servery (OpenSSH 8.8+) ho môžu odmietnuť, lebo RAMP ním zatiaľ podpisuje cez SHA-1. Odporúčame kľúč ed25519 (ssh-keygen -t ed25519)." : {
+    "Rozšírenia" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "RSA key: modern servers (OpenSSH 8.8+) may reject it because RAMP still signs with SHA-1. An ed25519 key is recommended (ssh-keygen -t ed25519)."
+            "value" : "Extensions"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "RSA kľúč: moderné servery (OpenSSH 8.8+) ho môžu odmietnuť, lebo RAMP ním zatiaľ podpisuje cez SHA-1. Odporúčame kľúč ed25519 (ssh-keygen -t ed25519)."
+            "value" : "Rozšírenia"
           }
         }
       }
@@ -9250,22 +8702,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schémy"
-          }
-        }
-      }
-    },
-    "sekúnd" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "seconds"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "sekúnd"
           }
         }
       }
@@ -9414,22 +8850,6 @@
         }
       }
     },
-    "Skóre" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Score"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skóre"
-          }
-        }
-      }
-    },
     "Skript" : {
       "localizations" : {
         "en" : {
@@ -9546,6 +8966,22 @@
         }
       }
     },
+    "Skóre" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Score"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skóre"
+          }
+        }
+      }
+    },
     "Skúsiť znova" : {
       "localizations" : {
         "en" : {
@@ -9626,6 +9062,26 @@
         }
       }
     },
+    "Služby už spravuje iná spustená kópia RAMP (PID %@). Táto kópia sa ukončí, aby nespúšťala služby druhýkrát." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Another running copy of RAMP (PID %@) already manages the services. This copy will quit so it doesn’t start them a second time."
+          }
+        }
+      }
+    },
+    "Služby už spravuje iná spustená kópia RAMP. Táto kópia sa ukončí, aby nespúšťala služby druhýkrát." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Another running copy of RAMP already manages the services. This copy will quit so it doesn’t start them a second time."
+          }
+        }
+      }
+    },
     "Socket" : {
       "localizations" : {
         "en" : {
@@ -9638,22 +9094,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Socket"
-          }
-        }
-      }
-    },
-    "Späť na pripojený prístup %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Back to connected site %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Späť na pripojený prístup %@"
           }
         }
       }
@@ -9706,34 +9146,18 @@
         }
       }
     },
-    "Spúšťa sa" : {
+    "Spustite Redis, aby ste mohli prehliadať kľúče." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Starting"
+            "value" : "Start Redis to browse keys."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spúšťa sa"
-          }
-        }
-      }
-    },
-    "Spúšťať pri prihlásení" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launch at login"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spúšťať pri prihlásení"
+            "value" : "Spustite Redis, aby ste mohli prehliadať kľúče."
           }
         }
       }
@@ -9819,98 +9243,50 @@
         }
       }
     },
-    "Spustite Redis, aby ste mohli prehliadať kľúče." : {
+    "Späť na pripojený prístup %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start Redis to browse keys."
+            "value" : "Back to connected site %@"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spustite Redis, aby ste mohli prehliadať kľúče."
+            "value" : "Späť na pripojený prístup %@"
           }
         }
       }
     },
-    "Sťahuje sa…" : {
+    "Spúšťa sa" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Downloading…"
+            "value" : "Starting"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sťahuje sa…"
+            "value" : "Spúšťa sa"
           }
         }
       }
     },
-    "Sťahuje sa… %@" : {
+    "Spúšťať pri prihlásení" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Downloading… %@"
+            "value" : "Launch at login"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sťahuje sa… %@"
-          }
-        }
-      }
-    },
-    "Sťahuje sa… %@ · %@/s" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Downloading… %1$@ · %2$@/s"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sťahuje sa… %1$@ · %2$@/s"
-          }
-        }
-      }
-    },
-    "Sťahuje sa… %@ / %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Downloading… %1$@ of %2$@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sťahuje sa… %1$@ / %2$@"
-          }
-        }
-      }
-    },
-    "Sťahuje sa… %@ / %@ · %@/s · zostáva %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Downloading… %1$@ of %2$@ · %3$@/s · %4$@ left"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sťahuje sa… %1$@ / %2$@ · %3$@/s · zostáva %4$@"
+            "value" : "Spúšťať pri prihlásení"
           }
         }
       }
@@ -9963,6 +9339,22 @@
         }
       }
     },
+    "Stiahnutý %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloaded %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stiahnutý %@"
+          }
+        }
+      }
+    },
     "Stiahnuť sem" : {
       "localizations" : {
         "en" : {
@@ -9991,22 +9383,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stiahnuť…"
-          }
-        }
-      }
-    },
-    "Stiahnutý %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Downloaded %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stiahnutý %@"
           }
         }
       }
@@ -10055,118 +9431,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stromové zobrazenie (podľa „:“)"
-          }
-        }
-      }
-    },
-    "Súbor /etc/hosts nie je aktuálny" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "/etc/hosts is not up to date"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Súbor /etc/hosts nie je aktuálny"
-          }
-        }
-      }
-    },
-    "Súbor FileZilly sa nedá načítať" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cannot read the FileZilla file"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Súbor FileZilly sa nedá načítať"
-          }
-        }
-      }
-    },
-    "súbory %lld/%lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "files %1$lld/%2$lld"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "súbory %1$lld/%2$lld"
-          }
-        }
-      }
-    },
-    "Súbory na serveri" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Files on the server"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Súbory na serveri"
-          }
-        }
-      }
-    },
-    "Súbory projektu v %@ sa NEVYMAŽÚ — odstráni sa len vhost z RAMP a záznam v /etc/hosts." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Project files in %@ are NOT deleted — only the vhost in RAMP and its /etc/hosts entry are removed."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Súbory projektu v %@ sa NEVYMAŽÚ — odstráni sa len vhost z RAMP a záznam v /etc/hosts."
-          }
-        }
-      }
-    },
-    "Súbory sem môžete pretiahnuť z Findera." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Drag files here from Finder."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Súbory sem môžete pretiahnuť z Findera."
-          }
-        }
-      }
-    },
-    "Súkromný kľúč" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Private key"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Súkromný kľúč"
           }
         }
       }
@@ -10235,6 +9499,230 @@
         }
       }
     },
+    "Súbor /etc/hosts nie je aktuálny" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/etc/hosts is not up to date"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Súbor /etc/hosts nie je aktuálny"
+          }
+        }
+      }
+    },
+    "Súbor FileZilly sa nedá načítať" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cannot read the FileZilla file"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Súbor FileZilly sa nedá načítať"
+          }
+        }
+      }
+    },
+    "Súbory na serveri" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Files on the server"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Súbory na serveri"
+          }
+        }
+      }
+    },
+    "Súbory projektu v %@ sa NEVYMAŽÚ — odstráni sa len vhost z RAMP a záznam v /etc/hosts." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Project files in %@ are NOT deleted — only the vhost in RAMP and its /etc/hosts entry are removed."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Súbory projektu v %@ sa NEVYMAŽÚ — odstráni sa len vhost z RAMP a záznam v /etc/hosts."
+          }
+        }
+      }
+    },
+    "Súbory sem môžete pretiahnuť z Findera." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag files here from Finder."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Súbory sem môžete pretiahnuť z Findera."
+          }
+        }
+      }
+    },
+    "Súkromný kľúč" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Private key"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Súkromný kľúč"
+          }
+        }
+      }
+    },
+    "Sťahuje sa…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloading…"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sťahuje sa…"
+          }
+        }
+      }
+    },
+    "Sťahuje sa… %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloading… %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sťahuje sa… %@"
+          }
+        }
+      }
+    },
+    "Sťahuje sa… %@ / %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloading… %1$@ of %2$@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sťahuje sa… %1$@ / %2$@"
+          }
+        }
+      }
+    },
+    "Sťahuje sa… %@ / %@ · %@/s · zostáva %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloading… %1$@ of %2$@ · %3$@/s · %4$@ left"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sťahuje sa… %1$@ / %2$@ · %3$@/s · zostáva %4$@"
+          }
+        }
+      }
+    },
+    "Sťahuje sa… %@ · %@/s" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloading… %1$@ · %2$@/s"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sťahuje sa… %1$@ · %2$@/s"
+          }
+        }
+      }
+    },
+    "TLD môže obsahovať len písmená, číslice a pomlčku (napr. local)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TLD may only contain letters, digits and hyphens (e.g. local)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TLD môže obsahovať len písmená, číslice a pomlčku (napr. local)"
+          }
+        }
+      }
+    },
+    "TTL %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TTL %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TTL %@"
+          }
+        }
+      }
+    },
+    "TTL sa nepodarilo zmeniť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not change the TTL"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TTL sa nepodarilo zmeniť"
+          }
+        }
+      }
+    },
     "Tabuliek" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -10280,22 +9768,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tabuľky"
-          }
-        }
-      }
-    },
-    "Táto verzia" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This version"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Táto verzia"
           }
         }
       }
@@ -10428,22 +9900,6 @@
         }
       }
     },
-    "TLD môže obsahovať len písmená, číslice a pomlčku (napr. local)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TLD may only contain letters, digits and hyphens (e.g. local)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TLD môže obsahovať len písmená, číslice a pomlčku (napr. local)"
-          }
-        }
-      }
-    },
     "Tracing JIT, buffer 128M" : {
       "localizations" : {
         "en" : {
@@ -10492,50 +9948,18 @@
         }
       }
     },
-    "TTL %@" : {
+    "Typ kľúča %@ RAMP nepodporuje. Použite kľúč ed25519 (ssh-keygen -t ed25519)." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TTL %@"
+            "value" : "RAMP does not support the key type %@. Use an ed25519 key (ssh-keygen -t ed25519)."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TTL %@"
-          }
-        }
-      }
-    },
-    "TTL sa nepodarilo zmeniť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not change the TTL"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TTL sa nepodarilo zmeniť"
-          }
-        }
-      }
-    },
-    "Túto verziu nepoužíva žiadny vhost" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No vhost uses this version"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Túto verziu nepoužíva žiadny vhost"
+            "value" : "Typ kľúča %@ RAMP nepodporuje. Použite kľúč ed25519 (ssh-keygen -t ed25519)."
           }
         }
       }
@@ -10556,18 +9980,34 @@
         }
       }
     },
-    "Typ kľúča %@ RAMP nepodporuje. Použite kľúč ed25519 (ssh-keygen -t ed25519)." : {
+    "Táto verzia" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "RAMP does not support the key type %@. Use an ed25519 key (ssh-keygen -t ed25519)."
+            "value" : "This version"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Typ kľúča %@ RAMP nepodporuje. Použite kľúč ed25519 (ssh-keygen -t ed25519)."
+            "value" : "Táto verzia"
+          }
+        }
+      }
+    },
+    "Túto verziu nepoužíva žiadny vhost" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No vhost uses this version"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Túto verziu nepoužíva žiadny vhost"
           }
         }
       }
@@ -10893,38 +10333,6 @@
         }
       }
     },
-    "Úroveň" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Level"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Úroveň"
-          }
-        }
-      }
-    },
-    "už existuje v RAMP" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "already exists in RAMP"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "už existuje v RAMP"
-          }
-        }
-      }
-    },
     "Uzly" : {
       "localizations" : {
         "en" : {
@@ -10937,6 +10345,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uzly"
+          }
+        }
+      }
+    },
+    "V cieľovom priečinku už existuje: %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Already in the destination folder: %lld"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V cieľovom priečinku už existuje: %lld"
+          }
+        }
+      }
+    },
+    "V súbore nie sú žiadne prístupy." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The file contains no sites."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V súbore nie sú žiadne prístupy."
           }
         }
       }
@@ -11001,86 +10441,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "V čase %@"
-          }
-        }
-      }
-    },
-    "V cieľovom priečinku už existuje: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Already in the destination folder: %lld"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "V cieľovom priečinku už existuje: %lld"
-          }
-        }
-      }
-    },
-    "V súbore nie sú žiadne prístupy." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The file contains no sites."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "V súbore nie sú žiadne prístupy."
-          }
-        }
-      }
-    },
-    "Veľkosť" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Size"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Veľkosť"
-          }
-        }
-      }
-    },
-    "Veľkosť pamäte (shm_size)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Memory size (shm_size)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Veľkosť pamäte (shm_size)"
-          }
-        }
-      }
-    },
-    "Veľkosť zdroja" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Source size"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Veľkosť zdroja"
           }
         }
       }
@@ -11193,6 +10553,54 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verzie PHP"
+          }
+        }
+      }
+    },
+    "Veľkosť" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Size"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veľkosť"
+          }
+        }
+      }
+    },
+    "Veľkosť pamäte (shm_size)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memory size (shm_size)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veľkosť pamäte (shm_size)"
+          }
+        }
+      }
+    },
+    "Veľkosť zdroja" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source size"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veľkosť zdroja"
           }
         }
       }
@@ -11469,134 +10877,6 @@
         }
       }
     },
-    "Všeobecné" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "General"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Všeobecné"
-          }
-        }
-      }
-    },
-    "Všetko" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Všetko"
-          }
-        }
-      }
-    },
-    "Všetko beží" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All running"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Všetko beží"
-          }
-        }
-      }
-    },
-    "Všetko je aktuálne" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Everything is up to date"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Všetko je aktuálne"
-          }
-        }
-      }
-    },
-    "Všetky" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Všetky"
-          }
-        }
-      }
-    },
-    "Všetky bežia (%lld)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All running (%lld)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Všetky bežia (%lld)"
-          }
-        }
-      }
-    },
-    "Všetky PHP verzie znovu načítané" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All PHP versions reloaded"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Všetky PHP verzie znovu načítané"
-          }
-        }
-      }
-    },
-    "Všetky verzie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All versions"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Všetky verzie"
-          }
-        }
-      }
-    },
     "Vyberte kľúč" : {
       "localizations" : {
         "en" : {
@@ -11725,102 +11005,6 @@
         }
       }
     },
-    "Vyčistiť APCu" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clear APCu"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vyčistiť APCu"
-          }
-        }
-      }
-    },
-    "Vyčistiť OPcache" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clear OPcache"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vyčistiť OPcache"
-          }
-        }
-      }
-    },
-    "Vyčistiť zobrazenie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clear View"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vyčistiť zobrazenie"
-          }
-        }
-      }
-    },
-    "Vyčistiť zobrazenie (súbor ostane nezmenený)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clear the view (the file stays unchanged)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vyčistiť zobrazenie (súbor ostane nezmenený)"
-          }
-        }
-      }
-    },
-    "Výkon" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Performance"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Výkon"
-          }
-        }
-      }
-    },
-    "Výkon = bez kontroly zmien súborov + JIT" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Performance = no file change checks + JIT"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Výkon = bez kontroly zmien súborov + JIT"
-          }
-        }
-      }
-    },
     "Vymazať" : {
       "localizations" : {
         "en" : {
@@ -11885,22 +11069,6 @@
         }
       }
     },
-    "Vymazať kľúč…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Delete key…"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vymazať kľúč…"
-          }
-        }
-      }
-    },
     "Vymazať kľúče podľa vzoru?" : {
       "localizations" : {
         "en" : {
@@ -11929,6 +11097,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vymazať kľúče podľa vzoru…"
+          }
+        }
+      }
+    },
+    "Vymazať kľúč…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete key…"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vymazať kľúč…"
           }
         }
       }
@@ -11981,38 +11165,6 @@
         }
       }
     },
-    "Vypnúť riadky MAMPu a použiť RAMP" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disable MAMP lines and use RAMP"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vypnúť riadky MAMPu a použiť RAMP"
-          }
-        }
-      }
-    },
-    "Vypnúť vhost" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disable vhost"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vypnúť vhost"
-          }
-        }
-      }
-    },
     "Vypnutá" : {
       "localizations" : {
         "en" : {
@@ -12061,18 +11213,34 @@
         }
       }
     },
-    "Výsledok" : {
+    "Vypnúť riadky MAMPu a použiť RAMP" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Result"
+            "value" : "Disable MAMP lines and use RAMP"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Výsledok"
+            "value" : "Vypnúť riadky MAMPu a použiť RAMP"
+          }
+        }
+      }
+    },
+    "Vypnúť vhost" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disable vhost"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vypnúť vhost"
           }
         }
       }
@@ -12089,6 +11257,150 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vytvoriť"
+          }
+        }
+      }
+    },
+    "Vyčistiť APCu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear APCu"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyčistiť APCu"
+          }
+        }
+      }
+    },
+    "Vyčistiť OPcache" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear OPcache"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyčistiť OPcache"
+          }
+        }
+      }
+    },
+    "Vyčistiť zobrazenie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear View"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyčistiť zobrazenie"
+          }
+        }
+      }
+    },
+    "Vyčistiť zobrazenie (súbor ostane nezmenený)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear the view (the file stays unchanged)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyčistiť zobrazenie (súbor ostane nezmenený)"
+          }
+        }
+      }
+    },
+    "Vzor (MATCH), napr. user:*" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pattern (MATCH), e.g. user:*"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vzor (MATCH), napr. user:*"
+          }
+        }
+      }
+    },
+    "Vzor „%@“ v DB %lld zodpovedá %lld kľúčom. Vymažú sa natrvalo (SCAN + UNLINK)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pattern “%1$@” in DB %2$lld matches %3$lld keys. They will be deleted permanently (SCAN + UNLINK)."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vzor „%1$@“ v DB %2$lld zodpovedá %3$lld kľúčom. Vymažú sa natrvalo (SCAN + UNLINK)."
+          }
+        }
+      }
+    },
+    "Výkon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Performance"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výkon"
+          }
+        }
+      }
+    },
+    "Výkon = bez kontroly zmien súborov + JIT" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Performance = no file change checks + JIT"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výkon = bez kontroly zmien súborov + JIT"
+          }
+        }
+      }
+    },
+    "Výsledok" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Result"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výsledok"
           }
         }
       }
@@ -12126,34 +11438,130 @@
         }
       }
     },
-    "Vzor „%@“ v DB %lld zodpovedá %lld kľúčom. Vymažú sa natrvalo (SCAN + UNLINK)." : {
+    "Všeobecné" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pattern “%1$@” in DB %2$lld matches %3$lld keys. They will be deleted permanently (SCAN + UNLINK)."
+            "value" : "General"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vzor „%1$@“ v DB %2$lld zodpovedá %3$lld kľúčom. Vymažú sa natrvalo (SCAN + UNLINK)."
+            "value" : "Všeobecné"
           }
         }
       }
     },
-    "Vzor (MATCH), napr. user:*" : {
+    "Všetko" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pattern (MATCH), e.g. user:*"
+            "value" : "All"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vzor (MATCH), napr. user:*"
+            "value" : "Všetko"
+          }
+        }
+      }
+    },
+    "Všetko beží" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All running"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Všetko beží"
+          }
+        }
+      }
+    },
+    "Všetko je aktuálne" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Everything is up to date"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Všetko je aktuálne"
+          }
+        }
+      }
+    },
+    "Všetky" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Všetky"
+          }
+        }
+      }
+    },
+    "Všetky PHP verzie znovu načítané" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All PHP versions reloaded"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Všetky PHP verzie znovu načítané"
+          }
+        }
+      }
+    },
+    "Všetky bežia (%lld)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All running (%lld)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Všetky bežia (%lld)"
+          }
+        }
+      }
+    },
+    "Všetky verzie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All versions"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Všetky verzie"
           }
         }
       }
@@ -12238,22 +11646,6 @@
         }
       }
     },
-    "Zabudnúť starý kľúč" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forget Old Key"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zabudnúť starý kľúč"
-          }
-        }
-      }
-    },
     "Zabudnuté heslo…" : {
       "localizations" : {
         "en" : {
@@ -12266,6 +11658,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zabudnuté heslo…"
+          }
+        }
+      }
+    },
+    "Zabudnúť starý kľúč" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forget Old Key"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zabudnúť starý kľúč"
           }
         }
       }
@@ -12318,70 +11726,6 @@
         }
       }
     },
-    "Záloha databáz: %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Database backup: %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Záloha databáz: %@"
-          }
-        }
-      }
-    },
-    "Záloha MySQL…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Backing up MySQL…"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Záloha MySQL…"
-          }
-        }
-      }
-    },
-    "Zálohovať databázy (mysqldump) na Plochu" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Back up databases (mysqldump) to the Desktop"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zálohovať databázy (mysqldump) na Plochu"
-          }
-        }
-      }
-    },
-    "Zálohovať databázy do %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Back up databases to %@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zálohovať databázy do %@"
-          }
-        }
-      }
-    },
     "Zamknúť" : {
       "localizations" : {
         "en" : {
@@ -12414,22 +11758,6 @@
         }
       }
     },
-    "Zapnúť vhost" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enable vhost"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zapnúť vhost"
-          }
-        }
-      }
-    },
     "Zapnutý" : {
       "localizations" : {
         "en" : {
@@ -12442,6 +11770,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zapnutý"
+          }
+        }
+      }
+    },
+    "Zapnúť vhost" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable vhost"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapnúť vhost"
           }
         }
       }
@@ -12606,22 +11950,6 @@
         }
       }
     },
-    "Záznamov: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entries: %lld"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Záznamov: %lld"
-          }
-        }
-      }
-    },
     "Zbalené" : {
       "localizations" : {
         "en" : {
@@ -12718,230 +12046,6 @@
         }
       }
     },
-    "Žiadna PHP verzia" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No PHP version"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadna PHP verzia"
-          }
-        }
-      }
-    },
-    "Žiadne" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "None"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne"
-          }
-        }
-      }
-    },
-    "Žiadne databázy" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No databases"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne databázy"
-          }
-        }
-      }
-    },
-    "Žiadne FTP prístupy" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No FTP sites"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne FTP prístupy"
-          }
-        }
-      }
-    },
-    "Žiadne indexy" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No indices"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne indexy"
-          }
-        }
-      }
-    },
-    "Žiadne kľúče nezodpovedajú vzoru" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No keys match the pattern"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne kľúče nezodpovedajú vzoru"
-          }
-        }
-      }
-    },
-    "Žiadne logy" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No logs"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne logy"
-          }
-        }
-      }
-    },
-    "Žiadne pluginy" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No plugins"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne pluginy"
-          }
-        }
-      }
-    },
-    "Žiadne prístupy" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No sites"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne prístupy"
-          }
-        }
-      }
-    },
-    "Žiadne služby" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Services"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne služby"
-          }
-        }
-      }
-    },
-    "Žiadne vhosty" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Vhosts"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne vhosty"
-          }
-        }
-      }
-    },
-    "Žiadne zapnuté vhosty" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No enabled vhosts"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne zapnuté vhosty"
-          }
-        }
-      }
-    },
-    "Žiadne zodpovedajúce riadky" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No matching lines"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadne zodpovedajúce riadky"
-          }
-        }
-      }
-    },
-    "Žiadny vhost bez skupiny nemá docroot vnorený v podpriečinku ~/Sites." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No ungrouped vhost has its docroot nested in a ~/Sites subfolder."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žiadny vhost bez skupiny nemá docroot vnorený v podpriečinku ~/Sites."
-          }
-        }
-      }
-    },
     "Zlyhalo" : {
       "localizations" : {
         "en" : {
@@ -12970,16 +12074,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zlyhalo: %@"
-          }
-        }
-      }
-    },
-    "zmazanie" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "delete"
           }
         }
       }
@@ -13196,22 +12290,6 @@
         }
       }
     },
-    "Zmeň im heslo cez phpMyAdmin (ALTER USER … IDENTIFIED WITH caching_sha2_password)." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Change their password in phpMyAdmin (ALTER USER … IDENTIFIED WITH caching_sha2_password)."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zmeň im heslo cez phpMyAdmin (ALTER USER … IDENTIFIED WITH caching_sha2_password)."
-          }
-        }
-      }
-    },
     "Zmena PHP %@ zlyhala" : {
       "localizations" : {
         "en" : {
@@ -13308,6 +12386,22 @@
         }
       }
     },
+    "Zmeň im heslo cez phpMyAdmin (ALTER USER … IDENTIFIED WITH caching_sha2_password)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change their password in phpMyAdmin (ALTER USER … IDENTIFIED WITH caching_sha2_password)."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zmeň im heslo cez phpMyAdmin (ALTER USER … IDENTIFIED WITH caching_sha2_password)."
+          }
+        }
+      }
+    },
     "Znova načítať údaje o databázach" : {
       "localizations" : {
         "en" : {
@@ -13384,22 +12478,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobraziť celé"
-          }
-        }
-      }
-    },
-    "Zobraziť ďalších %lld (zostáva %lld)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show %lld more (%lld remaining)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zobraziť ďalších %lld (zostáva %lld)"
           }
         }
       }
@@ -13506,6 +12584,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobraziť všetky riadky alebo len chyby"
+          }
+        }
+      }
+    },
+    "Zobraziť ďalších %lld (zostáva %lld)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show %lld more (%lld remaining)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobraziť ďalších %lld (zostáva %lld)"
           }
         }
       }
@@ -13724,6 +12818,960 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zrušiť zmeny"
+          }
+        }
+      }
+    },
+    "Záloha MySQL…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backing up MySQL…"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záloha MySQL…"
+          }
+        }
+      }
+    },
+    "Záloha databáz: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Database backup: %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záloha databáz: %@"
+          }
+        }
+      }
+    },
+    "Zálohovať databázy (mysqldump) na Plochu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back up databases (mysqldump) to the Desktop"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zálohovať databázy (mysqldump) na Plochu"
+          }
+        }
+      }
+    },
+    "Zálohovať databázy do %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back up databases to %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zálohovať databázy do %@"
+          }
+        }
+      }
+    },
+    "Záznamov: %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entries: %lld"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záznamov: %lld"
+          }
+        }
+      }
+    },
+    "automaticky" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "automatic"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "automaticky"
+          }
+        }
+      }
+    },
+    "bez ServerName" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "no ServerName"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bez ServerName"
+          }
+        }
+      }
+    },
+    "bezpečnostné opravy do %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "security fixes until %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bezpečnostné opravy do %@"
+          }
+        }
+      }
+    },
+    "beží na nej phpMyAdmin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "phpMyAdmin runs on it"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "beží na nej phpMyAdmin"
+          }
+        }
+      }
+    },
+    "dostupné aktualizácie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "updates available"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dostupné aktualizácie"
+          }
+        }
+      }
+    },
+    "duplicitný záznam" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "duplicate entry"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "duplicitný záznam"
+          }
+        }
+      }
+    },
+    "je predvolená verzia (Nastavenia)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "it is the default version (Settings)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "je predvolená verzia (Nastavenia)"
+          }
+        }
+      }
+    },
+    "len HTTPS" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HTTPS only"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "len HTTPS"
+          }
+        }
+      }
+    },
+    "len presmerovanie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "redirect only"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "len presmerovanie"
+          }
+        }
+      }
+    },
+    "localhost patrí RAMP" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "localhost belongs to RAMP"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "localhost patrí RAMP"
+          }
+        }
+      }
+    },
+    "mysqldump každej databázy do RAMP MySQL. MAMP MySQL musí bežať." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mysqldump of each database into RAMP MySQL. MAMP MySQL must be running."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mysqldump každej databázy do RAMP MySQL. MAMP MySQL musí bežať."
+          }
+        }
+      }
+    },
+    "nenájdený v RAMP.app" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "not found in RAMP.app"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nenájdený v RAMP.app"
+          }
+        }
+      }
+    },
+    "neregistrovaný" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "not registered"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "neregistrovaný"
+          }
+        }
+      }
+    },
+    "nie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "no"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nie"
+          }
+        }
+      }
+    },
+    "nie je v balíku" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "not in the package"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nie je v balíku"
+          }
+        }
+      }
+    },
+    "od %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "since %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "od %@"
+          }
+        }
+      }
+    },
+    "php v novom termináli" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "php in a new terminal"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "php v novom termináli"
+          }
+        }
+      }
+    },
+    "php.ini direktívy pre všetky PHP verzie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "php.ini directives for all PHP versions"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "php.ini direktívy pre všetky PHP verzie"
+          }
+        }
+      }
+    },
+    "phpMyAdmin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "phpMyAdmin"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "phpMyAdmin"
+          }
+        }
+      }
+    },
+    "používajú ju vhosty (%lld): %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "used by vhosts (%1$lld): %2$@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "používajú ju vhosty (%1$lld): %2$@"
+          }
+        }
+      }
+    },
+    "povolený" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "enabled"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "povolený"
+          }
+        }
+      }
+    },
+    "predvolene len 8.2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "default on 8.2 only"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "predvolene len 8.2"
+          }
+        }
+      }
+    },
+    "predvolená" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "default"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "predvolená"
+          }
+        }
+      }
+    },
+    "predvolená (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "default (%@)"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "predvolená (%@)"
+          }
+        }
+      }
+    },
+    "predvolený catch-all vhost" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "default catch-all vhost"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "predvolený catch-all vhost"
+          }
+        }
+      }
+    },
+    "sekúnd" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "seconds"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sekúnd"
+          }
+        }
+      }
+    },
+    "súbory %lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "files %1$lld/%2$lld"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "súbory %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "už existuje v RAMP" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "already exists in RAMP"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "už existuje v RAMP"
+          }
+        }
+      }
+    },
+    "zmazanie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "delete"
+          }
+        }
+      }
+    },
+    "· zostáva %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· %@ left"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· zostáva %@"
+          }
+        }
+      }
+    },
+    "Úroveň" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Úroveň"
+          }
+        }
+      }
+    },
+    "áno" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "yes"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "áno"
+          }
+        }
+      }
+    },
+    "Čaká" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Čaká"
+          }
+        }
+      }
+    },
+    "Čaká na schválenie v Nastaveniach systému › Položky pri prihlásení" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Awaiting approval in System Settings › Login Items"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Čaká na schválenie v Nastaveniach systému › Položky pri prihlásení"
+          }
+        }
+      }
+    },
+    "Čaká sa…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting…"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Čaká sa…"
+          }
+        }
+      }
+    },
+    "Čiastočne beží" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partially running"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Čiastočne beží"
+          }
+        }
+      }
+    },
+    "Člen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Member"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Člen"
+          }
+        }
+      }
+    },
+    "čaká na schválenie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "awaiting approval"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "čaká na schválenie"
+          }
+        }
+      }
+    },
+    "Ďalej" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ďalej"
+          }
+        }
+      }
+    },
+    "Ďalšie akcie" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More actions"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ďalšie akcie"
+          }
+        }
+      }
+    },
+    "Žiadna PHP verzia" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No PHP version"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadna PHP verzia"
+          }
+        }
+      }
+    },
+    "Žiadne" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "None"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne"
+          }
+        }
+      }
+    },
+    "Žiadne FTP prístupy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No FTP sites"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne FTP prístupy"
+          }
+        }
+      }
+    },
+    "Žiadne databázy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No databases"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne databázy"
+          }
+        }
+      }
+    },
+    "Žiadne indexy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No indices"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne indexy"
+          }
+        }
+      }
+    },
+    "Žiadne kľúče nezodpovedajú vzoru" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No keys match the pattern"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne kľúče nezodpovedajú vzoru"
+          }
+        }
+      }
+    },
+    "Žiadne logy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No logs"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne logy"
+          }
+        }
+      }
+    },
+    "Žiadne pluginy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No plugins"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne pluginy"
+          }
+        }
+      }
+    },
+    "Žiadne prístupy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No sites"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne prístupy"
+          }
+        }
+      }
+    },
+    "Žiadne služby" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Services"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne služby"
+          }
+        }
+      }
+    },
+    "Žiadne vhosty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Vhosts"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne vhosty"
+          }
+        }
+      }
+    },
+    "Žiadne zapnuté vhosty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No enabled vhosts"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne zapnuté vhosty"
+          }
+        }
+      }
+    },
+    "Žiadne zodpovedajúce riadky" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No matching lines"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadne zodpovedajúce riadky"
+          }
+        }
+      }
+    },
+    "Žiadny vhost bez skupiny nemá docroot vnorený v podpriečinku ~/Sites." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No ungrouped vhost has its docroot nested in a ~/Sites subfolder."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žiadny vhost bez skupiny nemá docroot vnorený v podpriečinku ~/Sites."
+          }
+        }
+      }
+    },
+    "⌥-klik otvorí" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌥-click opens"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌥-klik otvorí"
           }
         }
       }

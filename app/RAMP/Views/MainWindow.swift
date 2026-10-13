@@ -11,7 +11,16 @@ struct MainWindow: View {
             List(SidebarSection.allCases, selection: $app.selection) { section in
                 // Fixed icon box: SF Symbols differ in width, so titles would not line up otherwise.
                 Label {
-                    Text(section.title)
+                    HStack(spacing: 6) {
+                        Text(section.title)
+                        // FTP: live session indicator (same green dot as the connected site in the list).
+                        if section == .ftp, app.remote.browser?.state == .connected {
+                            Spacer(minLength: 0)
+                            Circle().fill(.green).frame(width: 7, height: 7)
+                                .help(Text("Pripojené k \(app.remote.browser?.site.name ?? "")"))
+                                .accessibilityLabel(Text("Pripojené"))
+                        }
+                    }
                 } icon: {
                     Image(systemName: section.systemImage)
                         .frame(width: 20, alignment: .center)

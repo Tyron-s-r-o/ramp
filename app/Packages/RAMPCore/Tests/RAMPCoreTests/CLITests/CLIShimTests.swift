@@ -13,6 +13,18 @@ import Testing
         return Dictionary(uniqueKeysWithValues: list.map { ($0.name, $0.contents) })
     }
 
+    /// `rampctl` is only offered when RAMP runs from an app bundle that contains it.
+    @Test func rampctlShimOnlyWithBundledBinary() {
+        #expect(shims()["rampctl"] == nil)
+        let bundled = URL(filePath: "/Applications/RAMP.app/Contents/MacOS/rampctl")
+        let list = CLIShimGenerator(config: GeneratorFixture.config, paths: GeneratorFixture.paths, shimDir: Self.shimDir,
+                                    rampctl: bundled).shims()
+        let shim = list.first { $0.name == "rampctl" }?.contents
+        #expect(shim?.contains(CLIShimGenerator.managedHeader) == true)
+        #expect(shim?.contains("exec '/Applications/RAMP.app/Contents/MacOS/rampctl' \"$@\"") == true)
+        #expect(CLIIntegration.bundledRampctl(executable: URL(filePath: "/tmp/.build/debug/rampctl")) == nil)
+    }
+
     @Test func commandSet() {
         let names = shims().keys.sorted()
         #expect(names == ["composer", "mysql", "mysqladmin", "mysqlcheck", "mysqldump", "php", "php-config",

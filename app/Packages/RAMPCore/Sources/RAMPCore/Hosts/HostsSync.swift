@@ -90,7 +90,13 @@ public struct HostsSyncCoordinator: HostsSyncing {
     public func apply(names: [String]) async throws -> HostsSyncOutcome {
         if try isInSync(names: names) { return .unchanged }
         if let helper, await helper.status == .enabled {
-            return try await helper.apply(names: names)
+            do {
+                return try await helper.apply(names: names)
+            } catch let error as HostsSyncError where error != .cancelled {
+                // Helper enabled but broken (no reply, XPC failure, helper error): don't leave /etc/hosts stale —
+                // use the password prompt this once. A cancelled prompt surfaces as `.cancelled` as usual.
+                return try await fallback.apply(names: names)
+            }
         }
         return try await fallback.apply(names: names)
     }

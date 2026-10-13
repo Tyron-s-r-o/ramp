@@ -70,6 +70,12 @@ targets:
         codeSign: true
         copy:
           destination: executables
+      # CLI for scripts / coding agents → Contents/MacOS/rampctl (shim: ~/.ramp/bin/rampctl).
+      - target: RAMPCtl
+        embed: true
+        codeSign: true
+        copy:
+          destination: executables
     settings:
       base:
         PRODUCT_NAME: RAMP
@@ -84,7 +90,7 @@ targets:
         INFOPLIST_KEY_LSUIElement: NO
         SWIFT_EMIT_LOC_STRINGS: YES
         LOCALIZATION_PREFERS_STRING_CATALOGS: YES
-        MARKETING_VERSION: "1.1.0"
+        MARKETING_VERSION: "1.1.4"
         CURRENT_PROJECT_VERSION: "$(RAMP_BUILD_NUMBER)"   # Distribution.xcconfig; release-app.sh --build
     scheme:
       testTargets: []
@@ -92,6 +98,27 @@ targets:
       # Dev: first launch installs packages from the local Phase 1 build (ramp.json without manifestURL).
       environmentVariables:
         RAMP_DEV_MANIFEST: file://$(SRCROOT)/../build/dist/manifest.json
+
+  # rampctl, built from the package's own sources so the bundled CLI always matches the app's RAMPCore.
+  RAMPCtl:
+    type: tool
+    platform: macOS
+    deploymentTarget: "27.0"
+    sources:
+      - path: Packages/RAMPCore/Sources/rampctl
+    dependencies:
+      - package: RAMPCore
+        product: RAMPCore
+    settings:
+      base:
+        PRODUCT_NAME: rampctl
+        PRODUCT_BUNDLE_IDENTIFIER: sk.tyron.ramp.rampctl
+        ENABLE_HARDENED_RUNTIME: YES
+        # Only embedded in RAMP.app — without this the archive also installs /usr/local/bin/rampctl and
+        # Organizer treats it as a "Generic Xcode Archive" (no Direct Distribution).
+        SKIP_INSTALL: YES
+        SWIFT_VERSION: "6.0"
+        GENERATE_INFOPLIST_FILE: NO
 
   RAMPHostsHelper:
     type: tool

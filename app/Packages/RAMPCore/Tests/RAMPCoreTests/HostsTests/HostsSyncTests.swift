@@ -88,6 +88,16 @@ final class FakeScriptRunner: AppleScriptRunning, Sendable {
         #expect(fallback.calls.isEmpty)
     }
 
+    /// Enabled but broken helper (stale registration after an app update): the password prompt takes over.
+    @Test(arguments: [HostsSyncError.timeout, .helperFailed("connection invalid")])
+    func brokenHelperFallsBackToPrompt(_ error: HostsSyncError) async throws {
+        let helper = FakeHostsSync(channel: .helper, status: .enabled, error: error)
+        let fallback = FakeHostsSync(channel: .adminPrompt)
+        let sync = HostsSyncCoordinator(helper: helper, fallback: fallback, reader: { Self.base })
+        #expect(try await sync.apply(names: ["a.local"]) == .updated(via: .adminPrompt))
+        #expect(fallback.calls == [["a.local"]])
+    }
+
     @Test(arguments: [HelperStatus.requiresApproval, .notRegistered, .notFound])
     func helperNotEnabledFallsBack(_ status: HelperStatus) async throws {
         let helper = FakeHostsSync(channel: .helper, status: status)

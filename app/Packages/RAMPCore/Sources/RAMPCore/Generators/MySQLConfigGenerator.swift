@@ -42,6 +42,9 @@ public struct MySQLConfigGenerator: Sendable {
         try t.directive("sql_mode", m.sqlMode, quoted: true)
         try t.directive("max_allowed_packet", m.maxAllowedPacket)
         try t.directive("innodb_buffer_pool_size", m.innodbBufferPoolSize)
+        // Default 100M stalls bulk imports ("Threads are unable to reserve space in redo log", MY-014084,
+        // seen during multi-GB project imports). 2G = two ~1 GB checkpoints of headroom; disk only.
+        try t.directive("innodb_redo_log_capacity", "2G")
         try t.directive("character-set-server", "utf8mb4")
         try t.directive("collation-server", "utf8mb4_0900_ai_ci")
         try t.directive("tmpdir", paths.tmp)

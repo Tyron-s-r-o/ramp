@@ -127,6 +127,11 @@ final class RemoteBrowserModel {
     @ObservationIgnored private var runner: Task<Void, Never>?
     @ObservationIgnored private var loadGeneration = 0
     @ObservationIgnored private var closed = false
+    /// Last user action in this session (listing, rename, transfers…) — drives the idle auto-disconnect.
+    @ObservationIgnored private(set) var lastActivity = Date()
+
+    /// Marks the session as used now (the idle timer in `RemoteModel` starts over).
+    func touch() { lastActivity = Date() }
 
     init(site: RemoteSite, knownHosts: KnownHosts) {
         self.site = site
@@ -209,6 +214,7 @@ final class RemoteBrowserModel {
     }
 
     func load(_ target: String) async {
+        touch()
         guard let fs else { return }
         let normalized = Self.normalize(target)
         loadGeneration += 1
@@ -255,6 +261,7 @@ final class RemoteBrowserModel {
     }
 
     func rename(_ item: RemoteItem, to newName: String) async {
+        touch()
         let name = newName.trimmingCharacters(in: .whitespaces)
         guard let fs, !Self.nameProblem(name), name != item.name else { return }
         do {
@@ -266,6 +273,7 @@ final class RemoteBrowserModel {
     }
 
     func createFolder(named newName: String) async {
+        touch()
         let name = newName.trimmingCharacters(in: .whitespaces)
         guard let fs, !Self.nameProblem(name) else { return }
         do {
@@ -277,6 +285,7 @@ final class RemoteBrowserModel {
     }
 
     func copyPaths(_ items: [RemoteItem]) {
+        touch()
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(items.map(\.path).joined(separator: "\n"), forType: .string)
     }
@@ -285,6 +294,7 @@ final class RemoteBrowserModel {
 
     /// Drop from Finder: checks conflicts once, then asks or enqueues.
     func requestUpload(_ urls: [URL], into remoteDir: String) async {
+        touch()
         guard !urls.isEmpty, let fs else { return }
         let conflicts: [String]
         do {
@@ -312,6 +322,7 @@ final class RemoteBrowserModel {
 
     /// "Stiahnuť…" after the folder was chosen.
     func requestDownload(_ items: [RemoteItem], into localDir: URL) {
+        touch()
         let downloadable = items.filter { $0.kind != .symlink }
         guard !downloadable.isEmpty else { return }
         let conflicts = RemoteTransfers.conflicts(downloading: downloadable, into: localDir)
@@ -333,6 +344,7 @@ final class RemoteBrowserModel {
     /// Drag to Finder (file promise): downloads into a temporary folder on the destination volume, then moves
     /// the file / folder to `destination` (a free name when something with that name already exists there).
     func promiseDownload(_ item: RemoteItem, to destination: URL, completion: @escaping @Sendable (Error?) -> Void) {
+        touch()
         guard state == .connected else {
             completion(RemoteError.connectionFailed(String(localized: "Pripojenie bolo ukončené.")))
             return
@@ -352,6 +364,7 @@ final class RemoteBrowserModel {
     }
 
     func enqueueDelete(_ items: [RemoteItem]) {
+        touch()
         let title = items.count == 1 ? items[0].name : String(localized: "\(items.count) položiek")
         let job = RemoteTransferJob(kind: .delete, title: title, destination: path) { fs, _ in
             for item in items { try await RemoteTransfers.deleteTree(fs, item: item) }
@@ -420,6 +433,7 @@ final class RemoteBrowserModel {
     }
 
     private func finish(_ job: RemoteTransferJob, error: Error?) {
+        touch()
         let onFinish = job.onFinish
         job.onFinish = nil
         onFinish?(error)
